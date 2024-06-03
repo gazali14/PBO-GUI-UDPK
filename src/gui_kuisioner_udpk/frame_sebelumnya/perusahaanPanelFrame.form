@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -23,22 +30,22 @@
                   <Component id="jLabel2" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" pref="154" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                           <Component id="jLabel8" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="jLabel10" min="-2" pref="43" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="jLabel7" alignment="0" pref="95" max="32767" attributes="0"/>
                               <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jLabel13" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="jLabel14" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="jLabel14" min="-2" pref="97" max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" pref="74" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="kodePos" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
@@ -51,27 +58,27 @@
                                   </Group>
                                   <Component id="jTextField9" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="next" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="next" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="email" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
+                                          <Component id="email" min="-2" pref="302" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
                                                       <Component id="provinsi" min="-2" pref="183" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                                       <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
                                                       <Component id="kabupaten" min="-2" pref="183" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
                                                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
                                                       <Component id="kecamatan" min="-2" pref="183" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
                                                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
                                                       <Component id="desa" min="-2" pref="183" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
                                                       <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
@@ -79,8 +86,8 @@
                                               </Group>
                                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="kodeKabupaten" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                                  <Component id="kodeProvinsi" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                                                  <Component id="kodeKabupaten" min="-2" pref="67" max="-2" attributes="0"/>
+                                                  <Component id="kodeProvinsi" min="-2" pref="67" max="-2" attributes="0"/>
                                                   <Component id="kodeKecamatan" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
                                                   <Component id="kodeDesa" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
                                               </Group>
@@ -88,8 +95,8 @@
                                       </Group>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="namaPengusaha" alignment="1" min="-2" pref="301" max="-2" attributes="0"/>
-                                      <Component id="alamat" alignment="1" min="-2" pref="302" max="-2" attributes="0"/>
+                                      <Component id="namaPengusaha" min="-2" pref="301" max="-2" attributes="0"/>
+                                      <Component id="alamat" min="-2" pref="302" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -100,7 +107,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -127,8 +134,8 @@
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="kodePos" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="kodePos" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -139,7 +146,7 @@
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
@@ -170,7 +177,7 @@
                           <Component id="jLabel14" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -179,7 +186,7 @@
                       <Component id="jLabel11" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel13" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="email" alignment="1" min="-2" max="-2" attributes="0"/>
