@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable1">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,13 +46,553 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="contactPersonLabel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel1" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jmlPekerjaLakiField" min="-2" pref="71" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="banyakPekerjaLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jmlPekerjaLakiLabel" min="-2" pref="71" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jmlPekerjaPerempuanLabel" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="jmlPekerjaPerempuanField" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jmlPekerja" pref="71" max="32767" attributes="0"/>
+                                  <Component id="jmlPekerjaLabel" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="pencacahLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pengawasLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jabatanCPLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jabatanCPField" min="-2" pref="127" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="namaCPLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                              <Component id="namaCPField" min="-2" pref="127" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="namaPengawasLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tanggalPencacahLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tanggalPencacahField" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="namaPengawasField" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="namaPencacahLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tanggalCPLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                              <Component id="jabatanPencacahLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="tanggalCPField" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <Component id="namaPencacahField" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <Component id="jabatanPencacahField" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jabatanPengawasLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jabatanPengawasField" min="-2" pref="127" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="tanggalPencacahLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                              <Component id="tanggalPengawasField" min="-2" pref="127" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="batalButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lanjutkanButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="kualifikasiPerusahaanLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="kualifikasiPerusahaanComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="statusPerusahaanLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="statusPerusahaanComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="badanHukumLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="badanHukumComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jenisBoronganLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jenisBoronganField" alignment="0" min="-2" pref="480" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="bidangPekerjaanUtamaLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="bidangPekerjaanComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="tempatUsahaLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tempatUsahaComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="tempatUsahaLainnya" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="judulKuesionerPanel" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="judulKuesionerPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="statusPerusahaanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="statusPerusahaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="kualifikasiPerusahaanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kualifikasiPerusahaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="badanHukumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="badanHukumComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jenisBoronganLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jenisBoronganField" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bidangPekerjaanUtamaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bidangPekerjaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tempatUsahaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempatUsahaComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempatUsahaLainnya" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="banyakPekerjaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jmlPekerjaLakiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jmlPekerjaPerempuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jmlPekerjaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jmlPekerjaLakiField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jmlPekerjaPerempuanField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jmlPekerja" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Component id="contactPersonLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="namaCPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="namaCPField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jabatanCPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jabatanCPField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tanggalCPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tanggalCPField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="pencacahLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="namaPencacahLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="namaPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jabatanPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jabatanPencacahLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tanggalPencacahLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tanggalPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="pengawasLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="namaPengawasLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="namaPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jabatanPengawasLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jabatanPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tanggalPencacahLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tanggalPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lanjutkanButton" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="batalButton" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="17" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="judulKuesionerPanel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Pengisian Kuesioner UDPK"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="statusPerusahaanLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Status Perusahaan/Usaha Saat Dikunjungi       :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="kualifikasiPerusahaanLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kualifikasi Perusahaan/Usaha (Gred)                 :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="badanHukumLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Badan Hukum/Badan Usaha                             :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jenisBoronganLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Isikan Jenis borongan Pekerjaan Utama Yang Biasa Dikerjakan:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="statusPerusahaanComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="Aktif Lama"/>
+            <StringItem index="1" value="Aktif Baru"/>
+            <StringItem index="2" value="Tutup"/>
+            <StringItem index="3" value="Tidak Ditemukan"/>
+            <StringItem index="4" value="Bukan Konstruksi"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="kualifikasiPerusahaanComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="8">
+            <StringItem index="0" value="Gred 1"/>
+            <StringItem index="1" value="Gred 2"/>
+            <StringItem index="2" value="Gred 3"/>
+            <StringItem index="3" value="Gred 4"/>
+            <StringItem index="4" value="Gred 5"/>
+            <StringItem index="5" value="Gred 6"/>
+            <StringItem index="6" value="Gred 7"/>
+            <StringItem index="7" value="Non Gred"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="badanHukumComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="7">
+            <StringItem index="0" value="PT. Persero"/>
+            <StringItem index="1" value="PT."/>
+            <StringItem index="2" value="CV"/>
+            <StringItem index="3" value="Firma"/>
+            <StringItem index="4" value="Koperasi"/>
+            <StringItem index="5" value="Perorangan"/>
+            <StringItem index="6" value="Lainnya"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jenisBoronganField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="bidangPekerjaanUtamaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bidang Pekerjaan Utama                                   :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="bidangPekerjaanComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="3">
+            <StringItem index="0" value="Konstruksi Gedung"/>
+            <StringItem index="1" value="Konstruksi Sipil"/>
+            <StringItem index="2" value="Konstruksi Khusus"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempatUsahaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tempat Usaha                                                   :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="tempatUsahaComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Kantor"/>
+            <StringItem index="1" value="Rumah Tinggal"/>
+            <StringItem index="2" value="Rukan"/>
+            <StringItem index="3" value="Lainnya"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempatUsahaLainnya">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="banyakPekerjaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Banyak Pekerja Tetap                      :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jmlPekerjaLakiField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jmlPekerjaPerempuanField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jmlPekerja">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jmlPekerjaLakiLabel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Laki-laki"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jmlPekerjaPerempuanLabel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Perempuan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jmlPekerjaLabel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Total"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="8" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="(jumlah pekerja tetap pada saat pencacahan)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="contactPersonLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Contact Person"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="namaCPLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nama                   :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="namaCPField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jabatanCPLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jabatan                :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jabatanCPField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="tanggalCPLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tanggal                :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="tanggalCPField">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="0" type="1"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="pencacahLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pencacah"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="namaPencacahLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nama                   :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="namaPencacahField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jabatanPencacahLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jabatan                :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jabatanPencacahField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="tanggalPencacahLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tanggal                :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="tanggalPencacahField">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="0" type="1"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="pengawasLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pengawas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="namaPengawasLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nama                   :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="namaPengawasField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jabatanPengawasLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jabatan                :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jabatanPengawasField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="tanggalPencacahLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tanggal                :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="tanggalPengawasField">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="0" type="1"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="lanjutkanButton">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="ff" red="66" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Lanjutkan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="batalButton">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Batal"/>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>
