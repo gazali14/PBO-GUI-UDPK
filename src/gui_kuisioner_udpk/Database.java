@@ -65,30 +65,27 @@ public class Database {
     }
 
     // Method untuk menambahkan data perusahaan
-    public void insertPerusahaan(String KIP, String namaPerusahaan, String namaPengusaha, String alamat, String kodePos,
-                                  String telepon, String fax, String hp, String provinsi, String kodeProvinsi,
-                                  String kabKota, String kodeKabKota, String kecamatan, String kodeKecamatan,
-                                  String desaKelurahan, String kodeDesaKelurahan, String email) {
+    public void insertPerusahaan(Perusahaan perusahaan){
         String sql = "INSERT INTO perusahaan (KIP, nama_perusahaan, nama_pengusaha, alamat, kode_pos, telepon, fax, hp, provinsi, kode_provinsi, kab_kota, kode_kabkota, kecamatan, kode_kecamatan, desa_kelurahan, kode_desa_kelurahan, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, KIP);
-            stmt.setString(2, namaPerusahaan);
-            stmt.setString(3, namaPengusaha);
-            stmt.setString(4, alamat);
-            stmt.setString(5, kodePos);
-            stmt.setString(6, telepon);
-            stmt.setString(7, fax);
-            stmt.setString(8, hp);
-            stmt.setString(9, provinsi);
-            stmt.setString(10, kodeProvinsi);
-            stmt.setString(11, kabKota);
-            stmt.setString(12, kodeKabKota);
-            stmt.setString(13, kecamatan);
-            stmt.setString(14, kodeKecamatan);
-            stmt.setString(15, desaKelurahan);
-            stmt.setString(16, kodeDesaKelurahan);
-            stmt.setString(17, email);
+            stmt.setString(1, perusahaan.getKIP());
+            stmt.setString(2, perusahaan.getNamaPerusahaan());
+            stmt.setString(3, perusahaan.getNamaPengusaha());
+            stmt.setString(4, perusahaan.getAlamat());
+            stmt.setString(5, perusahaan.getKodePos());
+            stmt.setString(6, perusahaan.getTelepon());
+            stmt.setString(7, perusahaan.getFax());
+            stmt.setString(8, perusahaan.getNoHP());
+            stmt.setString(9, perusahaan.getProvinsi());
+            stmt.setString(10, perusahaan.getKodeProv());
+            stmt.setString(11, perusahaan.getKabupaten());
+            stmt.setString(12, perusahaan.getKodeKab());
+            stmt.setString(13, perusahaan.getKecamatan());
+            stmt.setString(14, perusahaan.getKodeKec());
+            stmt.setString(15, perusahaan.getDesa());
+            stmt.setString(16, perusahaan.getKodeDes());
+            stmt.setString(17, perusahaan.getEmail());
             stmt.executeUpdate();
             System.out.println("Data perusahaan berhasil ditambahkan.");
         } catch (SQLException e) {

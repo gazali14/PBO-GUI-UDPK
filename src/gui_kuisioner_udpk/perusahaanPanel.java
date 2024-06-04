@@ -5,6 +5,7 @@
 package gui_kuisioner_udpk;
 
 import javax.swing.JScrollPane;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,24 +29,24 @@ public class perusahaanPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        identitasPerusahaan = new javax.swing.JTextField();
-        alamat = new javax.swing.JTextField();
-        namaPengusaha = new javax.swing.JTextField();
-        kodePos = new javax.swing.JTextField();
-        telepon = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        kabupaten = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        next = new javax.swing.JButton();
-        fax = new javax.swing.JTextField();
-        kecamatan = new javax.swing.JTextField();
-        desa = new javax.swing.JTextField();
-        provinsi = new javax.swing.JComboBox<>();
-        kodeProvinsi = new javax.swing.JSpinner();
-        kodeKabupaten = new javax.swing.JSpinner();
-        kodeKecamatan = new javax.swing.JSpinner();
-        kodeDesa = new javax.swing.JSpinner();
-        jLabel2 = new javax.swing.JLabel();
+        namaPerusahaanField = new javax.swing.JTextField();
+        alamatField = new javax.swing.JTextField();
+        namaPengusahaField = new javax.swing.JTextField();
+        kodePosField = new javax.swing.JTextField();
+        teleponField = new javax.swing.JTextField();
+        hpField = new javax.swing.JTextField();
+        kabupatenField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        nextButton = new javax.swing.JButton();
+        faxField = new javax.swing.JTextField();
+        kecamatanField = new javax.swing.JTextField();
+        desaField = new javax.swing.JTextField();
+        provinsiComboBox = new javax.swing.JComboBox<>();
+        kodeProvinsiSpinner = new javax.swing.JSpinner();
+        kodeKabupatenSpinner = new javax.swing.JSpinner();
+        kodeKecamatanSpinner = new javax.swing.JSpinner();
+        kodeDesaSpinner = new javax.swing.JSpinner();
+        keteranganUmumLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -63,89 +64,96 @@ public class perusahaanPanel extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         judul_TextField = new javax.swing.JTextField();
+        kipLabel = new javax.swing.JLabel();
+        kipField = new javax.swing.JTextField();
 
-        identitasPerusahaan.addActionListener(new java.awt.event.ActionListener() {
+        namaPerusahaanField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                identitasPerusahaanActionPerformed(evt);
+                namaPerusahaanFieldActionPerformed(evt);
             }
         });
 
-        alamat.addActionListener(new java.awt.event.ActionListener() {
+        alamatField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alamatActionPerformed(evt);
+                alamatFieldActionPerformed(evt);
             }
         });
 
-        namaPengusaha.addActionListener(new java.awt.event.ActionListener() {
+        namaPengusahaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                namaPengusahaActionPerformed(evt);
+                namaPengusahaFieldActionPerformed(evt);
             }
         });
 
-        kodePos.addActionListener(new java.awt.event.ActionListener() {
+        kodePosField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kodePosActionPerformed(evt);
+                kodePosFieldActionPerformed(evt);
             }
         });
 
-        telepon.addActionListener(new java.awt.event.ActionListener() {
+        teleponField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                teleponActionPerformed(evt);
+                teleponFieldActionPerformed(evt);
             }
         });
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        hpField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                hpFieldActionPerformed(evt);
             }
         });
 
-        kabupaten.addActionListener(new java.awt.event.ActionListener() {
+        kabupatenField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kabupatenActionPerformed(evt);
+                kabupatenFieldActionPerformed(evt);
             }
         });
 
-        email.addActionListener(new java.awt.event.ActionListener() {
+        emailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                emailFieldActionPerformed(evt);
             }
         });
 
-        next.setBackground(new java.awt.Color(51, 51, 51));
-        next.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        next.setForeground(new java.awt.Color(255, 255, 255));
-        next.setText("Next");
-
-        fax.addActionListener(new java.awt.event.ActionListener() {
+        nextButton.setBackground(new java.awt.Color(51, 51, 51));
+        nextButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        nextButton.setForeground(new java.awt.Color(255, 255, 255));
+        nextButton.setText("Next");
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                faxActionPerformed(evt);
+                nextButtonActionPerformed(evt);
             }
         });
 
-        kecamatan.addActionListener(new java.awt.event.ActionListener() {
+        faxField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kecamatanActionPerformed(evt);
+                faxFieldActionPerformed(evt);
             }
         });
 
-        desa.addActionListener(new java.awt.event.ActionListener() {
+        kecamatanField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                desaActionPerformed(evt);
+                kecamatanFieldActionPerformed(evt);
             }
         });
 
-        provinsi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<No Province Selected>", "Nanggroe Aceh Darussalam", "Sumatera Utara", "Sumatera Selatan", "Sumatera Barat", "Bengkulu", "Riau", "Kepulauan Riau ", "Jambi", "Lampung", "Bangka Belitung", "Kalimantan Barat", "Kalimantan Timur", "Kalimantan Selatan", "Kalimantan Tengah", "Kalimantan Utara", "Banten", "DKI Jakarta", "Jawa Barat", "Jawa Tengah", "Daerah Istimewa Yogyakarta", "Jawa Timur", "Bali", "Nusa Tenggara Timur", "Nusa Tenggara Barat", "Gorontalo", "Sulawesi Barat", "Sulawesi Tengah", "Sulawesi Utara", "Sulawesi Tenggara", "Sulawesi Selatan", "Maluku Utara", "Maluku", "Papua Bara", "Papua", "Papua Tengah", "Papua Pegunungan", "Papua Selatan", "Papua Barat Daya" }));
-        provinsi.addActionListener(new java.awt.event.ActionListener() {
+        desaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                provinsiActionPerformed(evt);
+                desaFieldActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setText("Isikan Keterangan Umum Perusahaan/Usaha");
+        provinsiComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<No Province Selected>", "Nanggroe Aceh Darussalam", "Sumatera Utara", "Sumatera Selatan", "Sumatera Barat", "Bengkulu", "Riau", "Kepulauan Riau ", "Jambi", "Lampung", "Bangka Belitung", "Kalimantan Barat", "Kalimantan Timur", "Kalimantan Selatan", "Kalimantan Tengah", "Kalimantan Utara", "Banten", "DKI Jakarta", "Jawa Barat", "Jawa Tengah", "Daerah Istimewa Yogyakarta", "Jawa Timur", "Bali", "Nusa Tenggara Timur", "Nusa Tenggara Barat", "Gorontalo", "Sulawesi Barat", "Sulawesi Tengah", "Sulawesi Utara", "Sulawesi Tenggara", "Sulawesi Selatan", "Maluku Utara", "Maluku", "Papua Barat", "Papua", "Papua Tengah", "Papua Pegunungan", "Papua Selatan", "Papua Barat Daya" }));
+        provinsiComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                provinsiComboBoxActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setText("Identitas Perusahaan/Usaha");
+        keteranganUmumLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        keteranganUmumLabel.setText("Isikan Keterangan Umum Perusahaan/Usaha");
+
+        jLabel3.setText("Nama Perusahaan/Usaha");
 
         jLabel4.setText("Nama Pengusaha");
 
@@ -187,6 +195,8 @@ public class perusahaanPanel extends javax.swing.JPanel {
         judul_TextField.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         judul_TextField.setFocusable(false);
 
+        kipLabel.setText("KIP");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -195,7 +205,8 @@ public class perusahaanPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kipLabel)
+                    .addComponent(keteranganUmumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -214,48 +225,51 @@ public class perusahaanPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(kodePos, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(kodePosField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(telepon, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(teleponField, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(fax, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(faxField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(hpField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(next)
+                                        .addComponent(nextButton)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(provinsi, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(15, 15, 15)
-                                                        .addComponent(jLabel15))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(kabupaten, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jLabel17))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(kecamatan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jLabel18))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(desa, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jLabel16)))
-                                                .addGap(10, 10, 10)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(kodeKabupaten, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(kodeProvinsi, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(kodeKecamatan, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(kodeDesa, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(kabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addComponent(jLabel17))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(kecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addComponent(jLabel18))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(desaField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addComponent(jLabel16)))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(provinsiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(jLabel15)))
+                                                .addGap(22, 22, 22)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(kodeKabupatenSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(kodeProvinsiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(kodeKecamatanSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(kodeDesaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(namaPengusaha, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(alamat, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(namaPengusahaField, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(alamatField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(identitasPerusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(kipField)
+                                    .addComponent(namaPerusahaanField, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -263,128 +277,159 @@ public class perusahaanPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(judul_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addComponent(keteranganUmumLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kipLabel)
+                    .addComponent(kipField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(identitasPerusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(namaPerusahaanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(namaPengusaha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(namaPengusahaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(alamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(alamatField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(kodePos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(kodePosField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(telepon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(teleponField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12)
-                    .addComponent(fax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(faxField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(provinsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15)
-                            .addComponent(kodeProvinsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(kodeKabupaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(kabupaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(kodeKecamatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(kecamatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(kodeDesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(desa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hpField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(kodeProvinsiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(provinsiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kodeKabupatenSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kodeKecamatanSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kodeDesaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(desaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(emailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(next)
+                .addComponent(nextButton)
                 .addGap(35, 35, 35))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void identitasPerusahaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identitasPerusahaanActionPerformed
+    private void namaPerusahaanFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaPerusahaanFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_identitasPerusahaanActionPerformed
+    }//GEN-LAST:event_namaPerusahaanFieldActionPerformed
 
-    private void alamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alamatActionPerformed
+    private void alamatFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alamatFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_alamatActionPerformed
+    }//GEN-LAST:event_alamatFieldActionPerformed
 
-    private void namaPengusahaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaPengusahaActionPerformed
+    private void namaPengusahaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaPengusahaFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_namaPengusahaActionPerformed
+    }//GEN-LAST:event_namaPengusahaFieldActionPerformed
 
-    private void kodePosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodePosActionPerformed
+    private void kodePosFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodePosFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_kodePosActionPerformed
+    }//GEN-LAST:event_kodePosFieldActionPerformed
 
-    private void teleponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teleponActionPerformed
+    private void teleponFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teleponFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_teleponActionPerformed
+    }//GEN-LAST:event_teleponFieldActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void hpFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_hpFieldActionPerformed
 
-    private void kabupatenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kabupatenActionPerformed
+    private void kabupatenFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kabupatenFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_kabupatenActionPerformed
+    }//GEN-LAST:event_kabupatenFieldActionPerformed
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_emailFieldActionPerformed
 
-    private void faxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faxActionPerformed
+    private void faxFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faxFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_faxActionPerformed
+    }//GEN-LAST:event_faxFieldActionPerformed
 
-    private void kecamatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kecamatanActionPerformed
+    private void kecamatanFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kecamatanFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_kecamatanActionPerformed
+    }//GEN-LAST:event_kecamatanFieldActionPerformed
 
-    private void desaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desaActionPerformed
+    private void desaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desaFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_desaActionPerformed
+    }//GEN-LAST:event_desaFieldActionPerformed
 
-    private void provinsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_provinsiActionPerformed
+    private void provinsiComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_provinsiComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_provinsiActionPerformed
+    }//GEN-LAST:event_provinsiComboBoxActionPerformed
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        // TODO add your handling code here:
+        Perusahaan perusahaan = new Perusahaan();
+        perusahaan.setKIP(kipField.getText());
+        perusahaan.setNamaPerusahaan(namaPerusahaanField.getText());
+        perusahaan.setNamaPengusaha(namaPengusahaField.getText());
+        perusahaan.setAlamat(alamatField.getText());
+        perusahaan.setKodePos(kodePosField.getText());
+        perusahaan.setTelepon(teleponField.getText());
+        perusahaan.setFax(faxField.getText());
+        perusahaan.setNoHP(hpField.getText());
+        perusahaan.setProvinsi(provinsiComboBox.getSelectedItem().toString());
+        perusahaan.setKodeProv(kodeProvinsiSpinner.getValue().toString());
+        perusahaan.setKabupaten(kabupatenField.getText());
+        perusahaan.setKodeKab(kodeKabupatenSpinner.getValue().toString());
+        perusahaan.setKecamatan(kecamatanField.getText());
+        perusahaan.setKodeKec(kodeKecamatanSpinner.getValue().toString());
+        perusahaan.setDesa(desaField.getText());
+        perusahaan.setKodeDes(kodeDesaSpinner.getValue().toString());
+        perusahaan.setEmail(emailField.getText());
+        
+        if(perusahaan.getValidasi()) {
+            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane));
+            Database.getInstance().insertPerusahaan(perusahaan);
+        } else {
+            String errorMessages = "";
+            for(String error : perusahaan.error) {
+                errorMessages = errorMessages + error + "\n";
+            }
+            JOptionPane.showMessageDialog(this, errorMessages);
+        }
+    }//GEN-LAST:event_nextButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField alamat;
-    private javax.swing.JTextField desa;
-    private javax.swing.JTextField email;
-    private javax.swing.JTextField fax;
-    private javax.swing.JTextField identitasPerusahaan;
+    private javax.swing.JTextField alamatField;
+    private javax.swing.JTextField desaField;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JTextField faxField;
+    private javax.swing.JTextField hpField;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -394,7 +439,6 @@ public class perusahaanPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -402,18 +446,22 @@ public class perusahaanPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField judul_TextField;
-    private javax.swing.JTextField kabupaten;
-    private javax.swing.JTextField kecamatan;
-    private javax.swing.JSpinner kodeDesa;
-    private javax.swing.JSpinner kodeKabupaten;
-    private javax.swing.JSpinner kodeKecamatan;
-    private javax.swing.JTextField kodePos;
-    private javax.swing.JSpinner kodeProvinsi;
-    private javax.swing.JTextField namaPengusaha;
-    private javax.swing.JButton next;
-    private javax.swing.JComboBox<String> provinsi;
-    private javax.swing.JTextField telepon;
+    private javax.swing.JTextField kabupatenField;
+    private javax.swing.JTextField kecamatanField;
+    private javax.swing.JLabel keteranganUmumLabel;
+    private javax.swing.JTextField kipField;
+    private javax.swing.JLabel kipLabel;
+    private javax.swing.JSpinner kodeDesaSpinner;
+    private javax.swing.JSpinner kodeKabupatenSpinner;
+    private javax.swing.JSpinner kodeKecamatanSpinner;
+    private javax.swing.JTextField kodePosField;
+    private javax.swing.JSpinner kodeProvinsiSpinner;
+    private javax.swing.JTextField namaPengusahaField;
+    private javax.swing.JTextField namaPerusahaanField;
+    private javax.swing.JButton nextButton;
+    private javax.swing.JComboBox<String> provinsiComboBox;
+    private javax.swing.JTextField teleponField;
     // End of variables declaration//GEN-END:variables
+
 }
