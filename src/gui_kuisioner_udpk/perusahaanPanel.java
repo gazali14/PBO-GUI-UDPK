@@ -412,7 +412,7 @@ public class perusahaanPanel extends javax.swing.JPanel {
         perusahaan.setEmail(emailField.getText());
         
         if(perusahaan.getValidasi()) {
-            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane));
+            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan));
             Database.getInstance().insertPerusahaan(perusahaan);
         } else {
             String errorMessages = "";

@@ -9,7 +9,7 @@ import java.util.ArrayList;
     Dewi Nurihandayani (222212564)
     Fickry Atmayoga Wienaldi (222212610)
     La Ode Muhammad Gazali (222212696)
- * 
+ *
  */
 
 public class Perusahaan {

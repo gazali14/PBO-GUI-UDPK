@@ -37,6 +37,11 @@ public class MainFrame extends javax.swing.JFrame {
         Menu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         logoutMenuItem.setText("Logout");
+        logoutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutMenuItemActionPerformed(evt);
+            }
+        });
         Menu.add(logoutMenuItem);
 
         entryMenuItem.setText("Entry");
@@ -75,6 +80,11 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane));
     }//GEN-LAST:event_entryMenuItemActionPerformed
+
+    private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
+        // TODO add your handling code here:
+        contentScrollPane.setViewportView(new loginPanel(contentScrollPane));
+    }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments

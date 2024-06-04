@@ -13,12 +13,14 @@ import javax.swing.JScrollPane;
 public class kuesionerPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
+    private Perusahaan perusahaan;
     /**
      * Creates new form kuesionerPanel
      */
-    public kuesionerPanel(JScrollPane contentScrollPane) {
+    public kuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
+        this.perusahaan = perusahaan;
     }
 
     /**
@@ -100,6 +102,11 @@ public class kuesionerPanel extends javax.swing.JPanel {
         lanjutkanButton.setBackground(new java.awt.Color(102, 255, 102));
         lanjutkanButton.setForeground(new java.awt.Color(255, 255, 255));
         lanjutkanButton.setText("Lanjutkan");
+        lanjutkanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lanjutkanButtonActionPerformed(evt);
+            }
+        });
 
         batalButton.setBackground(new java.awt.Color(255, 51, 51));
         batalButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -220,6 +227,12 @@ public class kuesionerPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lanjutkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanjutkanButtonActionPerformed
+        // TODO add your handling code here:
+        QuestionaireData qd = new QuestionaireData();
+        qd.setPerusahaan(perusahaan);
+    }//GEN-LAST:event_lanjutkanButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
