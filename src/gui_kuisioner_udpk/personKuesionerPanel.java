@@ -10,7 +10,7 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class personPanel extends javax.swing.JPanel {
+public class personKuesionerPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
     private Perusahaan perusahaan;
@@ -18,7 +18,7 @@ public class personPanel extends javax.swing.JPanel {
     /**
      * Creates new form kuesionerPanel2
      */
-    public personPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
+    public personKuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
         this.perusahaan = perusahaan;
@@ -200,6 +200,7 @@ public class personPanel extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan, qd));
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed

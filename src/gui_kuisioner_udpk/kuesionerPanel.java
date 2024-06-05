@@ -17,10 +17,20 @@ public class kuesionerPanel extends javax.swing.JPanel {
     /**
      * Creates new form kuesionerPanel
      */
-    public kuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan) {
+    public kuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
         this.perusahaan = perusahaan;
+        if(qd.getStatusUsaha() != null) {
+            statusPerusahaanComboBox.setSelectedItem(qd.getStatusUsaha());
+            kualifikasiPerusahaanComboBox.setSelectedItem(qd.getGred());
+            badanHukumComboBox.setSelectedItem(qd.getBadanUsaha());
+            jenisBoronganField.setText(qd.getPekerjaanUtama());
+            bidangPekerjaanComboBox.setSelectedItem(qd.getBidangPekerjaanUtama());
+            tempatUsahaComboBox.setSelectedItem(qd.getTempatUsaha());
+            jmlPekerjaLakiSpinner.setValue(qd.getBanyakPekerjaLaki());
+            jmlPekerjaPerempuanSpinner.setValue(qd.getBanyakPekerjaPerempuan());
+        }
     }
 
     /**
@@ -67,31 +77,36 @@ public class kuesionerPanel extends javax.swing.JPanel {
 
         jenisBoronganLabel.setText("Isikan Jenis borongan Pekerjaan Utama Yang Biasa Dikerjakan:");
 
-        statusPerusahaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aktif Lama", "Aktif Baru", "Tutup", "Tidak Ditemukan", "Bukan Konstruksi" }));
+        statusPerusahaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<None Selected>", "Aktif Lama", "Aktif Baru", "Tutup", "Tidak Ditemukan", "Bukan Konstruksi" }));
         statusPerusahaanComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statusPerusahaanComboBoxActionPerformed(evt);
             }
         });
 
-        kualifikasiPerusahaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gred 1", "Gred 2", "Gred 3", "Gred 4", "Gred 5", "Gred 6", "Gred 7", "Non Gred" }));
+        kualifikasiPerusahaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<None Selected>", "Gred 1", "Gred 2", "Gred 3", "Gred 4", "Gred 5", "Gred 6", "Gred 7", "Non Gred" }));
         kualifikasiPerusahaanComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kualifikasiPerusahaanComboBoxActionPerformed(evt);
             }
         });
 
-        badanHukumComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PT. Persero", "PT.", "CV", "Firma", "Koperasi", "Perorangan", "Lainnya" }));
+        badanHukumComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<None Selected>", "PT. Persero", "PT.", "CV", "Firma", "Koperasi", "Perorangan", "Lainnya" }));
 
         bidangPekerjaanUtamaLabel.setText("Bidang Pekerjaan Utama                                   :");
 
-        bidangPekerjaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Konstruksi Gedung", "Konstruksi Sipil", "Konstruksi Khusus" }));
+        bidangPekerjaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<None Selected>", "Konstruksi Gedung", "Konstruksi Sipil", "Konstruksi Khusus" }));
 
         tempatUsahaLabel.setText("Tempat Usaha                                                   :");
 
-        tempatUsahaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kantor", "Rumah Tinggal", "Rukan", "Lainnya" }));
+        tempatUsahaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<None Selected>", "Kantor", "Rumah Tinggal", "Rukan", "Lainnya" }));
+        tempatUsahaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tempatUsahaComboBoxActionPerformed(evt);
+            }
+        });
 
-        tempatUsahaLainnya.setEditable(false);
+        tempatUsahaLainnya.setEnabled(false);
 
         banyakPekerjaLabel.setText("Banyak Pekerja Tetap                      :");
 
@@ -236,6 +251,7 @@ public class kuesionerPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         QuestionaireData qd = new QuestionaireData();
         qd.setPerusahaan(perusahaan);
+        qd.setGred(kualifikasiPerusahaanComboBox.getSelectedItem().toString());
         qd.setStatusUsaha(statusPerusahaanComboBox.getSelectedItem().toString());
         qd.setBadanUsaha(badanHukumComboBox.getSelectedItem().toString());
         qd.setPekerjaanUtama(jenisBoronganField.getText());
@@ -244,7 +260,7 @@ public class kuesionerPanel extends javax.swing.JPanel {
         qd.setBanyakPekerjaLaki((int) jmlPekerjaLakiSpinner.getValue());
         qd.setBanyakPekerjaPerempuan((int) jmlPekerjaPerempuanSpinner.getValue());
         
-        contentScrollPane.setViewportView(new personPanel(contentScrollPane, perusahaan, qd));
+        contentScrollPane.setViewportView(new personKuesionerPanel(contentScrollPane, perusahaan, qd));
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
@@ -254,19 +270,42 @@ public class kuesionerPanel extends javax.swing.JPanel {
 
     private void statusPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusPerusahaanComboBoxActionPerformed
         // TODO add your handling code here:
-        if(statusPerusahaanComboBox.getSelectedIndex() >= 2 ) {
+        if(statusPerusahaanComboBox.getSelectedIndex() >= 3 ) {
+            kualifikasiPerusahaanComboBox.setSelectedIndex(0);
+            badanHukumComboBox.setSelectedIndex(0);
             badanHukumComboBox.setEnabled(false);
+            jenisBoronganField.setText("");
             jenisBoronganField.setEnabled(false);
+            bidangPekerjaanComboBox.setSelectedIndex(0);
             bidangPekerjaanComboBox.setEnabled(false);
+            tempatUsahaComboBox.setSelectedIndex(0);
             tempatUsahaComboBox.setEnabled(false);
+            jmlPekerjaLakiSpinner.setValue(0);
             jmlPekerjaLakiSpinner.setEnabled(false);
+            jmlPekerjaPerempuanSpinner.setValue(0);
             jmlPekerjaPerempuanSpinner.setEnabled(false);
+        } else {
+            badanHukumComboBox.setEnabled(true);
+            jenisBoronganField.setEnabled(true);
+            bidangPekerjaanComboBox.setEnabled(true);
+            tempatUsahaComboBox.setEnabled(true);
+            jmlPekerjaLakiSpinner.setEnabled(true);
+            jmlPekerjaPerempuanSpinner.setEnabled(true);
         }
     }//GEN-LAST:event_statusPerusahaanComboBoxActionPerformed
 
     private void kualifikasiPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kualifikasiPerusahaanComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_kualifikasiPerusahaanComboBoxActionPerformed
+
+    private void tempatUsahaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatUsahaComboBoxActionPerformed
+        // TODO add your handling code here:
+        if(tempatUsahaComboBox.getSelectedIndex() == 4) {
+            tempatUsahaLainnya.setEnabled(true);
+        } else {
+            tempatUsahaLainnya.setEnabled(false);
+        }
+    }//GEN-LAST:event_tempatUsahaComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

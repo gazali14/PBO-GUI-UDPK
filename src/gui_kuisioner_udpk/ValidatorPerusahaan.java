@@ -24,7 +24,10 @@ public class ValidatorPerusahaan implements Validator {
         // Lakukan validasi untuk semua atribut Perusahaan
         
         //Validasi pertama
-
+            if(!isValidString(perusahaan.getKIP()) || !perusahaan.getKIP().matches("[0-9]*")) {
+                perusahaan.error.add("KIP tidak boleh kosong atau berisi Huruf");
+            }
+            
             // Validasi untuk nama perusahaan
             if (!isValidString(perusahaan.getNamaPerusahaan()) || !perusahaan.getNamaPerusahaan().matches("[a-zA-Z ]+")) {
                 perusahaan.error.add("Nama perusahaan tidak boleh kosong atau berisi angka");

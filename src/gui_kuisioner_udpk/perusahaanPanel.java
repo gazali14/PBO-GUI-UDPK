@@ -14,13 +14,12 @@ import javax.swing.JOptionPane;
 public class perusahaanPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
-    private Perusahaan perusahaan;
+    
     /**
      * Creates new form perusahaanPanel
      */
     public perusahaanPanel(JScrollPane contentScrollPane, Perusahaan perusahaan) {
         initComponents();
-        this.perusahaan = perusahaan;
         this.contentScrollPane = contentScrollPane;
         if (perusahaan.getKIP() != null) {
             kipField.setText(perusahaan.getKIP());
@@ -40,8 +39,6 @@ public class perusahaanPanel extends javax.swing.JPanel {
             desaField.setText(perusahaan.getDesa());
             kodeDesaField.setText(perusahaan.getKodeDes());
             emailField.setText(perusahaan.getEmail());
-            
-            Database.getInstance().deletePerusahaan(perusahaan.getKIP());
         }
     }
 
@@ -448,6 +445,7 @@ public class perusahaanPanel extends javax.swing.JPanel {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
+        Perusahaan perusahaan = new Perusahaan();
         perusahaan.setKIP(kipField.getText());
         perusahaan.setNamaPerusahaan(namaPerusahaanField.getText());
         perusahaan.setNamaPengusaha(namaPengusahaField.getText());
@@ -467,14 +465,14 @@ public class perusahaanPanel extends javax.swing.JPanel {
         perusahaan.setEmail(emailField.getText());
         
         if(perusahaan.getValidasi()) {
-            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan));
-            Database.getInstance().insertPerusahaan(perusahaan);
+            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan, new QuestionaireData()));
         } else {
             String errorMessages = "";
             for(String error : perusahaan.error) {
                 errorMessages = errorMessages + error + "\n";
             }
             JOptionPane.showMessageDialog(this, errorMessages);
+            errorMessages = "";
         }
     }//GEN-LAST:event_nextButtonActionPerformed
 

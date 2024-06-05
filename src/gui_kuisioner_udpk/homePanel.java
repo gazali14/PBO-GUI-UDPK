@@ -244,6 +244,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void entryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, new Perusahaan()));
     }//GEN-LAST:event_entryButtonActionPerformed
 
 
