@@ -472,7 +472,6 @@ public class perusahaanPanel extends javax.swing.JPanel {
                 errorMessages = errorMessages + error + "\n";
             }
             JOptionPane.showMessageDialog(this, errorMessages);
-            errorMessages = "";
         }
     }//GEN-LAST:event_nextButtonActionPerformed
 

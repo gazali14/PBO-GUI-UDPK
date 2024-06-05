@@ -4,6 +4,8 @@
  */
 package gui_kuisioner_udpk;
 
+import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
 /**
@@ -32,8 +34,9 @@ public class personKuesionerPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooser1 = new com.raven.datechooser.DateChooser();
+        dateChooser2 = new com.raven.datechooser.DateChooser();
         judulKuesionerPanel = new javax.swing.JLabel();
-        tanggalPengawasField = new javax.swing.JFormattedTextField();
         contactPersonLabel = new javax.swing.JLabel();
         namaCPLabel = new javax.swing.JLabel();
         namaCPField = new javax.swing.JTextField();
@@ -41,7 +44,6 @@ public class personKuesionerPanel extends javax.swing.JPanel {
         namaPencacahLabel = new javax.swing.JLabel();
         namaPencacahField = new javax.swing.JTextField();
         tanggalPencacahLabel = new javax.swing.JLabel();
-        tanggalPencacahField = new javax.swing.JFormattedTextField();
         pengawasLabel = new javax.swing.JLabel();
         namaPengawasLabel = new javax.swing.JLabel();
         namaPengawasField = new javax.swing.JTextField();
@@ -50,14 +52,22 @@ public class personKuesionerPanel extends javax.swing.JPanel {
         backButton = new javax.swing.JButton();
         catatanLabel = new javax.swing.JLabel();
         catatanField = new javax.swing.JTextField();
+        jabatanCPLabel = new javax.swing.JLabel();
+        JabatanCPField = new javax.swing.JTextField();
+        tanggalPencacahField = new javax.swing.JTextField();
+        tanggalPengawasField = new javax.swing.JTextField();
+
+        dateChooser1.setForeground(new java.awt.Color(153, 204, 255));
+        dateChooser1.setTextRefernce(tanggalPencacahField);
+
+        dateChooser2.setForeground(new java.awt.Color(153, 204, 255));
+        dateChooser2.setTextRefernce(tanggalPengawasField);
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         judulKuesionerPanel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         judulKuesionerPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         judulKuesionerPanel.setText("Pengisian Kuesioner UDPK");
-
-        tanggalPengawasField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
         contactPersonLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         contactPersonLabel.setText("Contact Person");
@@ -70,8 +80,6 @@ public class personKuesionerPanel extends javax.swing.JPanel {
         namaPencacahLabel.setText("Nama                   :");
 
         tanggalPencacahLabel.setText("Tanggal                :");
-
-        tanggalPencacahField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
         pengawasLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         pengawasLabel.setText("Pengawas");
@@ -100,6 +108,8 @@ public class personKuesionerPanel extends javax.swing.JPanel {
 
         catatanLabel.setText("Catatan :");
 
+        jabatanCPLabel.setText("Jabatan                :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,34 +135,39 @@ public class personKuesionerPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(namaCPLabel)
-                                .addGap(84, 84, 84)
-                                .addComponent(namaCPField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(tanggalPencacahLabel1)
-                                .addGap(84, 84, 84)
-                                .addComponent(tanggalPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(211, 211, 211))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(namaPengawasLabel)
+                                                .addGap(1, 1, 1)
+                                                .addComponent(namaPencacahLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addGroup(layout.createSequentialGroup()
                                                 .addGap(0, 0, Short.MAX_VALUE)
                                                 .addComponent(tanggalPencacahLabel)
-                                                .addGap(83, 83, 83)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(tanggalPencacahField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(namaPengawasField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(namaPencacahLabel)
+                                                .addGap(82, 82, 82)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(namaPencacahField, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                                            .addComponent(tanggalPencacahField)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(namaPengawasLabel)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(namaPencacahField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(tanggalPengawasField)
+                                            .addComponent(namaPengawasField, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(namaCPLabel)
+                                    .addComponent(jabatanCPLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(84, 84, 84)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(namaCPField, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                                    .addComponent(JabatanCPField))))))
                 .addContainerGap(184, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -166,7 +181,11 @@ public class personKuesionerPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(namaCPLabel)
                     .addComponent(namaCPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jabatanCPLabel)
+                    .addComponent(JabatanCPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(pencacahLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -190,7 +209,7 @@ public class personKuesionerPanel extends javax.swing.JPanel {
                 .addComponent(catatanLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(catatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(backButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(nextButton, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
@@ -205,15 +224,64 @@ public class personKuesionerPanel extends javax.swing.JPanel {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
-        
+        ContactPerson cp = new ContactPerson();
+        cp.setNama(namaCPField.getText());
+        cp.setJabatan(JabatanCPField.getText());
+
+        Pencacah pc = new Pencacah();
+        pc.setNama(namaPencacahField.getText());
+
+        String tanggalPencacah = tanggalPencacahField.getText();
+
+        Pengawas pg = new Pengawas();
+        pg.setNama(namaPengawasField.getText());
+
+        String tanggalPengawas = tanggalPengawasField.getText();
+
+
+        String catatan = catatanField.getText();
+
+        if(cp.validasi.validate()) {
+            if(pc.validasi.validate()) {
+                if(pg.validasi.validate()) {
+                    Database.getInstance().insertPerusahaan(perusahaan);
+                    Database.getInstance().insertPerson(cp.getNama(), cp.getJabatan(), cp.getKeterangan());
+                    Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd, pg.getNama(), pc.getNama(), cp.getNama(), tanggalPencacah, tanggalPengawas, catatan);
+                    JOptionPane.showMessageDialog(this, "Insert data kuesioner berhasil!");
+                    contentScrollPane.setViewportView(new homePanel(contentScrollPane));
+                } else {
+                    String errorMessages = "";
+                    for(String error : pg.error) {
+                        errorMessages = errorMessages + error + "\n";
+                    }
+                    JOptionPane.showMessageDialog(this, errorMessages);
+                }
+            } else {
+                String errorMessages = "";
+                for(String error : pc.error) {
+                    errorMessages = errorMessages + error + "\n";
+                }
+                JOptionPane.showMessageDialog(this, errorMessages);
+            }
+        } else {
+            String errorMessages = "";
+            for(String error : cp.error) {
+                errorMessages = errorMessages + error + "\n";
+            }
+            JOptionPane.showMessageDialog(this, errorMessages);
+        }
     }//GEN-LAST:event_nextButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField JabatanCPField;
     private javax.swing.JButton backButton;
     private javax.swing.JTextField catatanField;
     private javax.swing.JLabel catatanLabel;
     private javax.swing.JLabel contactPersonLabel;
+    private com.raven.datechooser.DateChooser dateChooser1;
+    private com.raven.datechooser.DateChooser dateChooser2;
+    private javax.swing.JLabel jabatanCPLabel;
     private javax.swing.JLabel judulKuesionerPanel;
     private javax.swing.JTextField namaCPField;
     private javax.swing.JLabel namaCPLabel;
@@ -224,9 +292,9 @@ public class personKuesionerPanel extends javax.swing.JPanel {
     private javax.swing.JButton nextButton;
     private javax.swing.JLabel pencacahLabel;
     private javax.swing.JLabel pengawasLabel;
-    private javax.swing.JFormattedTextField tanggalPencacahField;
+    private javax.swing.JTextField tanggalPencacahField;
     private javax.swing.JLabel tanggalPencacahLabel;
     private javax.swing.JLabel tanggalPencacahLabel1;
-    private javax.swing.JFormattedTextField tanggalPengawasField;
+    private javax.swing.JTextField tanggalPengawasField;
     // End of variables declaration//GEN-END:variables
 }

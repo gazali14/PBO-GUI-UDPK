@@ -31,7 +31,7 @@ public class ValidatorPerson implements Validator {
         }
 
         // Jika semua validasi berhasil, kembalikan true
-        return true;
+        return person.error.isEmpty();
     }
 
     // Metode bantuan untuk memeriksa apakah string tidak kosong

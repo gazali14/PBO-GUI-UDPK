@@ -117,10 +117,7 @@ public class ValidatorPerusahaan implements Validator {
                 perusahaan.error.add("Email tidak valid");
             }
         // Jika semua validasi berhasil, kembalikan true
-        if(perusahaan.error.isEmpty())
-            return true;
-        else
-            return false;
+        return perusahaan.error.isEmpty();
     }
     
     // Metode bantuan untuk memeriksa apakah string tidak kosong

@@ -23,41 +23,44 @@ public class ValidatorQuestionaireData implements Validator {
         // Anda dapat menyesuaikan validasi sesuai kebutuhan
         
         // Contoh validasi untuk status usaha
-        if (!(questionaireData.getStatusUsaha().matches("[12345]"))) {
-            questionaireData.error.add("Status usaha harus antara 1-5");
+        if ("<None Selected>".equals(questionaireData.getStatusUsaha())) {
+            questionaireData.error.add("Status usaha harus dipilih");
         }
+        if(questionaireData.getStatusUsaha() == "Aktif Lama" || questionaireData.getStatusUsaha() == "Aktif Baru") {
+            // Validasi untuk gred
+            if ("<None Selected>".equals(questionaireData.getGred())) {
+                questionaireData.error.add("Gred harus dipilih");
+            }
 
-        // Contoh validasi untuk gred
-        if (!(questionaireData.getGred().matches("[12345679]"))) {
-            questionaireData.error.add("Gred harus salah satu dari 1,2,3,4,5,6,7, dan 9");
-        }
+            // Validasi untuk atribut badan usaha
+            if ("<None Selected>".equals(questionaireData.getBadanUsaha())) {
+                questionaireData.error.add("Badan usaha harus antara 1-7");
+            }
 
-        // Validasi untuk atribut badan usaha
-        if (!(questionaireData.getBadanUsaha().matches("[1234567]"))) {
-            questionaireData.error.add("Badan usaha harus antara 1-7");
-        }
+            // Validasi untuk atribut pekerjaan utama
+            if (!isValidString(questionaireData.getPekerjaanUtama())) {
+                questionaireData.error.add("Pekerjaan utama tidak boleh kosong");
+            }
 
-        // Validasi untuk atribut pekerjaan utama
-        if (!isValidString(questionaireData.getPekerjaanUtama()) || !questionaireData.getPekerjaanUtama().matches("[a-zA-Z ]+")) {
-            questionaireData.error.add("Pekerjaan utama tidak boleh kosong atau mengandung angka");
-        }
+            // Validasi untuk atribut bidang pekerjaan utama
+            if ("<None Selected>".equals(questionaireData.getBidangPekerjaanUtama())) {
+                questionaireData.error.add("Bidang pekerjaan utama harus dipilih");
+            }
 
-        // Validasi untuk atribut bidang pekerjaan utama
-        if (!(questionaireData.getBidangPekerjaanUtama().matches("[123]"))) {
-            questionaireData.error.add("Bidang pekerjaan utama harus antara 1-3");
-        }
+            // Validasi untuk atribut tempat usaha
+            if ("<None Selected>".equals(questionaireData.getTempatUsaha())) {
+                questionaireData.error.add("Tempat usaha harus dipilih");
+            }
 
-        // Validasi untuk atribut tempat usaha
-        if (!(questionaireData.getTempatUsaha().matches("[1234]"))) {
-            questionaireData.error.add("Tempat usaha harus antara 1-4");
-        }
+            // Validasi untuk atribut banyak pekerja tetap
+            if (!(questionaireData.getBanyakPekerjaLaki() + questionaireData.getBanyakPekerjaPerempuan() >= 0)){
+                questionaireData.error.add("Banyak pekerja tetap tidak boleh bernilai negatif");
+            }
 
-        // Validasi untuk atribut banyak pekerja tetap
-        if (!(questionaireData.getBanyakPekerjaLaki() + questionaireData.getBanyakPekerjaPerempuan() > 0)){
-            questionaireData.error.add("Banyak pekerja tetap harus lebih besar dari 0");
         }
         // Jika semua validasi berhasil, kembalikan true
-        return true;
+        return questionaireData.error.isEmpty();
+    
     }
 
     // Metode bantuan untuk memeriksa apakah string tidak kosong

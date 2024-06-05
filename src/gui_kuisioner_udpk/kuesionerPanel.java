@@ -4,6 +4,7 @@
  */
 package gui_kuisioner_udpk;
 
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
 /**
@@ -147,19 +148,19 @@ public class kuesionerPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(banyakPekerjaLabel)
                                         .addGap(18, 18, 18)
                                         .addComponent(jmlPekerjaLakiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(16, 16, 16)
-                                        .addComponent(jmlPekerjaLakiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jmlPekerjaLakiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jmlPekerjaPerempuanSpinner)
-                                    .addComponent(jmlPekerjaPerempuanLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jmlPekerjaPerempuanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jmlPekerjaPerempuanSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -260,7 +261,15 @@ public class kuesionerPanel extends javax.swing.JPanel {
         qd.setBanyakPekerjaLaki((int) jmlPekerjaLakiSpinner.getValue());
         qd.setBanyakPekerjaPerempuan((int) jmlPekerjaPerempuanSpinner.getValue());
         
-        contentScrollPane.setViewportView(new personKuesionerPanel(contentScrollPane, perusahaan, qd));
+        if(qd.validasi.validate()) {
+            contentScrollPane.setViewportView(new personKuesionerPanel(contentScrollPane, perusahaan, qd));
+        } else {
+            String errorMessages = "";
+            for(String error : qd.error) {
+                errorMessages = errorMessages + error + "\n";
+            }
+            JOptionPane.showMessageDialog(this, errorMessages);
+        }
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
@@ -271,10 +280,11 @@ public class kuesionerPanel extends javax.swing.JPanel {
     private void statusPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusPerusahaanComboBoxActionPerformed
         // TODO add your handling code here:
         if(statusPerusahaanComboBox.getSelectedIndex() >= 3 ) {
-            kualifikasiPerusahaanComboBox.setSelectedIndex(0);
+            kualifikasiPerusahaanComboBox.setEnabled(false);
+            kualifikasiPerusahaanComboBox.setSelectedItem(0);
             badanHukumComboBox.setSelectedIndex(0);
             badanHukumComboBox.setEnabled(false);
-            jenisBoronganField.setText("");
+            jenisBoronganField.setText("none");
             jenisBoronganField.setEnabled(false);
             bidangPekerjaanComboBox.setSelectedIndex(0);
             bidangPekerjaanComboBox.setEnabled(false);
@@ -285,6 +295,7 @@ public class kuesionerPanel extends javax.swing.JPanel {
             jmlPekerjaPerempuanSpinner.setValue(0);
             jmlPekerjaPerempuanSpinner.setEnabled(false);
         } else {
+            kualifikasiPerusahaanComboBox.setEnabled(true);
             badanHukumComboBox.setEnabled(true);
             jenisBoronganField.setEnabled(true);
             bidangPekerjaanComboBox.setEnabled(true);
