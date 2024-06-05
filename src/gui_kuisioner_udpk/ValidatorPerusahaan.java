@@ -49,7 +49,7 @@ public class ValidatorPerusahaan implements Validator {
             // Validasi untuk telepon
             if (!isValidString(perusahaan.getTelepon()) || !perusahaan.getTelepon().matches("[0][0-9]*")
                     || !(perusahaan.getTelepon().length()>=11 && perusahaan.getTelepon().length()<=13)) {
-                perusahaan.error.add("Nomor telepon terdiri dari 11-13 angka dan diawali dengan");
+                perusahaan.error.add("Nomor telepon terdiri dari 11-13 angka dan diawali dengan 0");
 
             }
 

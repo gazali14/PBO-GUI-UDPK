@@ -90,6 +90,8 @@ public class perusahaanPanel extends javax.swing.JPanel {
         kodeDesaField = new javax.swing.JTextField();
         kodeProvinsiField = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         namaPerusahaanField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 namaPerusahaanFieldActionPerformed(evt);

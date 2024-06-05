@@ -33,6 +33,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        contentScrollPane.setBackground(new java.awt.Color(255, 255, 255));
+
         Menu.setText("Menu");
         Menu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 

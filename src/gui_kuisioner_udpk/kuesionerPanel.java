@@ -45,15 +45,15 @@ public class kuesionerPanel extends javax.swing.JPanel {
         tempatUsahaComboBox = new javax.swing.JComboBox<>();
         tempatUsahaLainnya = new javax.swing.JTextField();
         banyakPekerjaLabel = new javax.swing.JLabel();
-        jmlPekerjaLakiField = new javax.swing.JTextField();
-        jmlPekerjaPerempuanField = new javax.swing.JTextField();
-        jmlPekerjaField = new javax.swing.JTextField();
         jmlPekerjaLakiLabel = new javax.swing.JLabel();
         jmlPekerjaPerempuanLabel = new javax.swing.JLabel();
-        jmlPekerjaLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         nextButton = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        jmlPekerjaLakiSpinner = new javax.swing.JSpinner();
+        jmlPekerjaPerempuanSpinner = new javax.swing.JSpinner();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         judulKuesionerPanel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         judulKuesionerPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -68,8 +68,18 @@ public class kuesionerPanel extends javax.swing.JPanel {
         jenisBoronganLabel.setText("Isikan Jenis borongan Pekerjaan Utama Yang Biasa Dikerjakan:");
 
         statusPerusahaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aktif Lama", "Aktif Baru", "Tutup", "Tidak Ditemukan", "Bukan Konstruksi" }));
+        statusPerusahaanComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusPerusahaanComboBoxActionPerformed(evt);
+            }
+        });
 
         kualifikasiPerusahaanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gred 1", "Gred 2", "Gred 3", "Gred 4", "Gred 5", "Gred 6", "Gred 7", "Non Gred" }));
+        kualifikasiPerusahaanComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kualifikasiPerusahaanComboBoxActionPerformed(evt);
+            }
+        });
 
         badanHukumComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PT. Persero", "PT.", "CV", "Firma", "Koperasi", "Perorangan", "Lainnya" }));
 
@@ -85,23 +95,11 @@ public class kuesionerPanel extends javax.swing.JPanel {
 
         banyakPekerjaLabel.setText("Banyak Pekerja Tetap                      :");
 
-        jmlPekerjaLakiField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jmlPekerjaLakiFieldKeyTyped(evt);
-            }
-        });
-
-        jmlPekerjaField.setEditable(false);
-        jmlPekerjaField.setFocusable(false);
-
         jmlPekerjaLakiLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmlPekerjaLakiLabel.setText("Laki-laki");
 
         jmlPekerjaPerempuanLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmlPekerjaPerempuanLabel.setText("Perempuan");
-
-        jmlPekerjaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jmlPekerjaLabel.setText("Total");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         jLabel1.setText("(jumlah pekerja tetap pada saat pencacahan)");
@@ -134,23 +132,19 @@ public class kuesionerPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jmlPekerjaLakiField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(banyakPekerjaLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jmlPekerjaLakiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jmlPekerjaPerempuanLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jmlPekerjaPerempuanField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jmlPekerjaLakiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(16, 16, 16)
+                                        .addComponent(jmlPekerjaLakiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jmlPekerjaField, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                    .addComponent(jmlPekerjaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jmlPekerjaPerempuanSpinner)
+                                    .addComponent(jmlPekerjaPerempuanLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -183,7 +177,7 @@ public class kuesionerPanel extends javax.swing.JPanel {
                                             .addComponent(tempatUsahaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addComponent(tempatUsahaLainnya))))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 13, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(judulKuesionerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -223,15 +217,13 @@ public class kuesionerPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(banyakPekerjaLabel)
                     .addComponent(jmlPekerjaLakiLabel)
-                    .addComponent(jmlPekerjaPerempuanLabel)
-                    .addComponent(jmlPekerjaLabel))
+                    .addComponent(jmlPekerjaPerempuanLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jmlPekerjaLakiField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jmlPekerjaPerempuanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jmlPekerjaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
+                        .addComponent(jmlPekerjaLakiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jmlPekerjaPerempuanSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,22 +241,32 @@ public class kuesionerPanel extends javax.swing.JPanel {
         qd.setPekerjaanUtama(jenisBoronganField.getText());
         qd.setBidangPekerjaanUtama(bidangPekerjaanComboBox.getSelectedItem().toString());
         qd.setTempatUsaha(tempatUsahaComboBox.getSelectedItem().toString());
-        qd.setBanyakPekerjaLaki(Integer.parseInt(jmlPekerjaLakiField.getText()));
-        qd.setBanyakPekerjaPerempuan(Integer.parseInt(jmlPekerjaPerempuanField.getText()));
+        qd.setBanyakPekerjaLaki((int) jmlPekerjaLakiSpinner.getValue());
+        qd.setBanyakPekerjaPerempuan((int) jmlPekerjaPerempuanSpinner.getValue());
         
-        Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd);
+        contentScrollPane.setViewportView(new personPanel(contentScrollPane, perusahaan, qd));
     }//GEN-LAST:event_nextButtonActionPerformed
-
-    private void jmlPekerjaLakiFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jmlPekerjaLakiFieldKeyTyped
-        // TODO add your handling code here:
-        jmlPekerjaField.setText(Integer.toString((Integer.parseInt(jmlPekerjaLakiField.getText()) 
-                + Integer.parseInt(jmlPekerjaPerempuanField.getText()))));
-    }//GEN-LAST:event_jmlPekerjaLakiFieldKeyTyped
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
         contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, perusahaan));
     }//GEN-LAST:event_backActionPerformed
+
+    private void statusPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusPerusahaanComboBoxActionPerformed
+        // TODO add your handling code here:
+        if(statusPerusahaanComboBox.getSelectedIndex() >= 2 ) {
+            badanHukumComboBox.setEnabled(false);
+            jenisBoronganField.setEnabled(false);
+            bidangPekerjaanComboBox.setEnabled(false);
+            tempatUsahaComboBox.setEnabled(false);
+            jmlPekerjaLakiSpinner.setEnabled(false);
+            jmlPekerjaPerempuanSpinner.setEnabled(false);
+        }
+    }//GEN-LAST:event_statusPerusahaanComboBoxActionPerformed
+
+    private void kualifikasiPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kualifikasiPerusahaanComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kualifikasiPerusahaanComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -277,12 +279,10 @@ public class kuesionerPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jenisBoronganField;
     private javax.swing.JLabel jenisBoronganLabel;
-    private javax.swing.JTextField jmlPekerjaField;
-    private javax.swing.JLabel jmlPekerjaLabel;
-    private javax.swing.JTextField jmlPekerjaLakiField;
     private javax.swing.JLabel jmlPekerjaLakiLabel;
-    private javax.swing.JTextField jmlPekerjaPerempuanField;
+    private javax.swing.JSpinner jmlPekerjaLakiSpinner;
     private javax.swing.JLabel jmlPekerjaPerempuanLabel;
+    private javax.swing.JSpinner jmlPekerjaPerempuanSpinner;
     private javax.swing.JLabel judulKuesionerPanel;
     private javax.swing.JComboBox<String> kualifikasiPerusahaanComboBox;
     private javax.swing.JLabel kualifikasiPerusahaanLabel;
