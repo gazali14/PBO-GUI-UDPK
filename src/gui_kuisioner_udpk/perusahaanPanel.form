@@ -51,43 +51,45 @@
                                       <Component id="faxField" min="-2" pref="126" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="hpField" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="nextButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="emailField" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="kabupatenField" min="-2" pref="183" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="kecamatanField" min="-2" pref="183" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="desaField" min="-2" pref="183" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="emailField" min="-2" pref="302" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="kabupatenField" min="-2" pref="183" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="provinsiComboBox" min="-2" pref="183" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="kecamatanField" min="-2" pref="183" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="desaField" min="-2" pref="183" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="kodeKabupatenSpinner" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                                  <Component id="kodeProvinsiSpinner" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                                  <Component id="kodeKecamatanSpinner" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                                  <Component id="kodeDesaSpinner" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="provinsiComboBox" min="-2" pref="183" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="kodeKabupatenField" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="kodeKecamatanField" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="kodeDesaField" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="kodeProvinsiField" min="-2" pref="70" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -156,32 +158,32 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="kodeProvinsiSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="provinsiComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="kodeProvinsiField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="kodeKabupatenSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="kabupatenField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="kodeKabupatenField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="kodeKecamatanSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="kecamatanField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel11" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="kodeKecamatanField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="kodeDesaSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="desaField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel14" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="kodeDesaField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel13" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="emailField" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -319,14 +321,6 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JSpinner" name="kodeProvinsiSpinner">
-    </Component>
-    <Component class="javax.swing.JSpinner" name="kodeKabupatenSpinner">
-    </Component>
-    <Component class="javax.swing.JSpinner" name="kodeKecamatanSpinner">
-    </Component>
-    <Component class="javax.swing.JSpinner" name="kodeDesaSpinner">
-    </Component>
     <Component class="javax.swing.JLabel" name="keteranganUmumLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -444,6 +438,14 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="kipField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="kodeKabupatenField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="kodeKecamatanField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="kodeDesaField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="kodeProvinsiField">
     </Component>
   </SubComponents>
 </Form>

@@ -83,38 +83,35 @@ public class ValidatorQuestionaireData implements Validator {
             case "4": System.out.println("Tidak Ditemukan"); break;
             case "5": System.out.println("Bukan Konstruksi"); break;
         }
-        if (questionaireData.getStatusUsaha().equals("1") || questionaireData.getStatusUsaha().equals("2"))
-        {
-            System.out.println("Gred: " + questionaireData.getGred());
-            System.out.print("Badan Hukum/Badan Usaha: ");
-            switch(questionaireData.getBadanUsaha()) {
-                case "1": System.out.println("PT. Persero"); break;
-                case "2": System.out.println("PT"); break;
-                case "3": System.out.println("CV"); break;
-                case "4": System.out.println("Firma"); break;
-                case "5": System.out.println("Koperasi"); break;
-                case "6": System.out.println("Perorangan"); break;
-                case "7": System.out.println("Lainnya"); break;
-            }
-            System.out.println("Pekerjaan Utama: " + questionaireData.getPekerjaanUtama());
-            System.out.print("Bidang Pekerjaan Utama: ");
-            switch(questionaireData.getBidangPekerjaanUtama()) {
-                case "1": System.out.println("Konstruksi Gedung"); break;
-                case "2": System.out.println("Konstruksi Sipil"); break;
-                case "3": System.out.println("Konstruksi Khusus"); break;
-            }
-            System.out.print("Tempat Usaha: ");
-            switch(questionaireData.getTempatUsaha()) {
-                case "1": System.out.println("Kantor"); break;
-                case "2": System.out.println("Rumah Tinggal"); break;
-                case "3": System.out.println("Rukan"); break;
-                default : System.out.println("Lainnya : " + questionaireData.getTempatUsaha()); break;
-            }
-            System.out.println("Banyak Pekerja Laki-laki: " + questionaireData.getBanyakPekerjaLaki());
-            System.out.println("Banyak Pekerja Perempuan: " + questionaireData.getBanyakPekerjaPerempuan());
-
-
+        
+        System.out.println("Gred: " + questionaireData.getGred());
+        System.out.print("Badan Hukum/Badan Usaha: ");
+        switch(questionaireData.getBadanUsaha()) {
+            case "1": System.out.println("PT. Persero"); break;
+            case "2": System.out.println("PT"); break;
+            case "3": System.out.println("CV"); break;
+            case "4": System.out.println("Firma"); break;
+            case "5": System.out.println("Koperasi"); break;
+            case "6": System.out.println("Perorangan"); break;
+            case "7": System.out.println("Lainnya"); break;
         }
+        System.out.println("Pekerjaan Utama: " + questionaireData.getPekerjaanUtama());
+        System.out.print("Bidang Pekerjaan Utama: ");
+        switch(questionaireData.getBidangPekerjaanUtama()) {
+            case "1": System.out.println("Konstruksi Gedung"); break;
+            case "2": System.out.println("Konstruksi Sipil"); break;
+            case "3": System.out.println("Konstruksi Khusus"); break;
+        }
+        System.out.print("Tempat Usaha: ");
+        switch(questionaireData.getTempatUsaha()) {
+            case "1": System.out.println("Kantor"); break;
+            case "2": System.out.println("Rumah Tinggal"); break;
+            case "3": System.out.println("Rukan"); break;
+            default : System.out.println("Lainnya : " + questionaireData.getTempatUsaha()); break;
+        }
+        System.out.println("Banyak Pekerja Laki-laki: " + questionaireData.getBanyakPekerjaLaki());
+        System.out.println("Banyak Pekerja Perempuan: " + questionaireData.getBanyakPekerjaPerempuan());
+
         System.out.println("Contact Person: " + questionaireData.getContactPerson());
         System.out.println("Pencacah: " + questionaireData.getPencacah());
         System.out.println("Pengawas: " + questionaireData.getPengawas());

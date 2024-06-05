@@ -78,7 +78,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void entryMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryMenuItemActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane));
+        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, new Perusahaan()));
     }//GEN-LAST:event_entryMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed

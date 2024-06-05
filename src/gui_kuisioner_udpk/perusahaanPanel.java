@@ -14,12 +14,35 @@ import javax.swing.JOptionPane;
 public class perusahaanPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
+    private Perusahaan perusahaan;
     /**
      * Creates new form perusahaanPanel
      */
-    public perusahaanPanel(JScrollPane contentScrollPane) {
+    public perusahaanPanel(JScrollPane contentScrollPane, Perusahaan perusahaan) {
         initComponents();
+        this.perusahaan = perusahaan;
         this.contentScrollPane = contentScrollPane;
+        if (perusahaan.getKIP() != null) {
+            kipField.setText(perusahaan.getKIP());
+            namaPerusahaanField.setText(perusahaan.getNamaPerusahaan());
+            namaPengusahaField.setText(perusahaan.getNamaPengusaha());
+            alamatField.setText(perusahaan.getAlamat());
+            kodePosField.setText(perusahaan.getKodePos());
+            teleponField.setText(perusahaan.getTelepon());
+            faxField.setText(perusahaan.getFax());
+            hpField.setText(perusahaan.getNoHP());
+            provinsiComboBox.setSelectedItem(perusahaan.getProvinsi());
+            kodeProvinsiField.setText(perusahaan.getKodeProv());
+            kabupatenField.setText(perusahaan.getKabupaten());
+            kodeKabupatenField.setText(perusahaan.getKodeKab());
+            kecamatanField.setText(perusahaan.getKecamatan());
+            kodeKecamatanField.setText(perusahaan.getKodeKec());
+            desaField.setText(perusahaan.getDesa());
+            kodeDesaField.setText(perusahaan.getKodeDes());
+            emailField.setText(perusahaan.getEmail());
+            
+            Database.getInstance().deletePerusahaan(perusahaan.getKIP());
+        }
     }
 
     /**
@@ -42,10 +65,6 @@ public class perusahaanPanel extends javax.swing.JPanel {
         kecamatanField = new javax.swing.JTextField();
         desaField = new javax.swing.JTextField();
         provinsiComboBox = new javax.swing.JComboBox<>();
-        kodeProvinsiSpinner = new javax.swing.JSpinner();
-        kodeKabupatenSpinner = new javax.swing.JSpinner();
-        kodeKecamatanSpinner = new javax.swing.JSpinner();
-        kodeDesaSpinner = new javax.swing.JSpinner();
         keteranganUmumLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -66,6 +85,10 @@ public class perusahaanPanel extends javax.swing.JPanel {
         judul_TextField = new javax.swing.JTextField();
         kipLabel = new javax.swing.JLabel();
         kipField = new javax.swing.JTextField();
+        kodeKabupatenField = new javax.swing.JTextField();
+        kodeKecamatanField = new javax.swing.JTextField();
+        kodeDesaField = new javax.swing.JTextField();
+        kodeProvinsiField = new javax.swing.JTextField();
 
         namaPerusahaanField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,35 +256,37 @@ public class perusahaanPanel extends javax.swing.JPanel {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(faxField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(hpField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(nextButton)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
                                             .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(kabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(jLabel17))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(kecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(jLabel18))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(desaField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(jLabel16)))
+                                            .addGap(3, 3, 3))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(provinsiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jLabel15)))
-                                                .addGap(22, 22, 22)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(kodeKabupatenSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(kodeProvinsiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(kodeKecamatanSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(kodeDesaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                        .addComponent(kabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel17))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(kecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel18))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(desaField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel16)))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(provinsiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(jLabel15)))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(kodeKabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(kodeKecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(kodeDesaField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(kodeProvinsiField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(0, 0, Short.MAX_VALUE)))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(namaPengusahaField, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(alamatField, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -311,28 +336,28 @@ public class perusahaanPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(kodeProvinsiSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(provinsiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kodeProvinsiField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(kodeKabupatenSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(kabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kodeKabupatenField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(kodeKecamatanSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(kecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kodeKecamatanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(kodeDesaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(desaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kodeDesaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(emailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -392,7 +417,6 @@ public class perusahaanPanel extends javax.swing.JPanel {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
-        Perusahaan perusahaan = new Perusahaan();
         perusahaan.setKIP(kipField.getText());
         perusahaan.setNamaPerusahaan(namaPerusahaanField.getText());
         perusahaan.setNamaPengusaha(namaPengusahaField.getText());
@@ -402,13 +426,13 @@ public class perusahaanPanel extends javax.swing.JPanel {
         perusahaan.setFax(faxField.getText());
         perusahaan.setNoHP(hpField.getText());
         perusahaan.setProvinsi(provinsiComboBox.getSelectedItem().toString());
-        perusahaan.setKodeProv(kodeProvinsiSpinner.getValue().toString());
+        perusahaan.setKodeProv(kodeProvinsiField.getText());
         perusahaan.setKabupaten(kabupatenField.getText());
-        perusahaan.setKodeKab(kodeKabupatenSpinner.getValue().toString());
+        perusahaan.setKodeKab(kodeKabupatenField.getText());
         perusahaan.setKecamatan(kecamatanField.getText());
-        perusahaan.setKodeKec(kodeKecamatanSpinner.getValue().toString());
+        perusahaan.setKodeKec(kodeKecamatanField.getText());
         perusahaan.setDesa(desaField.getText());
-        perusahaan.setKodeDes(kodeDesaSpinner.getValue().toString());
+        perusahaan.setKodeDes(kodeDesaField.getText());
         perusahaan.setEmail(emailField.getText());
         
         if(perusahaan.getValidasi()) {
@@ -452,11 +476,11 @@ public class perusahaanPanel extends javax.swing.JPanel {
     private javax.swing.JLabel keteranganUmumLabel;
     private javax.swing.JTextField kipField;
     private javax.swing.JLabel kipLabel;
-    private javax.swing.JSpinner kodeDesaSpinner;
-    private javax.swing.JSpinner kodeKabupatenSpinner;
-    private javax.swing.JSpinner kodeKecamatanSpinner;
+    private javax.swing.JTextField kodeDesaField;
+    private javax.swing.JTextField kodeKabupatenField;
+    private javax.swing.JTextField kodeKecamatanField;
     private javax.swing.JTextField kodePosField;
-    private javax.swing.JSpinner kodeProvinsiSpinner;
+    private javax.swing.JTextField kodeProvinsiField;
     private javax.swing.JTextField namaPengusahaField;
     private javax.swing.JTextField namaPerusahaanField;
     private javax.swing.JButton nextButton;

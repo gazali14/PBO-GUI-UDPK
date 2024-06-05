@@ -8,12 +8,12 @@ package gui_kuisioner_udpk;
  *
  * @author LENOVO
  */
-public class kuesionerPanel2 extends javax.swing.JPanel {
+public class personPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form kuesionerPanel2
      */
-    public kuesionerPanel2() {
+    public personPanel() {
         initComponents();
     }
 
