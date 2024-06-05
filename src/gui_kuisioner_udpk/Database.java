@@ -8,15 +8,16 @@ package gui_kuisioner_udpk;
  *
  * @author U53R
  */
+import java.io.Serializable;
 import java.sql.*;
 
-public class Database {
+public class Database implements Serializable{
 
     private static Database instance;
     private final String DB_TYPE = "mysql";
     private final String DB_HOST = "localhost";
     private final String DB_PORT = "3306";
-    private final String DB_NAME = "kuisioner_udpk";
+    private final String DB_NAME = "kuesioner_udpk";
     private final String DB_USER = "root";
     private final String DB_PASS = "";
 
@@ -65,30 +66,27 @@ public class Database {
     }
 
     // Method untuk menambahkan data perusahaan
-    public void insertPerusahaan(String KIP, String namaPerusahaan, String namaPengusaha, String alamat, String kodePos,
-                                  String telepon, String fax, String hp, String provinsi, String kodeProvinsi,
-                                  String kabKota, String kodeKabKota, String kecamatan, String kodeKecamatan,
-                                  String desaKelurahan, String kodeDesaKelurahan, String email) {
-        String sql = "INSERT INTO perusahaan (KIP, nama_perusahaan, nama_pengusaha, alamat, kode_pos, telepon, fax, hp, provinsi, kode_provinsi, kab_kota, kode_kabkota, kecamatan, kode_kecamatan, desa_kelurahan, kode_desa_kelurahan, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertPerusahaan(Perusahaan perusahaan){
+        String sql = "INSERT INTO perusahaan (KIP, nama_perusahaan, nama_pengusaha, alamat, kode_pos, telepon, fax, hp, provinsi, kode_provinsi, kab_kota, kode_kabkota, kecamatan, kode_kecamatan, desa_kelurahan, kode_desa_kelurahan, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, KIP);
-            stmt.setString(2, namaPerusahaan);
-            stmt.setString(3, namaPengusaha);
-            stmt.setString(4, alamat);
-            stmt.setString(5, kodePos);
-            stmt.setString(6, telepon);
-            stmt.setString(7, fax);
-            stmt.setString(8, hp);
-            stmt.setString(9, provinsi);
-            stmt.setString(10, kodeProvinsi);
-            stmt.setString(11, kabKota);
-            stmt.setString(12, kodeKabKota);
-            stmt.setString(13, kecamatan);
-            stmt.setString(14, kodeKecamatan);
-            stmt.setString(15, desaKelurahan);
-            stmt.setString(16, kodeDesaKelurahan);
-            stmt.setString(17, email);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, perusahaan.getKIP());
+            stmt.setString(2, perusahaan.getNamaPerusahaan());
+            stmt.setString(3, perusahaan.getNamaPengusaha());
+            stmt.setString(4, perusahaan.getAlamat());
+            stmt.setString(5, perusahaan.getKodePos());
+            stmt.setString(6, perusahaan.getTelepon());
+            stmt.setString(7, perusahaan.getFax());
+            stmt.setString(8, perusahaan.getNoHP());
+            stmt.setString(9, perusahaan.getProvinsi());
+            stmt.setString(10, perusahaan.getKodeProv());
+            stmt.setString(11, perusahaan.getKabupaten());
+            stmt.setString(12, perusahaan.getKodeKab());
+            stmt.setString(13, perusahaan.getKecamatan());
+            stmt.setString(14, perusahaan.getKodeKec());
+            stmt.setString(15, perusahaan.getDesa());
+            stmt.setString(16, perusahaan.getKodeDes());
+            stmt.setString(17, perusahaan.getEmail());
             stmt.executeUpdate();
             System.out.println("Data perusahaan berhasil ditambahkan.");
         } catch (SQLException e) {
@@ -103,7 +101,7 @@ public class Database {
                                   String desaKelurahan, String kodeDesaKelurahan, String email) {
         String sql = "UPDATE perusahaan SET nama_perusahaan=?, nama_pengusaha=?, alamat=?, kode_pos=?, telepon=?, fax=?, hp=?, provinsi=?, kode_provinsi=?, kab_kota=?, kode_kabkota=?, kecamatan=?, kode_kecamatan=?, desa_kelurahan=?, kode_desa_kelurahan=?, email=? WHERE KIP=?";
         try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, namaPerusahaan);
             stmt.setString(2, namaPengusaha);
             stmt.setString(3, alamat);
@@ -160,20 +158,19 @@ public class Database {
     }
 
     // Method untuk menambahkan data kuisioner
-    public void insertKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
-                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR) {
-        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertKuisioner(String KIP, QuestionaireData qd) {
+        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
-            stmt.setString(2, statusPerusahaan);
-            stmt.setString(3, kualifikasiPerusahaan);
-            stmt.setString(4, badanHukum);
-            stmt.setString(5, jenisBorongan);
-            stmt.setString(6, bidangPekerjaan);
-            stmt.setString(7, tempatUsaha);
-            stmt.setString(8, banyakPekerjaLK);
-            stmt.setString(9, banyakPekerjaPR);
+            stmt.setString(2, qd.getStatusUsaha());
+            stmt.setString(3, qd.getGred());
+            stmt.setString(4, qd.getBadanUsaha());
+            stmt.setString(5, qd.getPekerjaanUtama());
+            stmt.setString(6, qd.getBidangPekerjaanUtama());
+            stmt.setString(7, qd.getTempatUsaha());
+            stmt.setString(8, Integer.toString(qd.getBanyakPekerjaLaki()));
+            stmt.setString(9, Integer.toString(qd.getBanyakPekerjaPerempuan()));
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil ditambahkan.");
         } catch (SQLException e) {
