@@ -170,9 +170,8 @@ public class Database implements Serializable{
         }
     }
 
-    // Method untuk menambahkan data kuisioner
-    public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson) {
-        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson, Date tglPengawasan, Date tglPencacahan, String catatan) {
+        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
@@ -187,6 +186,9 @@ public class Database implements Serializable{
             stmt.setString(10, namaPengawas);
             stmt.setString(11, namaPencacah);
             stmt.setString(12, contactPerson);
+            stmt.setDate(13, new java.sql.Date(tglPengawasan.getTime()));
+            stmt.setDate(14, new java.sql.Date(tglPencacahan.getTime()));
+            stmt.setString(15, catatan);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil ditambahkan.");
         } catch (SQLException e) {
@@ -194,32 +196,35 @@ public class Database implements Serializable{
         }
     }
 
-
     // Method untuk memperbarui data kuisioner berdasarkan KIP
     public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
                                 String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR,
-                                String namaPengawas, String namaPencacah, String contactPerson) {
-        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, nama_pengawas=?, nama_pencacah=?, contact_person=? WHERE KIP=?";
+                                String namaPengawas, String namaPencacah, String contactPerson, Date tglPengawasan, Date tglPencacahan, String catatan) {
+        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, nama_pengawas=?, nama_pencacah=?, contact_person=?, tgl_pengawasan=?, tgl_pencacahan=?, catatan=? WHERE KIP=?";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, statusPerusahaan);
-            stmt.setString(2, kualifikasiPerusahaan);
-            stmt.setString(3, badanHukum);
-            stmt.setString(4, jenisBorongan);
-            stmt.setString(5, bidangPekerjaan);
-            stmt.setString(6, tempatUsaha);
-            stmt.setString(7, banyakPekerjaLK);
-            stmt.setString(8, banyakPekerjaPR);
-            stmt.setString(9, namaPengawas);
-            stmt.setString(10, namaPencacah);
-            stmt.setString(11, contactPerson);
-            stmt.setString(12, KIP);
+            stmt.setString(1, KIP);
+            stmt.setString(2, statusPerusahaan);
+            stmt.setString(3, kualifikasiPerusahaan);
+            stmt.setString(4, badanHukum);
+            stmt.setString(5, jenisBorongan);
+            stmt.setString(6, bidangPekerjaan);
+            stmt.setString(7, tempatUsaha);
+            stmt.setString(8, banyakPekerjaLK);
+            stmt.setString(9, banyakPekerjaPR);
+            stmt.setString(10, namaPengawas);
+            stmt.setString(11, namaPencacah);
+            stmt.setString(12, contactPerson);
+            stmt.setDate(13, new java.sql.Date(tglPengawasan.getTime()));
+            stmt.setDate(14, new java.sql.Date(tglPencacahan.getTime()));
+            stmt.setString(15, catatan);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil diperbarui.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
 
 
     // Method untuk menghapus data kuisioner berdasarkan KIP
@@ -234,8 +239,7 @@ public class Database implements Serializable{
             System.out.println(e.getMessage());
         }
     }
-
-
+    
     public void getKuisioner(String KIP) {
         String sql = "SELECT * FROM kuisioner WHERE KIP=?";
         try (Connection conn = this.connect();
@@ -255,22 +259,25 @@ public class Database implements Serializable{
                 System.out.println("Nama Pengawas: " + rs.getString("nama_pengawas"));
                 System.out.println("Nama Pencacah: " + rs.getString("nama_pencacah"));
                 System.out.println("Contact Person: " + rs.getString("contact_person"));
+                System.out.println("Tanggal Pengawasan: " + rs.getDate("tgl_pengawasan"));
+                System.out.println("Tanggal Pencacahan: " + rs.getDate("tgl_pencacahan"));
+                System.out.println("Catatan: " + rs.getString("catatan"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
    
 
     // Method untuk menambahkan data person
-    public void insertPerson(String nama, String jabatan, String keteranganPetugas, String catatan) {
-        String sql = "INSERT INTO person (nama, jabatan, keterangan_petugas, catatan) VALUES (?, ?, ?, ?)";
+    public void insertPerson(String nama, String jabatan, String keteranganPetugas) {
+        String sql = "INSERT INTO person (nama, jabatan, keterangan_petugas) VALUES (?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, nama);
             stmt.setString(2, jabatan);
             stmt.setString(3, keteranganPetugas);
-            stmt.setString(4, catatan);
             stmt.executeUpdate();
             System.out.println("Data person berhasil ditambahkan.");
         } catch (SQLException e) {
@@ -279,15 +286,14 @@ public class Database implements Serializable{
     }
 
     // Method untuk memperbarui data person berdasarkan id
-    public void updatePerson(int id, String nama, String jabatan, String keteranganPetugas, String catatan) {
-        String sql = "UPDATE person SET nama=?, jabatan=?, keterangan_petugas=?, catatan=? WHERE id=?";
+    public void updatePerson(int id, String nama, String jabatan, String keteranganPetugas) {
+        String sql = "UPDATE person SET nama=?, jabatan=?, keterangan_petugas=? WHERE id=?";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, nama);
-            stmt.setString(2, jabatan);
-            stmt.setString(3, keteranganPetugas);
-            stmt.setString(4, catatan);
-            stmt.setInt(5, id);
+            stmt.setInt(1, id);
+            stmt.setString(2, nama);
+            stmt.setString(3, jabatan);
+            stmt.setString(4, keteranganPetugas);
             stmt.executeUpdate();
             System.out.println("Data person berhasil diperbarui.");
         } catch (SQLException e) {
@@ -320,13 +326,9 @@ public class Database implements Serializable{
                 System.out.println("Nama: " + rs.getString("nama"));
                 System.out.println("Jabatan: " + rs.getString("jabatan"));
                 System.out.println("Keterangan Petugas: " + rs.getString("keterangan_petugas"));
-                System.out.println("Catatan: " + rs.getString("catatan"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-    }
-
-       
-    
+    }  
 }
