@@ -171,8 +171,8 @@ public class Database implements Serializable{
     }
 
     // Method untuk menambahkan data kuisioner
-    public void insertKuisioner(String KIP, QuestionaireData qd, int id_person) {
-        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, id_person) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson) {
+        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
@@ -184,7 +184,9 @@ public class Database implements Serializable{
             stmt.setString(7, qd.getTempatUsaha());
             stmt.setString(8, Integer.toString(qd.getBanyakPekerjaLaki()));
             stmt.setString(9, Integer.toString(qd.getBanyakPekerjaPerempuan()));
-            stmt.setInt(10, id_person);
+            stmt.setString(10, namaPengawas);
+            stmt.setString(11, namaPencacah);
+            stmt.setString(12, contactPerson);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil ditambahkan.");
         } catch (SQLException e) {
@@ -192,10 +194,12 @@ public class Database implements Serializable{
         }
     }
 
+
     // Method untuk memperbarui data kuisioner berdasarkan KIP
     public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
-                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR, int id_person) {
-        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, id_person=? WHERE KIP=?";
+                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR,
+                                String namaPengawas, String namaPencacah, String contactPerson) {
+        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, nama_pengawas=?, nama_pencacah=?, contact_person=? WHERE KIP=?";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, statusPerusahaan);
@@ -206,14 +210,17 @@ public class Database implements Serializable{
             stmt.setString(6, tempatUsaha);
             stmt.setString(7, banyakPekerjaLK);
             stmt.setString(8, banyakPekerjaPR);
-            stmt.setInt(9, id_person);
-            stmt.setString(10, KIP);
+            stmt.setString(9, namaPengawas);
+            stmt.setString(10, namaPencacah);
+            stmt.setString(11, contactPerson);
+            stmt.setString(12, KIP);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil diperbarui.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
 
     // Method untuk menghapus data kuisioner berdasarkan KIP
     public void deleteKuisioner(String KIP) {
@@ -227,6 +234,7 @@ public class Database implements Serializable{
             System.out.println(e.getMessage());
         }
     }
+
 
     public void getKuisioner(String KIP) {
         String sql = "SELECT * FROM kuisioner WHERE KIP=?";
@@ -244,12 +252,15 @@ public class Database implements Serializable{
                 System.out.println("Tempat Usaha: " + rs.getString("tempat_usaha"));
                 System.out.println("Banyak Pekerja Laki-laki: " + rs.getString("banyak_pekerja_LK"));
                 System.out.println("Banyak Pekerja Perempuan: " + rs.getString("banyak_pekerja_PR"));
-                System.out.println("ID Person: " + rs.getInt("id_person"));
+                System.out.println("Nama Pengawas: " + rs.getString("nama_pengawas"));
+                System.out.println("Nama Pencacah: " + rs.getString("nama_pencacah"));
+                System.out.println("Contact Person: " + rs.getString("contact_person"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-    }    
+    }
+   
 
     // Method untuk menambahkan data person
     public void insertPerson(String nama, String jabatan, String keteranganPetugas, String catatan) {
