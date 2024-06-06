@@ -161,9 +161,9 @@ public class personKuesionerPanel extends javax.swing.JPanel {
                                             .addComponent(tanggalPengawasField)
                                             .addComponent(namaPengawasField, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(namaCPLabel)
-                                    .addComponent(jabatanCPLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(namaCPLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jabatanCPLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(84, 84, 84)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(namaCPField, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
@@ -227,17 +227,22 @@ public class personKuesionerPanel extends javax.swing.JPanel {
         ContactPerson cp = new ContactPerson();
         cp.setNama(namaCPField.getText());
         cp.setJabatan(JabatanCPField.getText());
-
+        
         Pencacah pc = new Pencacah();
-        pc.setNama(namaPencacahField.getText());
-
         String tanggalPencacah = tanggalPencacahField.getText();
+        if(Database.getInstance().checkPersonByName(namaPencacahField.getText())) {
+            pc.setNama(namaPencacahField.getText());
+        } else {
+            JOptionPane.showMessageDialog(this, "Nama Pencacah tidak ditemukan!", "Gagal input kuesioner", JOptionPane.WARNING_MESSAGE);
+        }
 
         Pengawas pg = new Pengawas();
-        pg.setNama(namaPengawasField.getText());
-
         String tanggalPengawas = tanggalPengawasField.getText();
-
+        if(Database.getInstance().checkPersonByName(namaPengawasField.getText())) {
+            pg.setNama(namaPengawasField.getText());
+        } else {
+            JOptionPane.showMessageDialog(this, "Nama Pengawas tidak ditemukan!", "Gagal input kuesioner", JOptionPane.WARNING_MESSAGE);
+        }
 
         String catatan = catatanField.getText();
 

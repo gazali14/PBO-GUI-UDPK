@@ -268,8 +268,6 @@ public class Database implements Serializable{
         }
     }
 
-   
-
     // Method untuk menambahkan data person
     public void insertPerson(String nama, String jabatan, String keteranganPetugas) {
         String sql = "INSERT INTO person (nama, jabatan, keterangan_petugas) VALUES (?, ?, ?)";
@@ -330,5 +328,20 @@ public class Database implements Serializable{
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-    }  
+    }
+    // Method to check if a person exists based on name
+    public boolean checkPersonByName(String nama) {
+        String sql = "SELECT * FROM person WHERE nama=?";
+        try (Connection conn = this.connect();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nama);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
 }
