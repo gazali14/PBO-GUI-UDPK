@@ -8,15 +8,16 @@ package gui_kuisioner_udpk;
  *
  * @author U53R
  */
+import java.io.Serializable;
 import java.sql.*;
 
-public class Database {
+public class Database implements Serializable{
 
     private static Database instance;
     private final String DB_TYPE = "mysql";
     private final String DB_HOST = "localhost";
     private final String DB_PORT = "3306";
-    private final String DB_NAME = "kuisioner_udpk";
+    private final String DB_NAME = "kuesioner_udpk";
     private final String DB_USER = "root";
     private final String DB_PASS = "";
 
@@ -65,30 +66,27 @@ public class Database {
     }
 
     // Method untuk menambahkan data perusahaan
-    public void insertPerusahaan(String KIP, String namaPerusahaan, String namaPengusaha, String alamat, String kodePos,
-                                  String telepon, String fax, String hp, String provinsi, String kodeProvinsi,
-                                  String kabKota, String kodeKabKota, String kecamatan, String kodeKecamatan,
-                                  String desaKelurahan, String kodeDesaKelurahan, String email) {
-        String sql = "INSERT INTO perusahaan (KIP, nama_perusahaan, nama_pengusaha, alamat, kode_pos, telepon, fax, hp, provinsi, kode_provinsi, kab_kota, kode_kabkota, kecamatan, kode_kecamatan, desa_kelurahan, kode_desa_kelurahan, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertPerusahaan(Perusahaan perusahaan){
+        String sql = "INSERT INTO perusahaan (KIP, nama_perusahaan, nama_pengusaha, alamat, kode_pos, telepon, fax, hp, provinsi, kode_provinsi, kab_kota, kode_kabkota, kecamatan, kode_kecamatan, desa_kelurahan, kode_desa_kelurahan, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, KIP);
-            stmt.setString(2, namaPerusahaan);
-            stmt.setString(3, namaPengusaha);
-            stmt.setString(4, alamat);
-            stmt.setString(5, kodePos);
-            stmt.setString(6, telepon);
-            stmt.setString(7, fax);
-            stmt.setString(8, hp);
-            stmt.setString(9, provinsi);
-            stmt.setString(10, kodeProvinsi);
-            stmt.setString(11, kabKota);
-            stmt.setString(12, kodeKabKota);
-            stmt.setString(13, kecamatan);
-            stmt.setString(14, kodeKecamatan);
-            stmt.setString(15, desaKelurahan);
-            stmt.setString(16, kodeDesaKelurahan);
-            stmt.setString(17, email);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, perusahaan.getKIP());
+            stmt.setString(2, perusahaan.getNamaPerusahaan());
+            stmt.setString(3, perusahaan.getNamaPengusaha());
+            stmt.setString(4, perusahaan.getAlamat());
+            stmt.setString(5, perusahaan.getKodePos());
+            stmt.setString(6, perusahaan.getTelepon());
+            stmt.setString(7, perusahaan.getFax());
+            stmt.setString(8, perusahaan.getNoHP());
+            stmt.setString(9, perusahaan.getProvinsi());
+            stmt.setString(10, perusahaan.getKodeProv());
+            stmt.setString(11, perusahaan.getKabupaten());
+            stmt.setString(12, perusahaan.getKodeKab());
+            stmt.setString(13, perusahaan.getKecamatan());
+            stmt.setString(14, perusahaan.getKodeKec());
+            stmt.setString(15, perusahaan.getDesa());
+            stmt.setString(16, perusahaan.getKodeDes());
+            stmt.setString(17, perusahaan.getEmail());
             stmt.executeUpdate();
             System.out.println("Data perusahaan berhasil ditambahkan.");
         } catch (SQLException e) {
@@ -103,7 +101,7 @@ public class Database {
                                   String desaKelurahan, String kodeDesaKelurahan, String email) {
         String sql = "UPDATE perusahaan SET nama_perusahaan=?, nama_pengusaha=?, alamat=?, kode_pos=?, telepon=?, fax=?, hp=?, provinsi=?, kode_provinsi=?, kab_kota=?, kode_kabkota=?, kecamatan=?, kode_kecamatan=?, desa_kelurahan=?, kode_desa_kelurahan=?, email=? WHERE KIP=?";
         try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, namaPerusahaan);
             stmt.setString(2, namaPengusaha);
             stmt.setString(3, alamat);
@@ -144,7 +142,7 @@ public class Database {
     // Method untuk mendapatkan data perusahaan berdasarkan KIP
     public void getPerusahaan(String KIP) {
         String sql = "SELECT * FROM perusahaan WHERE KIP=?";
-            try (Connection conn = this.connect();
+        try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
             ResultSet rs = stmt.executeQuery();
@@ -152,17 +150,57 @@ public class Database {
                 System.out.println("KIP: " + rs.getString("KIP"));
                 System.out.println("Nama Perusahaan: " + rs.getString("nama_perusahaan"));
                 System.out.println("Nama Pengusaha: " + rs.getString("nama_pengusaha"));
-                // Lanjutkan dengan menampilkan sisa kolom
+                System.out.println("Alamat: " + rs.getString("alamat"));
+                System.out.println("Kode Pos: " + rs.getString("kode_pos"));
+                System.out.println("Telepon: " + rs.getString("telepon"));
+                System.out.println("Fax: " + rs.getString("fax"));
+                System.out.println("HP: " + rs.getString("hp"));
+                System.out.println("Provinsi: " + rs.getString("provinsi"));
+                System.out.println("Kode Provinsi: " + rs.getString("kode_provinsi"));
+                System.out.println("Kabupaten/Kota: " + rs.getString("kab_kota"));
+                System.out.println("Kode Kabupaten/Kota: " + rs.getString("kode_kabkota"));
+                System.out.println("Kecamatan: " + rs.getString("kecamatan"));
+                System.out.println("Kode Kecamatan: " + rs.getString("kode_kecamatan"));
+                System.out.println("Desa/Kelurahan: " + rs.getString("desa_kelurahan"));
+                System.out.println("Kode Desa/Kelurahan: " + rs.getString("kode_desa_kelurahan"));
+                System.out.println("Email: " + rs.getString("email"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    // Method untuk menambahkan data kuisioner
-    public void insertKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
-                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR) {
-        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson, String tglPengawasan, String tglPencacahan, String catatan) {
+        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = this.connect();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, KIP);
+            stmt.setString(2, qd.getStatusUsaha());
+            stmt.setString(3, qd.getGred());
+            stmt.setString(4, qd.getBadanUsaha());
+            stmt.setString(5, qd.getPekerjaanUtama());
+            stmt.setString(6, qd.getBidangPekerjaanUtama());
+            stmt.setString(7, qd.getTempatUsaha());
+            stmt.setString(8, Integer.toString(qd.getBanyakPekerjaLaki()));
+            stmt.setString(9, Integer.toString(qd.getBanyakPekerjaPerempuan()));
+            stmt.setString(10, namaPengawas);
+            stmt.setString(11, namaPencacah);
+            stmt.setString(12, contactPerson);
+            stmt.setString(13, tglPencacahan);
+            stmt.setString(14, tglPengawasan);
+            stmt.setString(15, catatan);
+            stmt.executeUpdate();
+            System.out.println("Data kuisioner berhasil ditambahkan.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // Method untuk memperbarui data kuisioner berdasarkan KIP
+    public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
+                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR,
+                                String namaPengawas, String namaPencacah, String contactPerson, Date tglPengawasan, Date tglPencacahan, String catatan) {
+        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, nama_pengawas=?, nama_pencacah=?, contact_person=?, tgl_pengawasan=?, tgl_pencacahan=?, catatan=? WHERE KIP=?";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
@@ -174,34 +212,20 @@ public class Database {
             stmt.setString(7, tempatUsaha);
             stmt.setString(8, banyakPekerjaLK);
             stmt.setString(9, banyakPekerjaPR);
-            stmt.executeUpdate();
-            System.out.println("Data kuisioner berhasil ditambahkan.");
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    // Method untuk memperbarui data kuisioner berdasarkan KIP
-    public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
-                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR) {
-        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=? WHERE KIP=?";
-        try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, statusPerusahaan);
-            stmt.setString(2, kualifikasiPerusahaan);
-            stmt.setString(3, badanHukum);
-            stmt.setString(4, jenisBorongan);
-            stmt.setString(5, bidangPekerjaan);
-            stmt.setString(6, tempatUsaha);
-            stmt.setString(7, banyakPekerjaLK);
-            stmt.setString(8, banyakPekerjaPR);
-            stmt.setString(9, KIP);
+            stmt.setString(10, namaPengawas);
+            stmt.setString(11, namaPencacah);
+            stmt.setString(12, contactPerson);
+            stmt.setDate(13, new java.sql.Date(tglPengawasan.getTime()));
+            stmt.setDate(14, new java.sql.Date(tglPencacahan.getTime()));
+            stmt.setString(15, catatan);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil diperbarui.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
+
 
     // Method untuk menghapus data kuisioner berdasarkan KIP
     public void deleteKuisioner(String KIP) {
@@ -215,8 +239,7 @@ public class Database {
             System.out.println(e.getMessage());
         }
     }
-
-    // Method untuk mendapatkan data kuisioner berdasarkan KIP
+    
     public void getKuisioner(String KIP) {
         String sql = "SELECT * FROM kuisioner WHERE KIP=?";
         try (Connection conn = this.connect();
@@ -227,22 +250,34 @@ public class Database {
                 System.out.println("KIP: " + rs.getString("KIP"));
                 System.out.println("Status Perusahaan: " + rs.getString("status_perusahaan"));
                 System.out.println("Kualifikasi Perusahaan: " + rs.getString("kualifikasi_perusahaan"));
-                // Lanjutkan dengan menampilkan sisa kolom
+                System.out.println("Badan Hukum: " + rs.getString("badan_hukum"));
+                System.out.println("Jenis Borongan: " + rs.getString("jenis_borongan"));
+                System.out.println("Bidang Pekerjaan: " + rs.getString("bidang_pekerjaan"));
+                System.out.println("Tempat Usaha: " + rs.getString("tempat_usaha"));
+                System.out.println("Banyak Pekerja Laki-laki: " + rs.getString("banyak_pekerja_LK"));
+                System.out.println("Banyak Pekerja Perempuan: " + rs.getString("banyak_pekerja_PR"));
+                System.out.println("Nama Pengawas: " + rs.getString("nama_pengawas"));
+                System.out.println("Nama Pencacah: " + rs.getString("nama_pencacah"));
+                System.out.println("Contact Person: " + rs.getString("contact_person"));
+                System.out.println("Tanggal Pengawasan: " + rs.getDate("tgl_pengawasan"));
+                System.out.println("Tanggal Pencacahan: " + rs.getDate("tgl_pencacahan"));
+                System.out.println("Catatan: " + rs.getString("catatan"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
 
+   
+
     // Method untuk menambahkan data person
-    public void insertPerson(String nama, String jabatan, String keteranganPetugas, String catatan) {
-        String sql = "INSERT INTO person (nama, jabatan, keterangan_petugas, catatan) VALUES (?, ?, ?, ?)";
+    public void insertPerson(String nama, String jabatan, String keteranganPetugas) {
+        String sql = "INSERT INTO person (nama, jabatan, keterangan_petugas) VALUES (?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, nama);
             stmt.setString(2, jabatan);
             stmt.setString(3, keteranganPetugas);
-            stmt.setString(4, catatan);
             stmt.executeUpdate();
             System.out.println("Data person berhasil ditambahkan.");
         } catch (SQLException e) {
@@ -251,15 +286,14 @@ public class Database {
     }
 
     // Method untuk memperbarui data person berdasarkan id
-    public void updatePerson(int id, String nama, String jabatan, String keteranganPetugas, String catatan) {
-        String sql = "UPDATE person SET nama=?, jabatan=?, keterangan_petugas=?, catatan=? WHERE id=?";
+    public void updatePerson(int id, String nama, String jabatan, String keteranganPetugas) {
+        String sql = "UPDATE person SET nama=?, jabatan=?, keterangan_petugas=? WHERE id=?";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, nama);
-            stmt.setString(2, jabatan);
-            stmt.setString(3, keteranganPetugas);
-            stmt.setString(4, catatan);
-            stmt.setInt(5, id);
+            stmt.setInt(1, id);
+            stmt.setString(2, nama);
+            stmt.setString(3, jabatan);
+            stmt.setString(4, keteranganPetugas);
             stmt.executeUpdate();
             System.out.println("Data person berhasil diperbarui.");
         } catch (SQLException e) {
@@ -291,12 +325,10 @@ public class Database {
                 System.out.println("ID: " + rs.getInt("id"));
                 System.out.println("Nama: " + rs.getString("nama"));
                 System.out.println("Jabatan: " + rs.getString("jabatan"));
-                System.out.println("Keterangan Petugas: " + rs.getString("keteranganPetugas"));
-                System.out.println("Catatan: " + rs.getString("catatan"));
-               
+                System.out.println("Keterangan Petugas: " + rs.getString("keterangan_petugas"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-    }
+    }  
 }

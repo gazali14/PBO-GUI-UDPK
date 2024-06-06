@@ -29,6 +29,9 @@ public class aboutPanel extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         home = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -40,7 +43,6 @@ public class aboutPanel extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("Aplikasi Updating Direktori Perusahaan/Usaha Konstruksi 2014");
         jTextField1.setFocusable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,10 +52,20 @@ public class aboutPanel extends javax.swing.JFrame {
 
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jTextArea2.setRows(5);
-        jTextArea2.setText("\n     Sejak tahun 2009, Badan Pusat Statistik (BPS) melakukan kegiatan Updating Direktori Perusahaan/Usaha Konstruksi \nsecara rutin yang dilaksanakan secara sampel di seluruh Indonesia.\n     Secara garis besar, tujuan dari pengutipan Direktori Perusahaan Konstruksi 2014 adalah membentuk Kerangka Sampel\nPerusahaan/Usaha Konstruksi yang up-to-date, yang digunakan untuk pengambilan sampel Survei Perusahaan Konstruksi \nTahunan (SKTH), Survei Perusahaan Konstruksi Triwulanan (SKTR), dan Survei Usaha Konstruksi Perorangan (SKP).\n\nPENULIS SOURCE CODE\nKelompok 8 (2KS2)\n1. Briel Sevtriobragi Sihaloho   (222212539)\n2. Dewi Nurihandayani             (222212564)\n3. Fickry Atmayoga Wienaldi   (222212610)\n4. La Ode Muhammad Gazali  (222212696)\n\n\nDESKRIPSI SINGKAT\nAplikasi ini digunakan untuk mengumpulkan data perusahaan/usaha konstruksi guna melakukan pembaharuan data direktori\nusaha konstruksi. Dalam kuisioner ini terdapat jenis pertanyaan terbuka dan tertutup sehingga perlu adanya validasi terhadap\ninputan yang dimasukkan user ke dalam form, apakah sudah sesuai dengan ketentuan yang ada atau belum. Dalam kuisioner\ntersebut terdapat 8 rincian pertanyaan dan 2 rincian yang diisi oleh pewawancara/BPS dengan total 27 kolom isian. Berikut \ntampilan formulir dari Updating Direktori Perusahaan/Usaha Konstruksi 2014.\n\n\nSTRUKTUR KUESIONER\n1. Nama Perusahaan\n    - Nama Pengusaha\n    - Alamat Perusahaan\n    - Kode Pos\n    - Nomor Telepon\n    - Nomor Fax\n    - Nama Provinsi\n    - Nama Kabupaten/Kota\n    - Kode Kabupaten/Kota\n    - Nama Kecamatan\n    - Kode Kecamatan\n    - Nama Desa/Kelurahan\n    - Kode Desa/Kelurahan\n    - Email\n\n2. Rincian Status Perusahaan/Usaha Saat Dikunjungi\n    - Status Usaha\n\n3. Kualifikasi Perusahaan/usaha\n    - Kualifikasi Perusahaan\n\n4. Rincian Badan Hukum/Badan Usaha\n    - Badan Usaha\n\n5. Rincian Pekerjaan Utama\n    - Pekerjaan Utama\n\n6. Rincian Bidang Pekerjaan Utama\n    - Bidang Pekerjaan Utama\n\n7. Rincian Tempat Usaha\n    - Tempat Usaha\n\n8. Rincian Banyaknya Pekerja Tetap\n    - Banyak Pekerja Tetap\n\n9. Rincian Contact Person, Pencacah, Pengawas/Pemeriksa\n    - Nama\n    - Jabatan\n    - Tanggal\n\n10. Rincian Kode KIP\n     - Kode Identifikasi Perusahaan (KIP)\n\n");
+        jTextArea2.setText("\n     Sejak tahun 2009, Badan Pusat Statistik (BPS) melakukan kegiatan Updating Direktori Perusahaan/Usaha Konstruksi \nsecara rutin yang dilaksanakan secara sampel di seluruh Indonesia.\n     Secara garis besar, tujuan dari pengutipan Direktori Perusahaan Konstruksi 2014 adalah membentuk Kerangka Sampel\nPerusahaan/Usaha Konstruksi yang up-to-date, yang digunakan untuk pengambilan sampel Survei Perusahaan Konstruksi \nTahunan (SKTH), Survei Perusahaan Konstruksi Triwulanan (SKTR), dan Survei Usaha Konstruksi Perorangan (SKP).\n\nPENULIS SOURCE CODE\nKelompok 8 (2KS2)\n1. Briel Sevtriobragi Sihaloho   (222212539)\n2. Dewi Nurihandayani               (222212564)\n3. Fickry Atmayoga Wienaldi    (222212610)\n4. La Ode Muhammad Gazali     (222212696)\n\n\nDESKRIPSI SINGKAT\nAplikasi ini digunakan untuk mengumpulkan data perusahaan/usaha konstruksi guna melakukan pembaharuan data direktori\nusaha konstruksi. Dalam kuisioner ini terdapat jenis pertanyaan terbuka dan tertutup sehingga perlu adanya validasi terhadap\ninputan yang dimasukkan user ke dalam form, apakah sudah sesuai dengan ketentuan yang ada atau belum. Dalam kuisioner\ntersebut terdapat 8 rincian pertanyaan dan 2 rincian yang diisi oleh pewawancara/BPS dengan total 27 kolom isian. Berikut \ntampilan formulir dari Updating Direktori Perusahaan/Usaha Konstruksi 2014.\n\n\nSTRUKTUR KUESIONER\n1. Nama Perusahaan\n    - Nama Pengusaha\n    - Alamat Perusahaan\n    - Kode Pos\n    - Nomor Telepon\n    - Nomor Fax\n    - Nama Provinsi\n    - Nama Kabupaten/Kota\n    - Kode Kabupaten/Kota\n    - Nama Kecamatan\n    - Kode Kecamatan\n    - Nama Desa/Kelurahan\n    - Kode Desa/Kelurahan\n    - Email\n\n2. Rincian Status Perusahaan/Usaha Saat Dikunjungi\n    - Status Usaha\n\n3. Kualifikasi Perusahaan/usaha\n    - Kualifikasi Perusahaan\n\n4. Rincian Badan Hukum/Badan Usaha\n    - Badan Usaha\n\n5. Rincian Pekerjaan Utama\n    - Pekerjaan Utama\n\n6. Rincian Bidang Pekerjaan Utama\n    - Bidang Pekerjaan Utama\n\n7. Rincian Tempat Usaha\n    - Tempat Usaha\n\n8. Rincian Banyaknya Pekerja Tetap\n    - Banyak Pekerja Tetap\n\n9. Rincian Contact Person, Pencacah, Pengawas/Pemeriksa\n    - Nama\n    - Jabatan\n    - Tanggal\n\n10. Rincian Kode KIP\n     - Kode Identifikasi Perusahaan (KIP)\n\n");
         jTextArea2.setFocusable(false);
         jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel1.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        jLabel1.setText("APLIKASI UPDATING DIREKTORI PERUSAHAAN KONSTRUKSI");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui_kuisioner_udpk/garuda.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui_kuisioner_udpk/Logo BPS -.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
 
         home.setText("<-- Home");
         home.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -68,15 +80,32 @@ public class aboutPanel extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTextField1)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(336, 336, 336)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
+                .addGap(7, 7, 7)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -125,6 +154,9 @@ public class aboutPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu home;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane2;
