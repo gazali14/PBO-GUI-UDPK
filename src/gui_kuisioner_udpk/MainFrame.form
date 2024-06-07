@@ -20,12 +20,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="entryMenuItem">
+            <MenuItem class="javax.swing.JMenuItem" name="homeMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Entry"/>
+                <Property name="text" type="java.lang.String" value="Home"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entryMenuItemActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

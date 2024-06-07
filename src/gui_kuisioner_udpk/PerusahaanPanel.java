@@ -11,14 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author LENOVO
  */
-public class perusahaanPanel extends javax.swing.JPanel {
+public class PerusahaanPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
     
     /**
      * Creates new form perusahaanPanel
      */
-    public perusahaanPanel(JScrollPane contentScrollPane, Perusahaan perusahaan) {
+    public PerusahaanPanel(JScrollPane contentScrollPane, Perusahaan perusahaan) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
         if (perusahaan.getKIP() != null) {
@@ -385,24 +385,24 @@ public class perusahaanPanel extends javax.swing.JPanel {
                                     .addComponent(namaPengusahaField, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
                                     .addComponent(namaPerusahaanField)
                                     .addComponent(kipField))))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jTextField1)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(185, 185, 185)
                         .addComponent(Garuda)
                         .addGap(135, 135, 135))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
                         .addComponent(Indonesia)
-                        .addGap(72, 72, 72)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(UDP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -575,7 +575,7 @@ public class perusahaanPanel extends javax.swing.JPanel {
         perusahaan.setEmail(emailField.getText());
         
         if(perusahaan.getValidasi()) {
-            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan, new QuestionaireData()));
+            contentScrollPane.setViewportView(new KuesionerPanel(contentScrollPane, perusahaan, new QuestionaireData()));
         } else {
             String errorMessages = "";
             for(String error : perusahaan.error) {

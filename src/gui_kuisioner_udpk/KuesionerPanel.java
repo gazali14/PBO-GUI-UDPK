@@ -11,14 +11,14 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class kuesionerPanel extends javax.swing.JPanel {
+public class KuesionerPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
     private Perusahaan perusahaan;
     /**
      * Creates new form kuesionerPanel
      */
-    public kuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
+    public KuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
         this.perusahaan = perusahaan;
@@ -262,7 +262,7 @@ public class kuesionerPanel extends javax.swing.JPanel {
         qd.setBanyakPekerjaPerempuan((int) jmlPekerjaPerempuanSpinner.getValue());
         
         if(qd.validasi.validate()) {
-            contentScrollPane.setViewportView(new personKuesionerPanel(contentScrollPane, perusahaan, qd));
+            contentScrollPane.setViewportView(new PersonKuesionerPanel(contentScrollPane, perusahaan, qd));
         } else {
             String errorMessages = "";
             for(String error : qd.error) {
@@ -274,7 +274,7 @@ public class kuesionerPanel extends javax.swing.JPanel {
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, perusahaan));
+        contentScrollPane.setViewportView(new PerusahaanPanel(contentScrollPane, perusahaan));
     }//GEN-LAST:event_backActionPerformed
 
     private void statusPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusPerusahaanComboBoxActionPerformed

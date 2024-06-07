@@ -32,7 +32,6 @@ public class TambahPengawas extends javax.swing.JPanel {
 
         PanelKeseluruhan2 = new javax.swing.JPanel();
         LogoBPS2 = new javax.swing.JLabel();
-        Garuda2 = new javax.swing.JLabel();
         Indonesia2 = new javax.swing.JLabel();
         PanelRahasia2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -49,12 +48,11 @@ public class TambahPengawas extends javax.swing.JPanel {
         jabatanField = new javax.swing.JTextField();
         TambahPengawas = new javax.swing.JLabel();
         TambahButton = new javax.swing.JButton();
+        Garuda2 = new javax.swing.JLabel();
 
         PanelKeseluruhan2.setBackground(new java.awt.Color(255, 255, 255));
 
         LogoBPS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui_kuisioner_udpk/LogoBPS.jpg"))); // NOI18N
-
-        Garuda2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui_kuisioner_udpk/Gambar1.jpg"))); // NOI18N
 
         Indonesia2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         Indonesia2.setText("REPUBLIK INDONESIA");
@@ -63,6 +61,7 @@ public class TambahPengawas extends javax.swing.JPanel {
 
         jLabel4.setBackground(new java.awt.Color(255, 204, 153));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("RAHASIA");
 
         javax.swing.GroupLayout PanelRahasia2Layout = new javax.swing.GroupLayout(PanelRahasia2);
@@ -70,15 +69,16 @@ public class TambahPengawas extends javax.swing.JPanel {
         PanelRahasia2Layout.setHorizontalGroup(
             PanelRahasia2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelRahasia2Layout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelRahasia2Layout.setVerticalGroup(
             PanelRahasia2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelRahasia2Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRahasia2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         UDP.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -116,10 +116,10 @@ public class TambahPengawas extends javax.swing.JPanel {
         PanelKonstruksi.setLayout(PanelKonstruksiLayout);
         PanelKonstruksiLayout.setHorizontalGroup(
             PanelKonstruksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKonstruksiLayout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
+            .addGroup(PanelKonstruksiLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
                 .addComponent(Konstruksi)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelKonstruksiLayout.setVerticalGroup(
             PanelKonstruksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,6 +173,8 @@ public class TambahPengawas extends javax.swing.JPanel {
             }
         });
 
+        Garuda2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui_kuisioner_udpk/Gambar1.jpg"))); // NOI18N
+
         javax.swing.GroupLayout PanelKeseluruhan2Layout = new javax.swing.GroupLayout(PanelKeseluruhan2);
         PanelKeseluruhan2.setLayout(PanelKeseluruhan2Layout);
         PanelKeseluruhan2Layout.setHorizontalGroup(
@@ -183,16 +185,15 @@ public class TambahPengawas extends javax.swing.JPanel {
                         .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelKeseluruhan2Layout.createSequentialGroup()
                                 .addGap(120, 120, 120)
-                                .addComponent(Indonesia2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE))
+                                .addComponent(Indonesia2))
                             .addGroup(PanelKeseluruhan2Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(PanelRahasia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Garuda2)
-                                .addGap(88, 88, 88)))
+                                .addGap(96, 96, 96)
+                                .addComponent(Garuda2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(UDP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(PanelKonstruksi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(PanelTahun, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -214,9 +215,9 @@ public class TambahPengawas extends javax.swing.JPanel {
                                 .addContainerGap()
                                 .addComponent(BPS)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeseluruhan2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
+            .addGroup(PanelKeseluruhan2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(TambahPengawas)
@@ -227,7 +228,8 @@ public class TambahPengawas extends javax.swing.JPanel {
                         .addComponent(LogoBPS2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(TambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))))
+                        .addGap(22, 22, 22)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PanelKeseluruhan2Layout.setVerticalGroup(
             PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,12 +289,14 @@ public class TambahPengawas extends javax.swing.JPanel {
     }//GEN-LAST:event_jabatanFieldActionPerformed
 
     private void TambahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TambahButtonActionPerformed
-               // TODO add your handling code here:
+        // TODO add your handling code here:
         Pengawas pengawas = new Pengawas();
         pengawas.setNama(namaField.getText());
         pengawas.setJabatan(jabatanField.getText());
         if(pengawas.validasi.validate()) {
             Database.getInstance().insertPerson(pengawas.getNama(), pengawas.getJabatan(), "Pengawas");
+            JOptionPane.showMessageDialog(this, "Insert Pengawas berhasil");
+            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
         } else {
             String errorMessages = "";
             for(String error : pengawas.error) {

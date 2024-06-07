@@ -12,7 +12,7 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class personKuesionerPanel extends javax.swing.JPanel {
+public class PersonKuesionerPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
     private Perusahaan perusahaan;
@@ -20,7 +20,7 @@ public class personKuesionerPanel extends javax.swing.JPanel {
     /**
      * Creates new form kuesionerPanel2
      */
-    public personKuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
+    public PersonKuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
         this.perusahaan = perusahaan;
@@ -219,7 +219,7 @@ public class personKuesionerPanel extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan, qd));
+        contentScrollPane.setViewportView(new KuesionerPanel(contentScrollPane, perusahaan, qd));
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
@@ -246,28 +246,12 @@ public class personKuesionerPanel extends javax.swing.JPanel {
 
         String catatan = catatanField.getText();
 
-        if(cp.validasi.validate()) {
-            if(pc.validasi.validate()) {
-                if(pg.validasi.validate()) {
-                    Database.getInstance().insertPerusahaan(perusahaan);
-                    Database.getInstance().insertPerson(cp.getNama(), cp.getJabatan(), cp.getKeterangan());
-                    Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd, pg.getNama(), pc.getNama(), cp.getNama(), tanggalPencacah, tanggalPengawas, catatan);
-                    JOptionPane.showMessageDialog(this, "Insert data kuesioner berhasil!");
-                    contentScrollPane.setViewportView(new homePanel(contentScrollPane));
-                } else {
-                    String errorMessages = "";
-                    for(String error : pg.error) {
-                        errorMessages = errorMessages + error + "\n";
-                    }
-                    JOptionPane.showMessageDialog(this, errorMessages);
-                }
-            } else {
-                String errorMessages = "";
-                for(String error : pc.error) {
-                    errorMessages = errorMessages + error + "\n";
-                }
-                JOptionPane.showMessageDialog(this, errorMessages);
-            }
+        if(cp.validasi.validate() && Database.getInstance().checkPersonByName(namaPengawasField.getText()) && Database.getInstance().checkPersonByName(namaPencacahField.getText())) {
+            Database.getInstance().insertPerson(cp.getNama(), cp.getJabatan(), "Contact Person");
+            Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd, pg.getNama(), pc.getNama(), cp.getNama(), cp.getJabatan(), tanggalPencacah, tanggalPengawas, catatan);
+            Database.getInstance().insertPerusahaan(perusahaan);
+            JOptionPane.showMessageDialog(this, "Insert data kuesioner berhasil!");
+            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
         } else {
             String errorMessages = "";
             for(String error : cp.error) {
