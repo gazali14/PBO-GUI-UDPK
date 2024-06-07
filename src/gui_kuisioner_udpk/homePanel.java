@@ -11,13 +11,13 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class HomePanel extends javax.swing.JPanel {
+public class homePanel extends javax.swing.JPanel {
 
     private JScrollPane contentScrollPane;
     /**
      * Creates new form homePanel
      */
-    public HomePanel(JScrollPane contentScrollPane) {
+    public homePanel(JScrollPane contentScrollPane) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
     }
@@ -225,7 +225,7 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void aboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new AboutPanel(contentScrollPane));
+        contentScrollPane.setViewportView(new aboutPanel(contentScrollPane));
     }//GEN-LAST:event_aboutButtonActionPerformed
 
     private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
@@ -234,12 +234,12 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void pencacahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pencacahButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new TambahPencacah(contentScrollPane));
+        contentScrollPane.setViewportView(new tambahPencacah(contentScrollPane));
     }//GEN-LAST:event_pencacahButtonActionPerformed
 
     private void pengawasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengawasButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new TambahPengawas(contentScrollPane));
+        contentScrollPane.setViewportView(new tambahPengawas(contentScrollPane));
     }//GEN-LAST:event_pengawasButtonActionPerformed
 
     private void exportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportButtonActionPerformed

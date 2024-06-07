@@ -219,7 +219,7 @@ public class PersonKuesionerPanel extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new KuesionerPanel(contentScrollPane, perusahaan, qd));
+        contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan, qd));
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
@@ -251,7 +251,7 @@ public class PersonKuesionerPanel extends javax.swing.JPanel {
             Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd, pg.getNama(), pc.getNama(), cp.getNama(), cp.getJabatan(), tanggalPencacah, tanggalPengawas, catatan);
             Database.getInstance().insertPerusahaan(perusahaan);
             JOptionPane.showMessageDialog(this, "Insert data kuesioner berhasil!");
-            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
+            contentScrollPane.setViewportView(new homePanel(contentScrollPane));
         } else {
             String errorMessages = "";
             for(String error : cp.error) {
