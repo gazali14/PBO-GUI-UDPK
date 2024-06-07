@@ -15,7 +15,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
-        this.contentScrollPane.setViewportView(new loginPanel(contentScrollPane));
+        this.contentScrollPane.setViewportView(new LoginPanel(contentScrollPane));
     }
 
     /**
@@ -80,12 +80,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void entryMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryMenuItemActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, new Perusahaan()));
+        contentScrollPane.setViewportView(new PerusahaanPanel(contentScrollPane, new Perusahaan()));
     }//GEN-LAST:event_entryMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new loginPanel(contentScrollPane));
+        contentScrollPane.setViewportView(new LoginPanel(contentScrollPane));
     }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     /**

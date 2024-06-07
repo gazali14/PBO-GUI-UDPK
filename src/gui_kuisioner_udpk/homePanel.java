@@ -11,13 +11,13 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class homePanel extends javax.swing.JPanel {
+public class HomePanel extends javax.swing.JPanel {
 
     private JScrollPane contentScrollPane;
     /**
      * Creates new form homePanel
      */
-    public homePanel(JScrollPane contentScrollPane) {
+    public HomePanel(JScrollPane contentScrollPane) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
     }
@@ -225,7 +225,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void aboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new aboutPanel(contentScrollPane));
+        contentScrollPane.setViewportView(new AboutPanel(contentScrollPane));
     }//GEN-LAST:event_aboutButtonActionPerformed
 
     private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
@@ -239,6 +239,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void pengawasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengawasButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new TambahPengawas(contentScrollPane));
     }//GEN-LAST:event_pengawasButtonActionPerformed
 
     private void exportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportButtonActionPerformed
@@ -247,7 +248,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void entryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, new Perusahaan()));
+        contentScrollPane.setViewportView(new PerusahaanPanel(contentScrollPane, new Perusahaan()));
     }//GEN-LAST:event_entryButtonActionPerformed
 
 

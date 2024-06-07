@@ -287,6 +287,8 @@ public class TambahPencacah extends javax.swing.JPanel {
         pencacah.setJabatan(jabatanField.getText());
         if(pencacah.validasi.validate()) {
             Database.getInstance().insertPerson(pencacah.getNama(), pencacah.getJabatan(), "Pencacah");
+            JOptionPane.showMessageDialog(this, "Insert Pencacah berhasil");
+            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
         } else {
             String errorMessages = "";
             for(String error : pencacah.error) {

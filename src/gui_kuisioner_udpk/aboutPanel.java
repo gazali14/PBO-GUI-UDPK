@@ -10,13 +10,13 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class aboutPanel extends javax.swing.JPanel {
+public class AboutPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
     /**
      * Creates new form aboutAplikasi
      */
-    public aboutPanel(JScrollPane contentScrollPane) {
+    public AboutPanel(JScrollPane contentScrollPane) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
     }

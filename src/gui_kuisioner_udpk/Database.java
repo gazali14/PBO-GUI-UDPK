@@ -170,8 +170,8 @@ public class Database implements Serializable{
         }
     }
 
-    public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson, String tglPengawasan, String tglPencacahan, String catatan) {
-        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson, String cp_jabatan, String tglPengawasan, String tglPencacahan, String catatan) {
+        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
@@ -186,9 +186,10 @@ public class Database implements Serializable{
             stmt.setString(10, namaPengawas);
             stmt.setString(11, namaPencacah);
             stmt.setString(12, contactPerson);
-            stmt.setString(13, tglPencacahan);
-            stmt.setString(14, tglPengawasan);
-            stmt.setString(15, catatan);
+            stmt.setString(13, cp_jabatan);
+            stmt.setString(14, tglPencacahan);
+            stmt.setString(15, tglPengawasan);
+            stmt.setString(16, catatan);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil ditambahkan.");
         } catch (SQLException e) {
