@@ -575,7 +575,7 @@ public class PerusahaanPanel extends javax.swing.JPanel {
         perusahaan.setEmail(emailField.getText());
         
         if(perusahaan.getValidasi()) {
-            contentScrollPane.setViewportView(new kuesionerPanel(contentScrollPane, perusahaan, new QuestionaireData()));
+            contentScrollPane.setViewportView(new KuesionerPanel(contentScrollPane, perusahaan, new QuestionaireData()));
         } else {
             String errorMessages = "";
             for(String error : perusahaan.error) {

@@ -11,12 +11,12 @@ import javax.swing.JScrollPane;
  *
  * @author briel
  */
-public class tambahPengawas extends javax.swing.JPanel {
+public class TambahPengawas extends javax.swing.JPanel {
     private JScrollPane contentScrollPane;
     /**
      * Creates new form tambahPengawas
      */
-    public tambahPengawas(JScrollPane contentScrollPane) {
+    public TambahPengawas(JScrollPane contentScrollPane) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
     }
@@ -296,7 +296,7 @@ public class tambahPengawas extends javax.swing.JPanel {
         if(pengawas.validasi.validate()) {
             Database.getInstance().insertPerson(pengawas.getNama(), pengawas.getJabatan(), "Pengawas");
             JOptionPane.showMessageDialog(this, "Insert Pengawas berhasil");
-            contentScrollPane.setViewportView(new homePanel(contentScrollPane));
+            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
         } else {
             String errorMessages = "";
             for(String error : pengawas.error) {

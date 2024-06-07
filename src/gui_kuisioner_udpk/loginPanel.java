@@ -11,13 +11,13 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class loginPanel extends javax.swing.JPanel {
+public class LoginPanel extends javax.swing.JPanel {
 
     private JScrollPane contentScrollPane;
     /**
      * Creates new form loginPanel
      */
-    public loginPanel(JScrollPane contentScrollPane) {
+    public LoginPanel(JScrollPane contentScrollPane) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
     }
@@ -255,7 +255,7 @@ public class loginPanel extends javax.swing.JPanel {
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new homePanel(contentScrollPane));
+        contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
     }//GEN-LAST:event_LoginButtonActionPerformed
 
 

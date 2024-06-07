@@ -11,14 +11,14 @@ import javax.swing.JScrollPane;
  *
  * @author LENOVO
  */
-public class kuesionerPanel extends javax.swing.JPanel {
+public class KuesionerPanel extends javax.swing.JPanel {
     
     private JScrollPane contentScrollPane;
     private Perusahaan perusahaan;
     /**
      * Creates new form kuesionerPanel
      */
-    public kuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
+    public KuesionerPanel(JScrollPane contentScrollPane, Perusahaan perusahaan, QuestionaireData qd) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
         this.perusahaan = perusahaan;
