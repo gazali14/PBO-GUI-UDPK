@@ -44,14 +44,6 @@ public abstract class Person {
         this.jabatan = jabatan;
     }
 
-    public Validator getValidasi() {
-        return validasi;
-    }
-
-    public void setValidasi(Validator validasi) {
-        this.validasi = validasi;
-    }
-
     public String getKeterangan() {
         return keterangan;
     }
@@ -70,7 +62,6 @@ public abstract class Person {
 
 class Pencacah extends Person{
     public Pencacah() {
-        this.setKeterangan("Pencacah");
     }
 
     @Override
@@ -81,7 +72,6 @@ class Pencacah extends Person{
 
 class Pengawas extends Person{
     public Pengawas() {
-        this.setKeterangan("Pengawas");
     }
     @Override
     public String toString() {
@@ -91,7 +81,6 @@ class Pengawas extends Person{
 
 class ContactPerson extends Person{
     public ContactPerson() {
-        this.setKeterangan("Contact Person");
     }
     @Override
     public String toString() {

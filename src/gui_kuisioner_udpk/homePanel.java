@@ -4,6 +4,7 @@
  */
 package gui_kuisioner_udpk;
 
+import gui_kuisioner_udpk.frame_sebelumnya.aboutFramePanel;
 import javax.swing.JScrollPane;
 
 /**
@@ -224,6 +225,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void aboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new aboutPanel(contentScrollPane));
     }//GEN-LAST:event_aboutButtonActionPerformed
 
     private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
@@ -232,6 +234,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void pencacahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pencacahButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new TambahPencacah(contentScrollPane));
     }//GEN-LAST:event_pencacahButtonActionPerformed
 
     private void pengawasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengawasButtonActionPerformed
