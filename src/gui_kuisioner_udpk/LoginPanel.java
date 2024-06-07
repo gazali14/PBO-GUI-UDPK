@@ -4,8 +4,10 @@
  */
 package gui_kuisioner_udpk;
 
-import gui_kuisioner_udpk.frame_sebelumnya.homePanelFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *
@@ -41,11 +43,11 @@ public class LoginPanel extends javax.swing.JPanel {
         PanelKonstruksi = new javax.swing.JPanel();
         Konstruksi = new javax.swing.JLabel();
         NamaKuesioner = new javax.swing.JLabel();
-        Username = new javax.swing.JLabel();
-        Password = new javax.swing.JLabel();
-        TextUsername = new javax.swing.JTextField();
-        TextPassword = new javax.swing.JPasswordField();
-        LoginButton = new javax.swing.JButton();
+        usernameLabe = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        usernameField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
+        loginButton = new javax.swing.JButton();
         BPS = new javax.swing.JLabel();
 
         PanelKeseluruhan.setBackground(new java.awt.Color(255, 255, 255));
@@ -130,23 +132,23 @@ public class LoginPanel extends javax.swing.JPanel {
         NamaKuesioner.setToolTipText("");
         NamaKuesioner.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Username.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        Username.setText("Username");
+        usernameLabe.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        usernameLabe.setText("Username");
 
-        Password.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        Password.setText("Password");
+        passwordLabel.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        passwordLabel.setText("Password");
 
-        TextUsername.addActionListener(new java.awt.event.ActionListener() {
+        usernameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextUsernameActionPerformed(evt);
+                usernameFieldActionPerformed(evt);
             }
         });
 
-        LoginButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        LoginButton.setText("Login");
-        LoginButton.addActionListener(new java.awt.event.ActionListener() {
+        loginButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        loginButton.setText("Login");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginButtonActionPerformed(evt);
+                loginButtonActionPerformed(evt);
             }
         });
 
@@ -164,20 +166,17 @@ public class LoginPanel extends javax.swing.JPanel {
                     .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LoginButton)
+                            .addComponent(loginButton)
                             .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
                                 .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Username, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(usernameLabe, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                    .addComponent(passwordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TextUsername)
-                                    .addComponent(TextPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)))))
+                                    .addComponent(usernameField)
+                                    .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)))))
+                    .addComponent(BPS)
                     .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BPS))
-                    .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
                                 .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,14 +222,14 @@ public class LoginPanel extends javax.swing.JPanel {
                 .addComponent(NamaKuesioner)
                 .addGap(50, 50, 50)
                 .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Username)
-                    .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(usernameLabe)
+                    .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Password)
-                    .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(passwordLabel)
+                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(LoginButton)
+                .addComponent(loginButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LogoBPS, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -249,14 +248,22 @@ public class LoginPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextUsernameActionPerformed
+    private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TextUsernameActionPerformed
+    }//GEN-LAST:event_usernameFieldActionPerformed
 
-    private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
-    }//GEN-LAST:event_LoginButtonActionPerformed
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        
+        if(Database.getInstance().login(username, password)) {
+            Database.getInstance().username = username;
+            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
+        } else {
+            JOptionPane.showMessageDialog(this, "Username atau password salah!");
+        }
+    }//GEN-LAST:event_loginButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -264,19 +271,19 @@ public class LoginPanel extends javax.swing.JPanel {
     private javax.swing.JLabel Garuda;
     private javax.swing.JLabel Indonesia;
     private javax.swing.JLabel Konstruksi;
-    private javax.swing.JButton LoginButton;
     private javax.swing.JLabel LogoBPS;
     private javax.swing.JLabel NamaKuesioner;
     private javax.swing.JPanel PanelKeseluruhan;
     private javax.swing.JPanel PanelKonstruksi;
     private javax.swing.JPanel PanelRahasia;
     private javax.swing.JPanel PanelTahun;
-    private javax.swing.JLabel Password;
     private javax.swing.JLabel Rahasia;
     private javax.swing.JLabel Tahun;
-    private javax.swing.JPasswordField TextPassword;
-    private javax.swing.JTextField TextUsername;
     private javax.swing.JLabel UDP;
-    private javax.swing.JLabel Username;
+    private javax.swing.JButton loginButton;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JTextField usernameField;
+    private javax.swing.JLabel usernameLabe;
     // End of variables declaration//GEN-END:variables
 }
