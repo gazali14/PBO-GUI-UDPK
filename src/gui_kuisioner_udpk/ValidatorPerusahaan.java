@@ -24,7 +24,10 @@ public class ValidatorPerusahaan implements Validator {
         // Lakukan validasi untuk semua atribut Perusahaan
         
         //Validasi pertama
-
+            if(!isValidString(perusahaan.getKIP()) || !perusahaan.getKIP().matches("[0-9]*")) {
+                perusahaan.error.add("KIP tidak boleh kosong atau berisi Huruf");
+            }
+            
             // Validasi untuk nama perusahaan
             if (!isValidString(perusahaan.getNamaPerusahaan()) || !perusahaan.getNamaPerusahaan().matches("[a-zA-Z ]+")) {
                 perusahaan.error.add("Nama perusahaan tidak boleh kosong atau berisi angka");
@@ -49,7 +52,7 @@ public class ValidatorPerusahaan implements Validator {
             // Validasi untuk telepon
             if (!isValidString(perusahaan.getTelepon()) || !perusahaan.getTelepon().matches("[0][0-9]*")
                     || !(perusahaan.getTelepon().length()>=11 && perusahaan.getTelepon().length()<=13)) {
-                perusahaan.error.add("Nomor telepon terdiri dari 11-13 angka dan diawali dengan");
+                perusahaan.error.add("Nomor telepon terdiri dari 11-13 angka dan diawali dengan 0");
 
             }
 
@@ -114,10 +117,7 @@ public class ValidatorPerusahaan implements Validator {
                 perusahaan.error.add("Email tidak valid");
             }
         // Jika semua validasi berhasil, kembalikan true
-        if(perusahaan.error.isEmpty())
-            return true;
-        else
-            return false;
+        return perusahaan.error.isEmpty();
     }
     
     // Metode bantuan untuk memeriksa apakah string tidak kosong

@@ -34,7 +34,7 @@ public class loginPanel extends javax.swing.JPanel {
         Garuda = new javax.swing.JLabel();
         Indonesia = new javax.swing.JLabel();
         PanelRahasia = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        Rahasia = new javax.swing.JLabel();
         UDP = new javax.swing.JLabel();
         PanelTahun = new javax.swing.JPanel();
         Tahun = new javax.swing.JLabel();
@@ -59,23 +59,23 @@ public class loginPanel extends javax.swing.JPanel {
 
         PanelRahasia.setBackground(new java.awt.Color(255, 204, 153));
 
-        jLabel2.setBackground(new java.awt.Color(255, 204, 153));
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel2.setText("RAHASIA");
+        Rahasia.setBackground(new java.awt.Color(255, 204, 153));
+        Rahasia.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        Rahasia.setText("RAHASIA");
 
         javax.swing.GroupLayout PanelRahasiaLayout = new javax.swing.GroupLayout(PanelRahasia);
         PanelRahasia.setLayout(PanelRahasiaLayout);
         PanelRahasiaLayout.setHorizontalGroup(
             PanelRahasiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelRahasiaLayout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(Rahasia)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         PanelRahasiaLayout.setVerticalGroup(
             PanelRahasiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelRahasiaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(Rahasia)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -93,14 +93,14 @@ public class loginPanel extends javax.swing.JPanel {
         PanelTahun.setLayout(PanelTahunLayout);
         PanelTahunLayout.setHorizontalGroup(
             PanelTahunLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTahunLayout.createSequentialGroup()
+            .addGroup(PanelTahunLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Tahun, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(Tahun, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelTahunLayout.setVerticalGroup(
             PanelTahunLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Tahun, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
+            .addComponent(Tahun, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
         );
 
         PanelKonstruksi.setBackground(new java.awt.Color(0, 0, 0));
@@ -114,14 +114,14 @@ public class loginPanel extends javax.swing.JPanel {
         PanelKonstruksi.setLayout(PanelKonstruksiLayout);
         PanelKonstruksiLayout.setHorizontalGroup(
             PanelKonstruksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKonstruksiLayout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
+            .addGroup(PanelKonstruksiLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(Konstruksi)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelKonstruksiLayout.setVerticalGroup(
             PanelKonstruksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Konstruksi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
+            .addComponent(Konstruksi, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
         );
 
         NamaKuesioner.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -159,52 +159,45 @@ public class loginPanel extends javax.swing.JPanel {
         PanelKeseluruhanLayout.setHorizontalGroup(
             PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
                 .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LoginButton)
+                            .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                                .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Username, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TextUsername)
+                                    .addComponent(TextPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)))))
+                    .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BPS))
+                    .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                                .addGap(142, 142, 142)
-                                .addComponent(Indonesia)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE))
-                            .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                                .addContainerGap()
                                 .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(129, 129, 129)
                                 .addComponent(Garuda)
-                                .addGap(88, 88, 88)))
-                        .addComponent(UDP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(71, 71, 71)
+                                .addComponent(UDP)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeseluruhanLayout.createSequentialGroup()
+                                .addComponent(Indonesia)
+                                .addGap(60, 60, 60)))
                         .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(PanelKonstruksi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(PanelTahun, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
                         .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                                .addGap(96, 96, 96)
-                                .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(LoginButton)
-                                    .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                                        .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(Username, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                                            .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(TextUsername)
-                                            .addComponent(TextPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)))))
-                            .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(BPS)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeseluruhanLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
-                        .addComponent(LogoBPS, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeseluruhanLayout.createSequentialGroup()
-                        .addComponent(NamaKuesioner)
-                        .addGap(35, 35, 35))))
+                            .addComponent(NamaKuesioner)
+                            .addComponent(LogoBPS, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelKeseluruhanLayout.setVerticalGroup(
             PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,16 +206,19 @@ public class loginPanel extends javax.swing.JPanel {
                 .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
                         .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Garuda))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                                .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeseluruhanLayout.createSequentialGroup()
+                                .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Garuda)
+                                    .addComponent(UDP))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addComponent(Indonesia))
-                    .addGroup(PanelKeseluruhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(UDP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelKeseluruhanLayout.createSequentialGroup()
-                            .addComponent(PanelKonstruksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(PanelTahun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(PanelKeseluruhanLayout.createSequentialGroup()
+                        .addComponent(PanelKonstruksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PanelTahun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(NamaKuesioner)
                 .addGap(50, 50, 50)
@@ -235,7 +231,7 @@ public class loginPanel extends javax.swing.JPanel {
                     .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(LoginButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LogoBPS, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BPS))
@@ -276,11 +272,11 @@ public class loginPanel extends javax.swing.JPanel {
     private javax.swing.JPanel PanelRahasia;
     private javax.swing.JPanel PanelTahun;
     private javax.swing.JLabel Password;
+    private javax.swing.JLabel Rahasia;
     private javax.swing.JLabel Tahun;
     private javax.swing.JPasswordField TextPassword;
     private javax.swing.JTextField TextUsername;
     private javax.swing.JLabel UDP;
     private javax.swing.JLabel Username;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

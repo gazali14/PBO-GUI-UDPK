@@ -4,6 +4,7 @@
  */
 package gui_kuisioner_udpk;
 
+import gui_kuisioner_udpk.frame_sebelumnya.aboutFramePanel;
 import javax.swing.JScrollPane;
 
 /**
@@ -218,12 +219,13 @@ public class homePanel extends javax.swing.JPanel {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel6))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void aboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new aboutPanel(contentScrollPane));
     }//GEN-LAST:event_aboutButtonActionPerformed
 
     private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
@@ -232,6 +234,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void pencacahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pencacahButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new TambahPencacah(contentScrollPane));
     }//GEN-LAST:event_pencacahButtonActionPerformed
 
     private void pengawasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengawasButtonActionPerformed
@@ -244,6 +247,7 @@ public class homePanel extends javax.swing.JPanel {
 
     private void entryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new perusahaanPanel(contentScrollPane, new Perusahaan()));
     }//GEN-LAST:event_entryButtonActionPerformed
 
 

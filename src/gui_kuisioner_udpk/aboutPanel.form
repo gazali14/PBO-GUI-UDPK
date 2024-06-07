@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
-      <SubComponents>
-        <Menu class="javax.swing.JMenu" name="home">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&lt;-- Home"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-          </Properties>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
-        </Menu>
-      </SubComponents>
-    </Menu>
-  </NonVisualComponents>
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+    </Property>
   </Properties>
-  <SyntheticProperties>
-    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
-    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
-  </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -41,22 +22,25 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="64" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jScrollPane2" alignment="0" min="-2" pref="768" max="-2" attributes="0"/>
-              </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" pref="64" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="532" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="532" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTextArea2" min="-2" pref="720" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,9 +56,9 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jTextField1" min="-2" pref="8" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" pref="261" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTextArea2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,27 +83,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea2">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cambria" size="14" style="0"/>
-            </Property>
-            <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="&#xa;     Sejak tahun 2009, Badan Pusat Statistik (BPS) melakukan kegiatan Updating Direktori Perusahaan/Usaha Konstruksi &#xa;secara rutin yang dilaksanakan secara sampel di seluruh Indonesia.&#xa;     Secara garis besar, tujuan dari pengutipan Direktori Perusahaan Konstruksi 2014 adalah membentuk Kerangka Sampel&#xa;Perusahaan/Usaha Konstruksi yang up-to-date, yang digunakan untuk pengambilan sampel Survei Perusahaan Konstruksi &#xa;Tahunan (SKTH), Survei Perusahaan Konstruksi Triwulanan (SKTR), dan Survei Usaha Konstruksi Perorangan (SKP).&#xa;&#xa;PENULIS SOURCE CODE&#xa;Kelompok 8 (2KS2)&#xa;1. Briel Sevtriobragi Sihaloho   (222212539)&#xa;2. Dewi Nurihandayani               (222212564)&#xa;3. Fickry Atmayoga Wienaldi    (222212610)&#xa;4. La Ode Muhammad Gazali     (222212696)&#xa;&#xa;&#xa;DESKRIPSI SINGKAT&#xa;Aplikasi ini digunakan untuk mengumpulkan data perusahaan/usaha konstruksi guna melakukan pembaharuan data direktori&#xa;usaha konstruksi. Dalam kuisioner ini terdapat jenis pertanyaan terbuka dan tertutup sehingga perlu adanya validasi terhadap&#xa;inputan yang dimasukkan user ke dalam form, apakah sudah sesuai dengan ketentuan yang ada atau belum. Dalam kuisioner&#xa;tersebut terdapat 8 rincian pertanyaan dan 2 rincian yang diisi oleh pewawancara/BPS dengan total 27 kolom isian. Berikut &#xa;tampilan formulir dari Updating Direktori Perusahaan/Usaha Konstruksi 2014.&#xa;&#xa;&#xa;STRUKTUR KUESIONER&#xa;1. Nama Perusahaan&#xa;    - Nama Pengusaha&#xa;    - Alamat Perusahaan&#xa;    - Kode Pos&#xa;    - Nomor Telepon&#xa;    - Nomor Fax&#xa;    - Nama Provinsi&#xa;    - Nama Kabupaten/Kota&#xa;    - Kode Kabupaten/Kota&#xa;    - Nama Kecamatan&#xa;    - Kode Kecamatan&#xa;    - Nama Desa/Kelurahan&#xa;    - Kode Desa/Kelurahan&#xa;    - Email&#xa;&#xa;2. Rincian Status Perusahaan/Usaha Saat Dikunjungi&#xa;    - Status Usaha&#xa;&#xa;3. Kualifikasi Perusahaan/usaha&#xa;    - Kualifikasi Perusahaan&#xa;&#xa;4. Rincian Badan Hukum/Badan Usaha&#xa;    - Badan Usaha&#xa;&#xa;5. Rincian Pekerjaan Utama&#xa;    - Pekerjaan Utama&#xa;&#xa;6. Rincian Bidang Pekerjaan Utama&#xa;    - Bidang Pekerjaan Utama&#xa;&#xa;7. Rincian Tempat Usaha&#xa;    - Tempat Usaha&#xa;&#xa;8. Rincian Banyaknya Pekerja Tetap&#xa;    - Banyak Pekerja Tetap&#xa;&#xa;9. Rincian Contact Person, Pencacah, Pengawas/Pemeriksa&#xa;    - Nama&#xa;    - Jabatan&#xa;    - Tanggal&#xa;&#xa;10. Rincian Kode KIP&#xa;     - Kode Identifikasi Perusahaan (KIP)&#xa;&#xa;"/>
-            <Property name="focusable" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -142,6 +105,23 @@
           <Image iconType="3" name="/gui_kuisioner_udpk/Logo BPS -.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextArea" name="jTextArea2">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="columns" type="int" value="20"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Cambria" size="14" style="0"/>
+        </Property>
+        <Property name="lineWrap" type="boolean" value="true"/>
+        <Property name="rows" type="int" value="5"/>
+        <Property name="text" type="java.lang.String" value="&#xa;     Sejak tahun 2009, Badan Pusat Statistik (BPS) melakukan kegiatan Updating Direktori Perusahaan/Usaha Konstruksi secara rutin yang dilaksanakan secara sampel di seluruh Indonesia. Secara garis besar, tujuan dari pengutipan Direktori Perusahaan Konstruksi 2014 adalah membentuk Kerangka Sampel&#xa;Perusahaan/Usaha Konstruksi yang up-to-date, yang digunakan untuk pengambilan sampel Survei Perusahaan Konstruksi &#xa;Tahunan (SKTH), Survei Perusahaan Konstruksi Triwulanan (SKTR), dan Survei Usaha Konstruksi Perorangan (SKP).&#xa;&#xa;PENULIS SOURCE CODE&#xa;Kelompok 8 (2KS2)&#xa;1. Briel Sevtriobragi Sihaloho   (222212539)&#xa;2. Dewi Nurihandayani               (222212564)&#xa;3. Fickry Atmayoga Wienaldi    (222212610)&#xa;4. La Ode Muhammad Gazali     (222212696)&#xa;&#xa;&#xa;DESKRIPSI SINGKAT&#xa;Aplikasi ini digunakan untuk mengumpulkan data perusahaan/usaha konstruksi guna melakukan pembaharuan data direktori usaha konstruksi. Dalam kuisioner ini terdapat jenis pertanyaan terbuka dan tertutup sehingga perlu adanya validasi terhadap inputan yang dimasukkan user ke dalam form, apakah sudah sesuai dengan ketentuan yang ada atau belum. Dalam kuisioner tersebut terdapat 8 rincian pertanyaan dan 2 rincian yang diisi oleh pewawancara/BPS dengan total 27 kolom isian. Berikut tampilan formulir dari Updating Direktori Perusahaan/Usaha Konstruksi 2014.&#xa;&#xa;&#xa;STRUKTUR KUESIONER&#xa;1. Nama Perusahaan&#xa;    - Nama Pengusaha&#xa;    - Alamat Perusahaan&#xa;    - Kode Pos&#xa;    - Nomor Telepon&#xa;    - Nomor Fax&#xa;    - Nama Provinsi&#xa;    - Nama Kabupaten/Kota&#xa;    - Kode Kabupaten/Kota&#xa;    - Nama Kecamatan&#xa;    - Kode Kecamatan&#xa;    - Nama Desa/Kelurahan&#xa;    - Kode Desa/Kelurahan&#xa;    - Email&#xa;&#xa;2. Rincian Status Perusahaan/Usaha Saat Dikunjungi&#xa;    - Status Usaha&#xa;&#xa;3. Kualifikasi Perusahaan/usaha&#xa;    - Kualifikasi Perusahaan&#xa;&#xa;4. Rincian Badan Hukum/Badan Usaha&#xa;    - Badan Usaha&#xa;&#xa;5. Rincian Pekerjaan Utama&#xa;    - Pekerjaan Utama&#xa;&#xa;6. Rincian Bidang Pekerjaan Utama&#xa;    - Bidang Pekerjaan Utama&#xa;&#xa;7. Rincian Tempat Usaha&#xa;    - Tempat Usaha&#xa;&#xa;8. Rincian Banyaknya Pekerja Tetap&#xa;    - Banyak Pekerja Tetap&#xa;&#xa;9. Rincian Contact Person, Pencacah, Pengawas/Pemeriksa&#xa;    - Nama&#xa;    - Jabatan&#xa;    - Tanggal&#xa;&#xa;10. Rincian Kode KIP&#xa;     - Kode Identifikasi Perusahaan (KIP)&#xa;&#xa;"/>
+        <Property name="wrapStyleWord" type="boolean" value="true"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
     </Component>
   </SubComponents>
