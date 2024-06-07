@@ -29,7 +29,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         Menu = new javax.swing.JMenu();
         logoutMenuItem = new javax.swing.JMenuItem();
-        entryMenuItem = new javax.swing.JMenuItem();
+        homeMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,13 +46,13 @@ public class MainFrame extends javax.swing.JFrame {
         });
         Menu.add(logoutMenuItem);
 
-        entryMenuItem.setText("Entry");
-        entryMenuItem.addActionListener(new java.awt.event.ActionListener() {
+        homeMenuItem.setText("Home");
+        homeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entryMenuItemActionPerformed(evt);
+                homeMenuItemActionPerformed(evt);
             }
         });
-        Menu.add(entryMenuItem);
+        Menu.add(homeMenuItem);
 
         jMenuBar1.add(Menu);
 
@@ -78,10 +78,10 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void entryMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryMenuItemActionPerformed
+    private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new PerusahaanPanel(contentScrollPane, new Perusahaan()));
-    }//GEN-LAST:event_entryMenuItemActionPerformed
+        contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
+    }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
         // TODO add your handling code here:
@@ -126,7 +126,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Menu;
     private javax.swing.JScrollPane contentScrollPane;
-    private javax.swing.JMenuItem entryMenuItem;
+    private javax.swing.JMenuItem homeMenuItem;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem logoutMenuItem;
     // End of variables declaration//GEN-END:variables

@@ -171,7 +171,7 @@ public class Database implements Serializable{
     }
 
     public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson, String cp_jabatan, String tglPengawasan, String tglPencacahan, String catatan) {
-        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, jabatan_cp, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
