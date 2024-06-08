@@ -3,31 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/Gui_kuisioner_UDPK.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/Pencacah.png</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/perusahaanPanel.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/HomePanel.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/AboutPanel.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/frame_sebelumnya/kuisionerPanelFrame.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/view.png</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/kuesionerPanel.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/QuestionaireData.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/Validator.java</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/homePanel.java</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/tambahPencacah.java</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/viewPanel.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/LoginPanel.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/KuesionerPanel.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/Perusahaan.java</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/tambahPengawas.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/ViewPanel.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/ValidatorPerusahaan.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/frame_sebelumnya/homePanelFrame.java</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/aboutPanel.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/ValidatorQuestionaireData.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/PerusahaanPanel.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/LogoBPS.jpg</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/MainFrame.java</file>
             <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/Database.java</file>
-            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/loginPanel.java</file>
-=======
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/PBO-GUI-UDPK/src/gui_kuisioner_udpk/MainFrame.java</file>
->>>>>>> 1c3967b0e5df0bc0032db1ecb0af7106fd516512
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/TambahPengawas.java</file>
+            <file>file:/D:/POLSTAT%20STIS/Semester%204/GUI%20Kuisioner%20UDPK/PBO-GUI-UDPK/src/gui_kuisioner_udpk/TambahPencacah.java</file>
         </group>
     </open-files>
 </project-private>
