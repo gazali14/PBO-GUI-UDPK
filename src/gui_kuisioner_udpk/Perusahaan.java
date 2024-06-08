@@ -177,4 +177,5 @@ public class Perusahaan {
     public void setKIP(String KIP) {
         this.KIP = KIP;
     }
+    
 }

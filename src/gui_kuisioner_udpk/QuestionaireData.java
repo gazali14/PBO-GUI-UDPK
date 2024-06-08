@@ -26,6 +26,15 @@ public class QuestionaireData {
     private String pencacah;
     private String pengawas;
     private String catatan;
+    private String KIP;
+
+    public String getKIP() {
+        return KIP;
+    }
+
+    public void setKIP(String KIP) {
+        this.KIP = KIP;
+    }
     public Validator validasi;
     public ArrayList<String> error;
 
