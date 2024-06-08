@@ -17,7 +17,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jScrollPane1" pref="1062" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" pref="1151" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -87,7 +87,7 @@
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       <Component id="kipLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="kipField" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="KIPTextField" min="-2" pref="200" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -113,7 +113,7 @@
                                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="namaPerusahaanField" alignment="0" pref="243" max="32767" attributes="0"/>
+                                                      <Component id="NamaPerusahaanTextField" alignment="0" pref="243" max="32767" attributes="0"/>
                                                       <Component id="namaPengusahaField" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Component id="alamatField" min="-2" pref="244" max="-2" attributes="0"/>
@@ -155,61 +155,52 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="nextButton" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                                              <Component id="aktifLamaLabel" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jSeparator1" min="-2" pref="32" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="aktifBaruLabel" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jSeparator3" min="-2" pref="32" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jSeparator2" min="-2" pref="7" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="tutupLabel" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jSeparator4" min="-2" pref="40" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="tidakDitemukanLabel" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="bukanKonstruksiLabel" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jSeparator6" min="-2" pref="40" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <Component id="jSeparator5" min="-2" pref="13" max="-2" attributes="0"/>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                      <Component id="aktifLamaLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jSeparator1" min="-2" pref="32" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="statusUsahaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="aktifBaruLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jSeparator3" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jSeparator2" min="-2" pref="7" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="tutupLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jSeparator4" min="-2" pref="40" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="tidakDitemukanLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="bukanKonstruksiLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jSeparator6" min="-2" pref="40" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="statusUsahaLabel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -400,6 +391,14 @@
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="UpdateButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="simpanButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -441,7 +440,7 @@
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="kipLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="kipField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="KIPTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField1" min="-2" pref="7" max="-2" attributes="0"/>
@@ -453,7 +452,7 @@
                           <Component id="provinsiComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="kodeProvinsiField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="namaPerusahaanField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NamaPerusahaanTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -497,7 +496,7 @@
                           <Component id="jLabel9" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                           <Component id="hpField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Component id="statusUsahaLabel" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -535,22 +534,17 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tutupLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jSeparator4" alignment="0" min="-2" pref="10" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="tutupLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jSeparator4" alignment="0" min="-2" pref="10" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="tidakDitemukanLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                              <Component id="bukanKonstruksiLabel" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="tidakDitemukanLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="bukanKonstruksiLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jSeparator5" min="-2" pref="64" max="-2" attributes="0"/>
+                                  <Component id="jSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -583,87 +577,96 @@
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Component id="jenisBoronganLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jenisBoronganField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="bidangPekerjaanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="konstruksiGedungLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="konstruksiSipilLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="konstruksiKhususLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="bidangPekerjaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tempatUsahaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="kantorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rumahTinggalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rukanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tempatLainnyaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tempatUsahaLainnya" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tempatUsahaComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jmlPekerjaTetapLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jenisBoronganField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jmlPekerjaLakiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jmlPekerjaPerempuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jmlPekerjaTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bidangPekerjaanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="konstruksiGedungLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="konstruksiSipilLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="konstruksiKhususLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bidangPekerjaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jmlPekerjaLakiSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jmlPekerjaPerempuanSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jmlPekerjaTotalSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tempatUsahaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="kantorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rumahTinggalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rukanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tempatLainnyaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tempatUsahaLainnya" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tempatUsahaComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jmlPekerjaTetapLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jmlPekerjaLakiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jmlPekerjaPerempuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jmlPekerjaTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jmlPekerjaLakiSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jmlPekerjaPerempuanSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jmlPekerjaTotalSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="namaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jabatanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tanggalPencacahLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jmlPekerjaTetapLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="namaContactPersonField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jabatanContactPersonField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tanggalPencacahanField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jmlPekerjaTetapLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="namaPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jabatanPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tanggalPencacahanField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jabatanPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="namaPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jmlPekerjaTetapLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tanggalPencacahanField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="155" max="32767" attributes="0"/>
+                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="UpdateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="simpanButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="namaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jabatanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tanggalPencacahLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jmlPekerjaTetapLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="namaContactPersonField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jabatanContactPersonField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tanggalPencacahanField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jmlPekerjaTetapLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="namaPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jabatanPencacahField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tanggalPencacahanField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jabatanPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="namaPengawasField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jmlPekerjaTetapLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tanggalPencacahanField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="122" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel19" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="nextButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="namaPerusahaanField">
+            <Component class="javax.swing.JTextField" name="NamaPerusahaanTextField">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -674,7 +677,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="namaPerusahaanFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NamaPerusahaanTextFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="alamatField">
@@ -773,20 +776,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailFieldActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="nextButton">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="ff" red="0" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Next"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nextButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="faxField">
@@ -984,7 +973,7 @@
                 <Property name="text" type="java.lang.String" value="KIP"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="kipField">
+            <Component class="javax.swing.JTextField" name="KIPTextField">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1277,14 +1266,6 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="99" red="ff" type="rgb"/>
                 </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JSeparator" name="jSeparator5">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="99" red="ff" type="rgb"/>
-                </Property>
-                <Property name="orientation" type="int" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator6">
@@ -1923,6 +1904,16 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tanggalPencacahanField2ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="UpdateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Update"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="simpanButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jButton1"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

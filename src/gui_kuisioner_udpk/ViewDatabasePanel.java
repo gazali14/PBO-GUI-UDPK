@@ -195,7 +195,21 @@ public class ViewDatabasePanel extends javax.swing.JPanel {
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void tampilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tampilButtonActionPerformed
-        
+        // Get the selected row index
+        int selectedRowIndex = databaseTable.getSelectedRow();
+
+        // Ensure a row is selected
+        if (selectedRowIndex != -1) {
+            // Get the KIP from the selected row
+            String KIP = (String) databaseTable.getValueAt(selectedRowIndex, 0);
+            // Retrieve the Perusahaan object from the database using KIP
+            Perusahaan perusahaan = Database.getInstance().getPerusahaanByKIP(KIP);
+            QuestionaireData kuisioner = Database.getInstance().getKuisionerByKIP(KIP);
+            contentScrollPane.setViewportView(new ViewPanel(contentScrollPane, perusahaan, kuisioner));
+        } else {
+            // If no row is selected, display a message
+            JOptionPane.showMessageDialog(this, "Pilih baris terlebih dahulu.", "Peringatan", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_tampilButtonActionPerformed
 
     private void jScrollPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jScrollPane1MouseClicked

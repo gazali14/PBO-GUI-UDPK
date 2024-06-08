@@ -19,7 +19,7 @@ public class Database implements Serializable{
     private final String DB_TYPE = "mysql";
     private final String DB_HOST = "localhost";
     private final String DB_PORT = "3306";
-    private final String DB_NAME = "kuesioner_udpk";
+    private final String DB_NAME = "kuisioner_udpk";
     private final String DB_USER = "root";
     private final String DB_PASS = "";
     public String username = "";
