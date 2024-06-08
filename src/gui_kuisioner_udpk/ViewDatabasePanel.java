@@ -200,23 +200,11 @@ public class ViewDatabasePanel extends javax.swing.JPanel {
 
         // Ensure a row is selected
         if (selectedRowIndex != -1) {
-            try {
-                // Get the KIP from the selected row
-                String KIP = (String) databaseTable.getValueAt(selectedRowIndex, 0);
-
-                // Retrieve the Perusahaan object from the database using KIP
-                Perusahaan perusahaan = Database.getInstance().getPerusahaanByKIP(KIP);
-
-                // Pass the Perusahaan object to the ViewPanel to display
-                viewPanel.setPerusahaanData(perusahaan);
-
-                // Switch to the ViewPanel
-                CardLayout cardLayout = (CardLayout) ViewPanel.getLayout();
-                cardLayout.show(mainPanel, "viewPanel");
-            } catch (SQLException e) {
-                System.err.println(e);
-                JOptionPane.showMessageDialog(this, "Gagal mengambil data.", "Gagal", JOptionPane.ERROR_MESSAGE);
-            }
+            // Get the KIP from the selected row
+            String KIP = (String) databaseTable.getValueAt(selectedRowIndex, 0);
+            // Retrieve the Perusahaan object from the database using KIP
+            Perusahaan perusahaan = Database.getInstance().getPerusahaanByKIP(KIP);
+            contentScrollPane.setViewportView(new ViewPanel(contentScrollPane, perusahaan));
         } else {
             // If no row is selected, display a message
             JOptionPane.showMessageDialog(this, "Pilih baris terlebih dahulu.", "Peringatan", JOptionPane.WARNING_MESSAGE);
