@@ -4,6 +4,8 @@
  */
 package gui_kuisioner_udpk;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LENOVO
@@ -80,11 +82,16 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
         // TODO add your handling code here:
-        contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
+        if(!Database.getInstance().username.isEmpty()) {
+            contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
+        } else {
+            JOptionPane.showMessageDialog(this, "Anda belum login!");
+        }
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
         // TODO add your handling code here:
+        Database.getInstance().username = "";
         contentScrollPane.setViewportView(new LoginPanel(contentScrollPane));
     }//GEN-LAST:event_logoutMenuItemActionPerformed
 

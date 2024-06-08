@@ -20,6 +20,7 @@ public class Database implements Serializable{
     private final String DB_NAME = "kuesioner_udpk";
     private final String DB_USER = "root";
     private final String DB_PASS = "";
+    public String username = "";
 
     private Database() {
     }
@@ -54,6 +55,7 @@ public class Database implements Serializable{
             if (rs.next()) {
                 // Jika ada baris yang sesuai, login berhasil
                 loggedIn = true;
+                this.username = username;
                 System.out.println("Login berhasil.");
             } else {
                 // Jika tidak ada baris yang sesuai, login gagal

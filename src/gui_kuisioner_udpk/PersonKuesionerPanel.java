@@ -58,9 +58,11 @@ public class PersonKuesionerPanel extends javax.swing.JPanel {
         tanggalPengawasField = new javax.swing.JTextField();
 
         dateChooser1.setForeground(new java.awt.Color(153, 204, 255));
+        dateChooser1.setDateFormat("yyyy-MM-dd");
         dateChooser1.setTextRefernce(tanggalPencacahField);
 
         dateChooser2.setForeground(new java.awt.Color(153, 204, 255));
+        dateChooser2.setDateFormat("yyyy-MM-dd");
         dateChooser2.setTextRefernce(tanggalPengawasField);
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -248,8 +250,9 @@ public class PersonKuesionerPanel extends javax.swing.JPanel {
 
         if(cp.validasi.validate() && Database.getInstance().checkPersonByName(namaPengawasField.getText()) && Database.getInstance().checkPersonByName(namaPencacahField.getText())) {
             Database.getInstance().insertPerson(cp.getNama(), cp.getJabatan(), "Contact Person");
-            Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd, pg.getNama(), pc.getNama(), cp.getNama(), cp.getJabatan(), tanggalPencacah, tanggalPengawas, catatan);
             Database.getInstance().insertPerusahaan(perusahaan);
+            Database.getInstance().insertKuisioner(perusahaan.getKIP(), qd, pg.getNama(), pc.getNama(), cp.getNama(), cp.getJabatan(), tanggalPencacah, tanggalPengawas, catatan);
+            
             JOptionPane.showMessageDialog(this, "Insert data kuesioner berhasil!");
             contentScrollPane.setViewportView(new HomePanel(contentScrollPane));
         } else {
