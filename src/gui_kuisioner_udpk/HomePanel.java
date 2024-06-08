@@ -230,6 +230,7 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
         // TODO add your handling code here:
+        contentScrollPane.setViewportView(new ViewDatabasePanel(contentScrollPane));
     }//GEN-LAST:event_viewButtonActionPerformed
 
     private void pencacahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pencacahButtonActionPerformed
