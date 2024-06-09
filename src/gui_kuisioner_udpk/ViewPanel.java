@@ -1395,7 +1395,7 @@ public class ViewPanel extends javax.swing.JPanel {
         if(perusahaan.getValidasi()) {
             Database.getInstance().updatePerusahaan(perusahaan.getKIP(), perusahaan.getNamaPerusahaan(), perusahaan.getNamaPengusaha(), perusahaan.getAlamat(), perusahaan.getKodePos(), perusahaan.getTelepon(), perusahaan.getFax(), perusahaan.getNoHP(), perusahaan.getProvinsi(), perusahaan.getKodeProv(), perusahaan.getKabupaten(), perusahaan.getKodeKab(), perusahaan.getKecamatan(), perusahaan.getKodeKec(), perusahaan.getDesa(), perusahaan.getKodeDes(), perusahaan.getEmail());
             Database.getInstance().updateKuisioner(kuisioner.getKIP(), kuisioner.getStatusUsaha(), kuisioner.getGred(), kuisioner.getBadanUsaha(), kuisioner.getPekerjaanUtama(), kuisioner.getBidangPekerjaanUtama(), kuisioner.getTempatUsaha(), Integer.toString(kuisioner.getBanyakPekerjaLaki()), Integer.toString(kuisioner.getBanyakPekerjaPerempuan()), kuisioner.getTanggalPengawasan(), kuisioner.getTanggalPencacahan(), kuisioner.getCatatan());
-            JOptionPane.showMessageDialog(this, "Data berhasil dierbarui");
+            JOptionPane.showMessageDialog(this, "Data berhasil diperbarui");
             contentScrollPane.setViewportView(new ViewDatabasePanel(contentScrollPane));
         } else {
             String errorMessages = "";
