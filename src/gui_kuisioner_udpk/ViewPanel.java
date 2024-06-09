@@ -8,9 +8,6 @@ package gui_kuisioner_udpk;
  *
  * @author U53R
  */
-import java.text.ParseException;
-import java.util.Date;
-import java.text.SimpleDateFormat;
 import javax.swing.JScrollPane;
 import javax.swing.JOptionPane;
 
@@ -30,7 +27,6 @@ public class ViewPanel extends javax.swing.JPanel {
         this.perusahaan = perusahaan;
         this.kuisioner = kuisioner;
         loadData(perusahaan,kuisioner);
-        System.out.println(perusahaan.getKIP());
     }
     
     private void loadData(Perusahaan perusahaan, QuestionaireData kuisioner){
@@ -58,6 +54,7 @@ public class ViewPanel extends javax.swing.JPanel {
                 jenisBoronganField.setText(kuisioner.getPekerjaanUtama());
                 bidangPekerjaanComboBox.setSelectedItem(kuisioner.getBidangPekerjaanUtama());
                 tempatUsahaComboBox.setSelectedItem(kuisioner.getTempatUsaha());
+                catatanField.setText(kuisioner.getCatatan());
                 
                 // Check if the value for pekerja laki-laki is valid
                 int pekerjaLaki = kuisioner.getBanyakPekerjaLaki();
@@ -221,6 +218,8 @@ public class ViewPanel extends javax.swing.JPanel {
         BackButton = new javax.swing.JButton();
         simpanButton = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
+        Catatan = new javax.swing.JLabel();
+        catatanField = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -346,6 +345,7 @@ public class ViewPanel extends javax.swing.JPanel {
 
         kipLabel.setText("KIP");
 
+        KIPTextField.setEditable(false);
         KIPTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
 
         kodeKabupatenField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
@@ -603,6 +603,7 @@ public class ViewPanel extends javax.swing.JPanel {
         jabatanLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jabatanLabel.setText("Jabatan");
 
+        namaContactPersonField.setEditable(false);
         namaContactPersonField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         namaContactPersonField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         namaContactPersonField.setDisabledTextColor(new java.awt.Color(153, 153, 153));
@@ -613,6 +614,7 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
+        namaPencacahField.setEditable(false);
         namaPencacahField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         namaPencacahField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         namaPencacahField.setDisabledTextColor(new java.awt.Color(153, 153, 153));
@@ -623,6 +625,7 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
+        namaPengawasField.setEditable(false);
         namaPengawasField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         namaPengawasField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         namaPengawasField.setDisabledTextColor(new java.awt.Color(153, 153, 153));
@@ -633,6 +636,7 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
+        jabatanContactPersonField.setEditable(false);
         jabatanContactPersonField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jabatanContactPersonField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         jabatanContactPersonField.setSelectionColor(new java.awt.Color(255, 153, 51));
@@ -642,6 +646,7 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
+        jabatanPencacahField.setEditable(false);
         jabatanPencacahField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jabatanPencacahField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         jabatanPencacahField.setSelectionColor(new java.awt.Color(255, 153, 51));
@@ -651,6 +656,7 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
+        jabatanPengawasField.setEditable(false);
         jabatanPengawasField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jabatanPengawasField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         jabatanPengawasField.setSelectionColor(new java.awt.Color(255, 153, 51));
@@ -711,6 +717,9 @@ public class ViewPanel extends javax.swing.JPanel {
 
         jSeparator5.setBackground(new java.awt.Color(255, 153, 0));
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        Catatan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Catatan.setText("Catatan");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -873,14 +882,18 @@ public class ViewPanel extends javax.swing.JPanel {
                                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addComponent(jmlPekerjaTetapLabel2)
                                                                         .addComponent(jmlPekerjaTetapLabel1)
-                                                                        .addComponent(jmlPekerjaTetapLabel3))))
+                                                                        .addComponent(jmlPekerjaTetapLabel3)
+                                                                        .addComponent(Catatan))))
                                                             .addGap(58, 58, 58)
                                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                 .addComponent(namaLabel)
                                                                 .addComponent(rukanLabel)
                                                                 .addComponent(namaContactPersonField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addComponent(namaPencacahField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(namaPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                                .addComponent(namaPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                            .addGap(14, 14, 14)
+                                                            .addComponent(catatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1182,7 +1195,11 @@ public class ViewPanel extends javax.swing.JPanel {
                             .addComponent(namaPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jmlPekerjaTetapLabel3)
                             .addComponent(tanggalPengawasanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Catatan)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(catatanField, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addComponent(jLabel19)
                         .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -1337,8 +1354,6 @@ public class ViewPanel extends javax.swing.JPanel {
 
     private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
         // TODO add your handling code here:
-        // TODO add your handling code here:
-    try {
         // Create instances of Perusahaan and QuestionaireData
         Perusahaan perusahaan = new Perusahaan();
         QuestionaireData kuisioner = new QuestionaireData();
@@ -1372,63 +1387,23 @@ public class ViewPanel extends javax.swing.JPanel {
         kuisioner.setTempatUsaha(tempatUsahaComboBox.getSelectedItem().toString());
         kuisioner.setBanyakPekerjaLaki((Integer) jmlPekerjaLakiSpinner.getValue());
         kuisioner.setBanyakPekerjaPerempuan((Integer) jmlPekerjaPerempuanSpinner.getValue());
-        kuisioner.setContactPerson(namaContactPersonField.getText());
         kuisioner.setJabatan_cp(jabatanContactPersonField.getText());
-        kuisioner.setCatatan(""); // Set this if you have a field for it
+        kuisioner.setCatatan(catatanField.getText());
+        kuisioner.setTanggalPencacahan(tanggalPencacahanField.getText());
+        kuisioner.setTanggalPengawasan(tanggalPengawasanField.getText());
 
-        // Retrieve pencacah and pengawas details if needed
-        Pencacah pencacah = Database.getInstance().getPencacah(kuisioner.getPencacah());
-        Pengawas pengawas = Database.getInstance().getPengawas(kuisioner.getPengawas());
-
-        // Set Pencacah and Pengawas details in the form fields if available
-        if (pencacah != null) {
-            kuisioner.setPencacah(pencacah.getNama());
-            kuisioner.setJabatanPencacah(pencacah.getJabatan());
-            namaPencacahField.setText(pencacah.getNama());
-            jabatanPencacahField.setText(pencacah.getJabatan());
-        }
-
-        if (pengawas != null) {
-            kuisioner.setPengawas(pengawas.getNama());
-            kuisioner.setJabatanPengawas(pengawas.getJabatan());
-            namaPengawasField.setText(pengawas.getNama());
-            jabatanPengawasField.setText(pengawas.getJabatan());
-        }
-
-        // Set additional form fields from kuisioner
-        tanggalPencacahanField.setText(kuisioner.getTanggalPencacahan());
-        tanggalPengawasanField.setText(kuisioner.getTanggalPengawasan());
-
-        // Check if the data already exists in the database
-        Database database = Database.getInstance();
-
-        // Check if the data for Perusahaan already exists
-        Perusahaan existingPerusahaan = database.getPerusahaanByKIP(perusahaan.getKIP());
-        if (existingPerusahaan == null) {
-            // If the Perusahaan data doesn't exist, insert it
-            database.insertPerusahaan(perusahaan);
+        if(perusahaan.getValidasi()) {
+            Database.getInstance().updatePerusahaan(perusahaan.getKIP(), perusahaan.getNamaPerusahaan(), perusahaan.getNamaPengusaha(), perusahaan.getAlamat(), perusahaan.getKodePos(), perusahaan.getTelepon(), perusahaan.getFax(), perusahaan.getNoHP(), perusahaan.getProvinsi(), perusahaan.getKodeProv(), perusahaan.getKabupaten(), perusahaan.getKodeKab(), perusahaan.getKecamatan(), perusahaan.getKodeKec(), perusahaan.getDesa(), perusahaan.getKodeDes(), perusahaan.getEmail());
+            Database.getInstance().updateKuisioner(kuisioner.getKIP(), kuisioner.getStatusUsaha(), kuisioner.getGred(), kuisioner.getBadanUsaha(), kuisioner.getPekerjaanUtama(), kuisioner.getBidangPekerjaanUtama(), kuisioner.getTempatUsaha(), Integer.toString(kuisioner.getBanyakPekerjaLaki()), Integer.toString(kuisioner.getBanyakPekerjaPerempuan()), kuisioner.getTanggalPengawasan(), kuisioner.getTanggalPencacahan(), kuisioner.getCatatan());
+            JOptionPane.showMessageDialog(this, "Data berhasil dierbarui");
+            contentScrollPane.setViewportView(new ViewDatabasePanel(contentScrollPane));
         } else {
-            // If the Perusahaan data exists, update it
-            database.updatePerusahaan(perusahaan.getKIP(), perusahaan.getNamaPerusahaan(), perusahaan.getNamaPengusaha(), perusahaan.getAlamat(), perusahaan.getKodePos(), perusahaan.getTelepon(), perusahaan.getFax(), perusahaan.getNoHP(), perusahaan.getProvinsi(), perusahaan.getKodeProv(), perusahaan.getKabupaten(), perusahaan.getKodeKab(), perusahaan.getKecamatan(), perusahaan.getKodeKec(), perusahaan.getDesa(), perusahaan.getKodeDes(), perusahaan.getEmail());
+            String errorMessages = "";
+            for(String error : perusahaan.error) {
+                errorMessages = errorMessages + error + "\n";
+            }
+            JOptionPane.showMessageDialog(this, errorMessages);
         }
-
-        // Check if the data for Kuisioner already exists
-        QuestionaireData existingKuisioner = database.getKuisionerByKIP(kuisioner.getKIP());
-        if (existingKuisioner == null) {
-            // If the Kuisioner data doesn't exist, insert it
-            database.insertKuisioner(kuisioner.getKIP(), kuisioner, namaPengawasField.getText(), namaPencacahField.getText(), namaContactPersonField.getText(), jabatanContactPersonField.getText(), tanggalPengawasanField.getText(), tanggalPencacahanField.getText(), "");
-        } else {
-            // If the Kuisioner data exists, update it
-            database.updateKuisioner(kuisioner.getStatusUsaha(), kuisioner.getGred(), kuisioner.getBadanUsaha(), kuisioner.getPekerjaanUtama(), kuisioner.getBidangPekerjaanUtama(), kuisioner.getTempatUsaha(), Integer.toString(kuisioner.getBanyakPekerjaLaki()), Integer.toString(kuisioner.getBanyakPekerjaPerempuan()), namaPengawasField.getText(), namaPencacahField.getText(), namaContactPersonField.getText(), kuisioner.getTanggalPengawasan(), kuisioner.getTanggalPencacahan(), "", kuisioner.getKIP());
-        }
-
-
-        // Notify the user and clear the form
-        JOptionPane.showMessageDialog(this, "Data berhasil disimpan.", "Sukses", JOptionPane.INFORMATION_MESSAGE);
-    } catch (Exception e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(this, "Gagal menyimpan data.", "Gagal", JOptionPane.ERROR_MESSAGE);
-    }   
     }//GEN-LAST:event_simpanButtonActionPerformed
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -1439,6 +1414,7 @@ public class ViewPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
+    private javax.swing.JLabel Catatan;
     private javax.swing.JLabel Garuda;
     private javax.swing.JLabel Indonesia;
     private javax.swing.JTextField KIPTextField;
@@ -1459,6 +1435,7 @@ public class ViewPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> bidangPekerjaanComboBox;
     private javax.swing.JLabel bidangPekerjaanLabel;
     private javax.swing.JLabel bukanKonstruksiLabel;
+    private javax.swing.JTextField catatanField;
     private javax.swing.JLabel cvLabel;
     private javax.swing.JTextField desaField;
     private javax.swing.JTextField emailField;

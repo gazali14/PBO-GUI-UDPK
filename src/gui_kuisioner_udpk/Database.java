@@ -203,10 +203,10 @@ public class Database implements Serializable{
 
     // Method untuk memperbarui data kuisioner berdasarkan KIP
     
-    public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan, String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR, String namaPengawas, String namaPencacah, String contactPerson, String tglPengawasan, String tglPencacahan, String catatan) {
-        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, nama_pengawas=?, nama_pencacah=?, contact_person=?, tgl_pengawasan=?, tgl_pencacahan=?, catatan=? WHERE KIP=?";
+    public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan, String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR, String tglPengawasan, String tglPencacahan, String catatan) {
+        String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, tgl_pengawasan=?, tgl_pencacahan=?, catatan=? WHERE KIP=?";
         try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, statusPerusahaan);
             stmt.setString(2, kualifikasiPerusahaan);
             stmt.setString(3, badanHukum);
@@ -215,13 +215,10 @@ public class Database implements Serializable{
             stmt.setString(6, tempatUsaha);
             stmt.setString(7, banyakPekerjaLK);
             stmt.setString(8, banyakPekerjaPR);
-            stmt.setString(9, namaPengawas);
-            stmt.setString(10, namaPencacah);
-            stmt.setString(11, contactPerson);
-            stmt.setString(12, tglPengawasan);
-            stmt.setString(13, tglPencacahan);
-            stmt.setString(14, catatan);
-            stmt.setString(15, KIP);
+            stmt.setString(9, tglPengawasan);
+            stmt.setString(10, tglPencacahan);
+            stmt.setString(11, catatan);
+            stmt.setString(12, KIP);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil diperbarui.");
         } catch (SQLException e) {
