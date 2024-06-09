@@ -269,6 +269,11 @@ public class HomePanel extends javax.swing.JPanel {
 
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             File fileToSave = fileChooser.getSelectedFile();
+
+            if (!fileToSave.getAbsolutePath().toLowerCase().endsWith(".csv")) {
+                fileToSave = new File(fileToSave.getAbsolutePath() + ".csv");
+            }
+            
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileToSave));
 

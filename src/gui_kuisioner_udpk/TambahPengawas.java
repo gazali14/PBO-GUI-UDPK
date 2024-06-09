@@ -191,7 +191,7 @@ public class TambahPengawas extends javax.swing.JPanel {
                                 .addComponent(PanelRahasia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(96, 96, 96)
                                 .addComponent(Garuda2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(14, 14, 14)
                         .addComponent(UDP)
                         .addGap(18, 18, 18)
                         .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -215,7 +215,7 @@ public class TambahPengawas extends javax.swing.JPanel {
                                 .addContainerGap()
                                 .addComponent(BPS)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(14, 14, 14))
+                .addGap(17, 17, 17))
             .addGroup(PanelKeseluruhan2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -233,7 +233,7 @@ public class TambahPengawas extends javax.swing.JPanel {
         );
         PanelKeseluruhan2Layout.setVerticalGroup(
             PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeseluruhan2Layout.createSequentialGroup()
+            .addGroup(PanelKeseluruhan2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelKeseluruhan2Layout.createSequentialGroup()
@@ -260,11 +260,11 @@ public class TambahPengawas extends javax.swing.JPanel {
                 .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jabatanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jabatanLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addGap(64, 64, 64)
                 .addGroup(PanelKeseluruhan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LogoBPS2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TambahButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BPS))
         );
 
