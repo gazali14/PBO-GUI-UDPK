@@ -202,33 +202,34 @@ public class Database implements Serializable{
     }
 
     // Method untuk memperbarui data kuisioner berdasarkan KIP
-    public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan,
-                                String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR,
-                                String namaPengawas, String namaPencacah, String contactPerson, Date tglPengawasan, Date tglPencacahan, String catatan) {
+    
+    public void updateKuisioner(String KIP, String statusPerusahaan, String kualifikasiPerusahaan, String badanHukum, String jenisBorongan, String bidangPekerjaan, String tempatUsaha, String banyakPekerjaLK, String banyakPekerjaPR, String namaPengawas, String namaPencacah, String contactPerson, String tglPengawasan, String tglPencacahan, String catatan) {
         String sql = "UPDATE kuisioner SET status_perusahaan=?, kualifikasi_perusahaan=?, badan_hukum=?, jenis_borongan=?, bidang_pekerjaan=?, tempat_usaha=?, banyak_pekerja_LK=?, banyak_pekerja_PR=?, nama_pengawas=?, nama_pencacah=?, contact_person=?, tgl_pengawasan=?, tgl_pencacahan=?, catatan=? WHERE KIP=?";
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, KIP);
-            stmt.setString(2, statusPerusahaan);
-            stmt.setString(3, kualifikasiPerusahaan);
-            stmt.setString(4, badanHukum);
-            stmt.setString(5, jenisBorongan);
-            stmt.setString(6, bidangPekerjaan);
-            stmt.setString(7, tempatUsaha);
-            stmt.setString(8, banyakPekerjaLK);
-            stmt.setString(9, banyakPekerjaPR);
-            stmt.setString(10, namaPengawas);
-            stmt.setString(11, namaPencacah);
-            stmt.setString(12, contactPerson);
-            stmt.setDate(13, new java.sql.Date(tglPengawasan.getTime()));
-            stmt.setDate(14, new java.sql.Date(tglPencacahan.getTime()));
-            stmt.setString(15, catatan);
+            stmt.setString(1, statusPerusahaan);
+            stmt.setString(2, kualifikasiPerusahaan);
+            stmt.setString(3, badanHukum);
+            stmt.setString(4, jenisBorongan);
+            stmt.setString(5, bidangPekerjaan);
+            stmt.setString(6, tempatUsaha);
+            stmt.setString(7, banyakPekerjaLK);
+            stmt.setString(8, banyakPekerjaPR);
+            stmt.setString(9, namaPengawas);
+            stmt.setString(10, namaPencacah);
+            stmt.setString(11, contactPerson);
+            stmt.setString(12, tglPengawasan);
+            stmt.setString(13, tglPencacahan);
+            stmt.setString(14, catatan);
+            stmt.setString(15, KIP);
             stmt.executeUpdate();
             System.out.println("Data kuisioner berhasil diperbarui.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
+
 
     // Method untuk menghapus data kuisioner berdasarkan KIP
     public void deleteKuisioner(String KIP) {
@@ -406,6 +407,26 @@ public QuestionaireData getKuisionerByKIP(String KIP) {
             System.out.println(e.getMessage());
         }
         return pengawas;
+    }
+    
+    public void setJabatanPencacah(String pencacahId, String jabatan) throws SQLException {
+        String query = "UPDATE Pencacah SET jabatan = ? WHERE id = ?";
+        try (Connection conn = this.connect();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+            pstmt.setString(1, jabatan);
+            pstmt.setString(2, pencacahId);
+            pstmt.executeUpdate();
+        }
+    }
+
+    public void setJabatanPengawas(String pengawasId, String jabatan) throws SQLException {
+        String query = "UPDATE Pengawas SET jabatan = ? WHERE id = ?";
+        try (Connection conn = this.connect();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+            pstmt.setString(1, jabatan);
+            pstmt.setString(2, pengawasId);
+            pstmt.executeUpdate();
+        }
     }
     
     // Method to check if a person exists based on name

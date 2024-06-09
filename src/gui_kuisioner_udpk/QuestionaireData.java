@@ -27,6 +27,24 @@ public class QuestionaireData {
     private String pencacah;
     private String pengawas;
     private String catatan;
+    private String jabatanPengawas;
+    private String jabatanPencacah;
+
+    public String getJabatanPengawas() {
+        return jabatanPengawas;
+    }
+
+    public void setJabatanPengawas(String jabatanPengawas) {
+        this.jabatanPengawas = jabatanPengawas;
+    }
+
+    public String getJabatanPencacah() {
+        return jabatanPencacah;
+    }
+
+    public void setJabatanPencacah(String jabatanPencacah) {
+        this.jabatanPencacah = jabatanPencacah;
+    }
     private String KIP;
     private String tanggalPencacahan;
     private String tanggalPengawasan;
