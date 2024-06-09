@@ -6,6 +6,22 @@ package gui_kuisioner_udpk;
 
 import gui_kuisioner_udpk.frame_sebelumnya.aboutFramePanel;
 import javax.swing.JScrollPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -245,14 +261,93 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void exportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportButtonActionPerformed
         // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Export Data to CSV");
+        fileChooser.setFileFilter(new FileNameExtensionFilter("CSV files (*.csv)", "csv"));
+
+        int userSelection = fileChooser.showSaveDialog(this);
+
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(fileToSave));
+
+                // Write CSV header
+                writer.write("KIP,status_perusahaan,kualifikasi_perusahaan,badan_hukum,jenis_borongan,bidang_pekerjaan,tempat_usaha,banyak_pekerja_LK,banyak_pekerja_PR,nama_pengawas,nama_pencacah,contact_person,jabatan_cp,tgl_pengawasan,tgl_pencacahan,catatan\n");
+
+                // Query database to retrieve data from the kuisioner table
+                // Assuming you have a method to retrieve data from the database, replace "getDataFromDatabase()" with that method call
+                ArrayList<String> data = getDataFromDatabase();
+
+                // Write data to CSV file
+                for (String row : data) {
+                    writer.write(row + "\n");
+                }
+
+                writer.close();
+                JOptionPane.showMessageDialog(this, "Data exported successfully to " + fileToSave.getAbsolutePath(), "Export Success", JOptionPane.INFORMATION_MESSAGE);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Error exporting data: " + e.getMessage(), "Export Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_exportButtonActionPerformed
 
     private void entryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entryButtonActionPerformed
         // TODO add your handling code here:
         contentScrollPane.setViewportView(new PerusahaanPanel(contentScrollPane, new Perusahaan()));
     }//GEN-LAST:event_entryButtonActionPerformed
+    
+    // Method to retrieve data from the database
+    public ArrayList<String> getDataFromDatabase() {
+        ArrayList<String> data = new ArrayList<>();
 
+        try {
+            
+            // Establish a connection to the database
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kuisioner_udpk","root","");
+            // Create a statement object to execute SQL queries
+            Statement statement = conn.createStatement();
 
+            // SQL query to retrieve data from the kuisioner table
+            String query = "SELECT * FROM kuisioner";
+
+            // Execute the query and get the result set
+            ResultSet resultSet = statement.executeQuery(query);
+
+            // Iterate through the result set and add each row to the data list
+            while (resultSet.next()) {
+                String rowData = resultSet.getString("KIP") + "," +
+                        resultSet.getString("status_perusahaan") + "," +
+                        resultSet.getString("kualifikasi_perusahaan") + "," +
+                        resultSet.getString("badan_hukum") + "," +
+                        resultSet.getString("jenis_borongan") + "," +
+                        resultSet.getString("bidang_pekerjaan") + "," +
+                        resultSet.getString("tempat_usaha") + "," +
+                        resultSet.getString("banyak_pekerja_LK") + "," +
+                        resultSet.getString("banyak_pekerja_PR") + "," +
+                        resultSet.getString("nama_pengawas") + "," +
+                        resultSet.getString("nama_pencacah") + "," +
+                        resultSet.getString("contact_person") + "," +
+                        resultSet.getString("jabatan_cp") + "," +
+                        resultSet.getDate("tgl_pengawasan") + "," +
+                        resultSet.getDate("tgl_pencacahan") + "," +
+                        resultSet.getString("catatan");
+
+                data.add(rowData);
+            }
+
+            // Close the result set, statement, and connection
+            resultSet.close();
+            statement.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return data;
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aboutButton;
     private javax.swing.JButton entryButton;

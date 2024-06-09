@@ -690,7 +690,7 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
-        BackButton.setBackground(new java.awt.Color(204, 204, 204));
+        BackButton.setBackground(new java.awt.Color(255, 0, 51));
         BackButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BackButton.setText("Kembali");
         BackButton.addActionListener(new java.awt.event.ActionListener() {
