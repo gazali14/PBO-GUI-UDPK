@@ -4,6 +4,7 @@
  */
 package gui_kuisioner_udpk;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import java.security.MessageDigest;
@@ -144,6 +145,17 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
 
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFieldActionPerformed(evt);
+            }
+        });
+        passwordField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passwordFieldKeyPressed(evt);
+            }
+        });
+
         loginButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -254,6 +266,20 @@ public class LoginPanel extends javax.swing.JPanel {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+        checkLogin();
+    }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void passwordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordFieldKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+            checkLogin();
+    }//GEN-LAST:event_passwordFieldKeyPressed
+
+    private void checkLogin() {
         String username = usernameField.getText();
         String password = passwordField.getText();
         
@@ -263,8 +289,7 @@ public class LoginPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(this, "Username atau password salah!");
         }
-    }//GEN-LAST:event_loginButtonActionPerformed
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BPS;

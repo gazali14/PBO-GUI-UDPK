@@ -8,7 +8,6 @@ package gui_kuisioner_udpk;
  *
  * @author U53R
  */
-import java.sql.SQLException;
 import javax.swing.JScrollPane;
 import javax.swing.JOptionPane;
 
@@ -28,11 +27,11 @@ public class ViewPanel extends javax.swing.JPanel {
         this.perusahaan = perusahaan;
         this.kuisioner = kuisioner;
         loadData(perusahaan,kuisioner);
+        System.out.println(perusahaan.getKIP());
     }
     
     private void loadData(Perusahaan perusahaan, QuestionaireData kuisioner){
         try {
-            
                 KIPTextField.setText(perusahaan.getKIP());
                 NamaPerusahaanTextField.setText(perusahaan.getNamaPerusahaan());
                 namaPengusahaField.setText(perusahaan.getNamaPengusaha());
@@ -50,8 +49,6 @@ public class ViewPanel extends javax.swing.JPanel {
                 desaField.setText(perusahaan.getDesa());
                 kodeDesaField.setText(perusahaan.getKodeDes());
                 emailField.setText(perusahaan.getEmail());
-            
-
                 statusPerusahaanComboBox.setSelectedItem(kuisioner.getStatusUsaha());
                 kualifikasiPerusahaanComboBox.setSelectedItem(kuisioner.getGred());
                 badanHukumComboBox.setSelectedItem(kuisioner.getBadanUsaha());
@@ -70,7 +67,20 @@ public class ViewPanel extends javax.swing.JPanel {
                 if (pekerjaPerempuan >=0){
                     jmlPekerjaPerempuanSpinner.setValue(pekerjaPerempuan);
                 }
-            
+                
+                Pencacah pencacah = Database.getInstance().getPencacah(kuisioner.getPencacah());
+                Pengawas pengawas = Database.getInstance().getPengawas(kuisioner.getPengawas());
+                
+                namaContactPersonField.setText(kuisioner.getContactPerson());
+                jabatanContactPersonField.setText(kuisioner.getJabatan_cp());
+                tanggalPencacahanField.setText(kuisioner.getTanggalPencacahan());
+                namaPencacahField.setText(pencacah.getNama());
+                jabatanPencacahField.setText(pencacah.getJabatan());
+                tanggalPencacahanField1.setText(kuisioner.getTanggalPencacahan());
+                namaPengawasField.setText(pengawas.getNama());
+                jabatanPengawasField.setText(pengawas.getJabatan());
+                tanggalPengawasanField.setText(kuisioner.getTanggalPengawasan());
+                System.out.println("Muat data berhasil!");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -88,7 +98,6 @@ public class ViewPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         NamaPerusahaanTextField = new javax.swing.JTextField();
         alamatField = new javax.swing.JTextField();
@@ -183,7 +192,6 @@ public class ViewPanel extends javax.swing.JPanel {
         rukanLabel = new javax.swing.JLabel();
         tempatLainnyaLabel = new javax.swing.JLabel();
         tempatUsahaComboBox = new javax.swing.JComboBox<>();
-        tempatUsahaLainnya = new javax.swing.JTextField();
         jmlPekerjaTetapLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jmlPekerjaLakiSpinner = new javax.swing.JSpinner();
@@ -206,7 +214,7 @@ public class ViewPanel extends javax.swing.JPanel {
         tanggalPencacahLabel1 = new javax.swing.JLabel();
         tanggalPencacahanField = new javax.swing.JTextField();
         tanggalPencacahanField1 = new javax.swing.JTextField();
-        tanggalPencacahanField2 = new javax.swing.JTextField();
+        tanggalPengawasanField = new javax.swing.JTextField();
         UpdateButton = new javax.swing.JButton();
         simpanButton = new javax.swing.JButton();
 
@@ -555,9 +563,6 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
-        tempatUsahaLainnya.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
-        tempatUsahaLainnya.setEnabled(false);
-
         jmlPekerjaTetapLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jmlPekerjaTetapLabel.setText("8. Banyak Pekerja Tetap :");
 
@@ -672,12 +677,12 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
-        tanggalPencacahanField2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tanggalPencacahanField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
-        tanggalPencacahanField2.setSelectionColor(new java.awt.Color(255, 153, 51));
-        tanggalPencacahanField2.addActionListener(new java.awt.event.ActionListener() {
+        tanggalPengawasanField.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        tanggalPengawasanField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
+        tanggalPengawasanField.setSelectionColor(new java.awt.Color(255, 153, 51));
+        tanggalPengawasanField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tanggalPencacahanField2ActionPerformed(evt);
+                tanggalPengawasanFieldActionPerformed(evt);
             }
         });
 
@@ -696,11 +701,11 @@ public class ViewPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(keteranganUmumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(324, 324, 324)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -712,19 +717,19 @@ public class ViewPanel extends javax.swing.JPanel {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(Indonesia)))
                                         .addGap(157, 157, 157)))
-                                .addGap(87, 87, 87)
+                                .addGap(190, 190, 190)
                                 .addComponent(UDP)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(PanelKonstruksi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(PanelTahun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(834, 834, 834)
                                 .addComponent(kipLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(KIPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(56, 56, 56)))
-                        .addGap(53, 53, 53))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -794,22 +799,17 @@ public class ViewPanel extends javax.swing.JPanel {
                                         .addComponent(jLabel21)
                                         .addGap(143, 143, 143)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                                 .addComponent(tutupLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(tidakDitemukanLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(tidakDitemukanLabel, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                                 .addComponent(bukanKonstruksiLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(statusUsahaLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(statusUsahaLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel22)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -867,7 +867,7 @@ public class ViewPanel extends javax.swing.JPanel {
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                             .addComponent(jabatanPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(tanggalPencacahanField2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                            .addComponent(tanggalPengawasanField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -892,10 +892,7 @@ public class ViewPanel extends javax.swing.JPanel {
                                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                                     .addGap(138, 138, 138)
                                                                     .addComponent(tanggalPencacahanField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                                            .addComponent(tempatLainnyaLabel)
-                                                            .addGap(18, 18, 18)
-                                                            .addComponent(tempatUsahaLainnya, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(tempatLainnyaLabel))
                                                     .addGap(0, 0, Short.MAX_VALUE))))
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                             .addGap(14, 14, 14)
@@ -1121,7 +1118,6 @@ public class ViewPanel extends javax.swing.JPanel {
                             .addComponent(rumahTinggalLabel)
                             .addComponent(rukanLabel)
                             .addComponent(tempatLainnyaLabel)
-                            .addComponent(tempatUsahaLainnya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tempatUsahaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1162,32 +1158,32 @@ public class ViewPanel extends javax.swing.JPanel {
                             .addComponent(jabatanPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(namaPengawasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jmlPekerjaTetapLabel3)
-                            .addComponent(tanggalPencacahanField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                            .addComponent(tanggalPengawasanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel19)
                         .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 496, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(UpdateButton)
                             .addComponent(simpanButton))
                         .addGap(44, 44, 44))))
         );
 
-        jScrollPane1.setViewportView(jPanel1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -1206,11 +1202,6 @@ public class ViewPanel extends javax.swing.JPanel {
 
     private void tempatUsahaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatUsahaComboBoxActionPerformed
         // TODO add your handling code here:
-        if(tempatUsahaComboBox.getSelectedIndex() == 4) {
-            tempatUsahaLainnya.setEnabled(true);
-        } else {
-            tempatUsahaLainnya.setEnabled(false);
-        }
     }//GEN-LAST:event_tempatUsahaComboBoxActionPerformed
 
     private void kualifikasiPerusahaanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kualifikasiPerusahaanComboBoxActionPerformed
@@ -1317,9 +1308,9 @@ public class ViewPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_tanggalPencacahanField1ActionPerformed
 
-    private void tanggalPencacahanField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanggalPencacahanField2ActionPerformed
+    private void tanggalPengawasanFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanggalPengawasanFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tanggalPencacahanField2ActionPerformed
+    }//GEN-LAST:event_tanggalPengawasanFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1381,7 +1372,6 @@ public class ViewPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -1436,12 +1426,11 @@ public class ViewPanel extends javax.swing.JPanel {
     private javax.swing.JLabel tanggalPencacahLabel1;
     private javax.swing.JTextField tanggalPencacahanField;
     private javax.swing.JTextField tanggalPencacahanField1;
-    private javax.swing.JTextField tanggalPencacahanField2;
+    private javax.swing.JTextField tanggalPengawasanField;
     private javax.swing.JTextField teleponField;
     private javax.swing.JLabel tempatLainnyaLabel;
     private javax.swing.JComboBox<String> tempatUsahaComboBox;
     private javax.swing.JLabel tempatUsahaLabel;
-    private javax.swing.JTextField tempatUsahaLainnya;
     private javax.swing.JLabel tidakDitemukanLabel;
     private javax.swing.JLabel tutupLabel;
     // End of variables declaration//GEN-END:variables

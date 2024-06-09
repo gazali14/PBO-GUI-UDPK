@@ -173,40 +173,6 @@ public class Database implements Serializable{
             System.out.println(e.getMessage());
         }
     }
-    
-        // Method untuk mendapatkan data perusahaan berdasarkan KIP
-    public Perusahaan getPerusahaanByKIP(String KIP) {
-        String sql = "SELECT * FROM perusahaan WHERE KIP=?";
-        Perusahaan perusahaan = new Perusahaan();
-        try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, KIP);
-            try(ResultSet rs = stmt.executeQuery()){
-                if (rs.next()) {
-                    System.out.println("KIP: " + rs.getString("KIP"));
-                    System.out.println("Nama Perusahaan: " + rs.getString("nama_perusahaan"));
-                    System.out.println("Nama Pengusaha: " + rs.getString("nama_pengusaha"));
-                    System.out.println("Alamat: " + rs.getString("alamat"));
-                    System.out.println("Kode Pos: " + rs.getString("kode_pos"));
-                    System.out.println("Telepon: " + rs.getString("telepon"));
-                    System.out.println("Fax: " + rs.getString("fax"));
-                    System.out.println("HP: " + rs.getString("hp"));
-                    System.out.println("Provinsi: " + rs.getString("provinsi"));
-                    System.out.println("Kode Provinsi: " + rs.getString("kode_provinsi"));
-                    System.out.println("Kabupaten/Kota: " + rs.getString("kab_kota"));
-                    System.out.println("Kode Kabupaten/Kota: " + rs.getString("kode_kabkota"));
-                    System.out.println("Kecamatan: " + rs.getString("kecamatan"));
-                    System.out.println("Kode Kecamatan: " + rs.getString("kode_kecamatan"));
-                    System.out.println("Desa/Kelurahan: " + rs.getString("desa_kelurahan"));
-                    System.out.println("Kode Desa/Kelurahan: " + rs.getString("kode_desa_kelurahan"));
-                    System.out.println("Email: " + rs.getString("email"));
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return perusahaan;
-    }
 
     public void insertKuisioner(String KIP, QuestionaireData qd, String namaPengawas, String namaPencacah, String contactPerson, String cp_jabatan, String tglPengawasan, String tglPencacahan, String catatan) {
         String sql = "INSERT INTO kuisioner (KIP, status_perusahaan, kualifikasi_perusahaan, badan_hukum, jenis_borongan, bidang_pekerjaan, tempat_usaha, banyak_pekerja_LK, banyak_pekerja_PR, nama_pengawas, nama_pencacah, contact_person, jabatan_cp, tgl_pengawasan, tgl_pencacahan, catatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -264,8 +230,6 @@ public class Database implements Serializable{
         }
     }
 
-
-
     // Method untuk menghapus data kuisioner berdasarkan KIP
     public void deleteKuisioner(String KIP) {
         String sql = "DELETE FROM kuisioner WHERE KIP=?";
@@ -277,66 +241,75 @@ public class Database implements Serializable{
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-    }
+    }  
     
-    public void getKuisioner(String KIP) {
-        String sql = "SELECT * FROM kuisioner WHERE KIP=?";
-        try (Connection conn = this.connect();
-            PreparedStatement stmt = conn.prepareStatement(sql)) {
-                stmt.setString(1, KIP);
-                try(ResultSet rs = stmt.executeQuery()){
-                    if(rs.next()) {
-                        System.out.println("KIP: " + rs.getString("KIP"));
-                        System.out.println("Status Perusahaan: " + rs.getString("status_perusahaan"));
-                        System.out.println("Kualifikasi Perusahaan: " + rs.getString("kualifikasi_perusahaan"));
-                        System.out.println("Badan Hukum: " + rs.getString("badan_hukum"));
-                        System.out.println("Jenis Borongan: " + rs.getString("jenis_borongan"));
-                        System.out.println("Bidang Pekerjaan: " + rs.getString("bidang_pekerjaan"));
-                        System.out.println("Tempat Usaha: " + rs.getString("tempat_usaha"));
-                        System.out.println("Banyak Pekerja Laki-laki: " + rs.getString("banyak_pekerja_LK"));
-                        System.out.println("Banyak Pekerja Perempuan: " + rs.getString("banyak_pekerja_PR"));
-                        System.out.println("Nama Pengawas: " + rs.getString("nama_pengawas"));
-                        System.out.println("Nama Pencacah: " + rs.getString("nama_pencacah"));
-                        System.out.println("Contact Person: " + rs.getString("contact_person"));
-                        System.out.println("Tanggal Pengawasan: " + rs.getDate("tgl_pengawasan"));
-                        System.out.println("Tanggal Pencacahan: " + rs.getDate("tgl_pencacahan"));
-                        System.out.println("Catatan: " + rs.getString("catatan"));
-                    }
-                }        
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-    }
     
-    public QuestionaireData getKuisionerByKIP(String KIP) {
-        String sql = "SELECT * FROM kuisioner WHERE KIP=?";
-        QuestionaireData kuisioner = new QuestionaireData();
+        
+    // Method untuk mendapatkan data perusahaan berdasarkan KIP
+    public Perusahaan getPerusahaanByKIP(String KIP) {
+        String sql = "SELECT * FROM perusahaan WHERE KIP=?";
+        Perusahaan perusahaan = new Perusahaan();
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, KIP);
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                System.out.println("KIP: " + rs.getString("KIP"));
-                System.out.println("Status Perusahaan: " + rs.getString("status_perusahaan"));
-                System.out.println("Kualifikasi Perusahaan: " + rs.getString("kualifikasi_perusahaan"));
-                System.out.println("Badan Hukum: " + rs.getString("badan_hukum"));
-                System.out.println("Jenis Borongan: " + rs.getString("jenis_borongan"));
-                System.out.println("Bidang Pekerjaan: " + rs.getString("bidang_pekerjaan"));
-                System.out.println("Tempat Usaha: " + rs.getString("tempat_usaha"));
-                System.out.println("Banyak Pekerja Laki-laki: " + rs.getString("banyak_pekerja_LK"));
-                System.out.println("Banyak Pekerja Perempuan: " + rs.getString("banyak_pekerja_PR"));
-                System.out.println("Nama Pengawas: " + rs.getString("nama_pengawas"));
-                System.out.println("Nama Pencacah: " + rs.getString("nama_pencacah"));
-                System.out.println("Contact Person: " + rs.getString("contact_person"));
-                System.out.println("Tanggal Pengawasan: " + rs.getDate("tgl_pengawasan"));
-                System.out.println("Tanggal Pencacahan: " + rs.getDate("tgl_pencacahan"));
-                System.out.println("Catatan: " + rs.getString("catatan"));
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    perusahaan.setKIP(rs.getString("KIP"));
+                    perusahaan.setNamaPerusahaan(rs.getString("nama_perusahaan"));
+                    perusahaan.setNamaPengusaha(rs.getString("nama_pengusaha"));
+                    perusahaan.setAlamat(rs.getString("alamat"));
+                    perusahaan.setKodePos(rs.getString("kode_pos"));
+                    perusahaan.setTelepon(rs.getString("telepon"));
+                    perusahaan.setFax(rs.getString("fax"));
+                    perusahaan.setNoHP(rs.getString("hp"));
+                    perusahaan.setProvinsi(rs.getString("provinsi"));
+                    perusahaan.setKodeProv(rs.getString("kode_provinsi"));
+                    perusahaan.setKabupaten(rs.getString("kab_kota"));
+                    perusahaan.setKodeKab(rs.getString("kode_kabkota"));
+                    perusahaan.setKecamatan(rs.getString("kecamatan"));
+                    perusahaan.setKodeKec(rs.getString("kode_kecamatan"));
+                    perusahaan.setDesa(rs.getString("desa_kelurahan"));
+                    perusahaan.setKodeDes(rs.getString("kode_desa_kelurahan"));
+                    perusahaan.setEmail(rs.getString("email"));
+                }
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return kuisioner;
+        return perusahaan;
     }
+
+    
+public QuestionaireData getKuisionerByKIP(String KIP) {
+    String sql = "SELECT * FROM kuisioner WHERE KIP=?";
+    QuestionaireData kuisioner = new QuestionaireData();
+    try (Connection conn = this.connect();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setString(1, KIP);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            kuisioner.setKIP(rs.getString("KIP"));
+            kuisioner.setStatusUsaha(rs.getString("status_perusahaan"));
+            kuisioner.setGred(rs.getString("kualifikasi_perusahaan"));
+            kuisioner.setBadanUsaha(rs.getString("badan_hukum"));
+            kuisioner.setPekerjaanUtama(rs.getString("jenis_borongan"));
+            kuisioner.setBidangPekerjaanUtama(rs.getString("bidang_pekerjaan"));
+            kuisioner.setTempatUsaha(rs.getString("tempat_usaha"));
+            kuisioner.setBanyakPekerjaLaki(rs.getInt("banyak_pekerja_LK"));
+            kuisioner.setBanyakPekerjaPerempuan(rs.getInt("banyak_pekerja_PR"));
+            kuisioner.setPengawas(rs.getString("nama_pengawas"));
+            kuisioner.setPencacah(rs.getString("nama_pencacah"));
+            kuisioner.setContactPerson(rs.getString("contact_person"));
+            kuisioner.setJabatan_cp(rs.getString("jabatan_cp"));
+            kuisioner.setTanggalPengawasan(rs.getString("tgl_pengawasan"));
+            kuisioner.setTanggalPencacahan(rs.getString("tgl_pencacahan"));
+            kuisioner.setCatatan(rs.getString("catatan"));
+        }
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+    }
+    return kuisioner;
+}
 
     // Method untuk menambahkan data person
     public void insertPerson(String nama, String jabatan, String keteranganPetugas) {
@@ -401,20 +374,38 @@ public class Database implements Serializable{
     }
     
     
-        // Method untuk mendapatkan data person berdasarkan id
-    public void getPerson(String nama) {
+    public Pencacah getPencacah(String nama) {
         String sql = "SELECT * FROM person WHERE nama=?";
+        Pencacah pencacah = new Pencacah();
         try (Connection conn = this.connect();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, nama);
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                System.out.println("Nama: " + rs.getString("nama"));
-                System.out.println("Jabatan: " + rs.getString("jabatan"));
+            if (rs.next()) {
+                pencacah.setNama(rs.getString("nama"));
+                pencacah.setJabatan(rs.getString("jabatan"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        return pencacah;
+    }
+    
+    public Pengawas getPengawas(String nama) {
+        String sql = "SELECT * FROM person WHERE nama=?";
+        Pengawas pengawas = new Pengawas();
+        try (Connection conn = this.connect();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nama);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                pengawas.setNama(rs.getString("nama"));
+                pengawas.setJabatan(rs.getString("jabatan"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return pengawas;
     }
     
     // Method to check if a person exists based on name

@@ -23,10 +23,13 @@ public class QuestionaireData {
     private int banyakPekerjaLaki;
     private int banyakPekerjaPerempuan;
     private String contactPerson;
+    private String jabatan_cp;
     private String pencacah;
     private String pengawas;
     private String catatan;
     private String KIP;
+    private String tanggalPencacahan;
+    private String tanggalPengawasan;
 
     public String getKIP() {
         return KIP;
@@ -115,8 +118,6 @@ public class QuestionaireData {
         this.banyakPekerjaPerempuan = banyakPekerjaPerempuan;
     }
 
-
-
     public String getContactPerson() {
         return contactPerson;
     }
@@ -125,6 +126,16 @@ public class QuestionaireData {
         this.contactPerson = contactPerson;
     }
 
+    public String getJabatan_cp() {
+        return jabatan_cp;
+    }
+
+    public void setJabatan_cp(String jabatan_cp) {
+        this.jabatan_cp = jabatan_cp;
+    }
+    
+    
+    
     public String getPencacah() {
         return pencacah;
     }
@@ -148,5 +159,23 @@ public class QuestionaireData {
     public void setCatatan(String catatan) {
         this.catatan = catatan;
     }
+
+    public String getTanggalPencacahan() {
+        return tanggalPencacahan;
+    }
+
+    public void setTanggalPencacahan(String tanggalPencacahan) {
+        this.tanggalPencacahan = tanggalPencacahan;
+    }
+
+    public String getTanggalPengawasan() {
+        return tanggalPengawasan;
+    }
+
+    public void setTanggalPengawasan(String tanggalPengawasan) {
+        this.tanggalPengawasan = tanggalPengawasan;
+    }
+    
+    
 }
 
