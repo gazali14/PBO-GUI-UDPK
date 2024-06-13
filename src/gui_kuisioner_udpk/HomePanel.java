@@ -36,6 +36,7 @@ public class HomePanel extends javax.swing.JPanel {
     public HomePanel(JScrollPane contentScrollPane) {
         initComponents();
         this.contentScrollPane = contentScrollPane;
+        
     }
 
     /**

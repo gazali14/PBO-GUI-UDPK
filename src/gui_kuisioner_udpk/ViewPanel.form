@@ -26,9 +26,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -85,314 +85,311 @@
                                   <Component id="KIPTextField" min="-2" pref="200" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="BackButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="simpanButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel9" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jLabel4" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" pref="154" max="-2" attributes="0"/>
+                                      <Component id="jLabel8" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                      <Component id="jLabel5" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jLabel6" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="hpField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="kodePosField" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="NamaPerusahaanTextField" alignment="0" pref="243" max="32767" attributes="0"/>
+                                                  <Component id="namaPengusahaField" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="alamatField" min="-2" pref="244" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="teleponField" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel12" min="-2" pref="24" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="faxField" min="-2" pref="104" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel10" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <Component id="jLabel11" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                      <Component id="jLabel13" min="-2" pref="43" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="BackButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="simpanButton" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="provinsiComboBox" alignment="1" min="-2" pref="151" max="-2" attributes="0"/>
+                                      <Component id="kabupatenField" max="32767" attributes="0"/>
+                                      <Component id="kecamatanField" max="32767" attributes="0"/>
+                                      <Component id="desaField" max="32767" attributes="0"/>
+                                      <Component id="emailField" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel9" min="-2" pref="37" max="-2" attributes="0"/>
-                                              <Component id="jLabel4" min="-2" pref="101" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" min="-2" pref="154" max="-2" attributes="0"/>
-                                              <Component id="jLabel8" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                                              <Component id="jLabel5" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
-                                              <Component id="jLabel6" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="hpField" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="kodePosField" alignment="0" max="32767" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="NamaPerusahaanTextField" alignment="0" pref="243" max="32767" attributes="0"/>
-                                                          <Component id="namaPengusahaField" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="alamatField" min="-2" pref="244" max="-2" attributes="0"/>
-                                                  </Group>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                  <Component id="aktifLamaLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jSeparator1" min="-2" pref="32" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="teleponField" min="-2" pref="105" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel12" min="-2" pref="24" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="faxField" min="-2" pref="104" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="aktifBaruLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jSeparator3" min="-2" pref="32" max="-2" attributes="0"/>
                                               </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel10" min="-2" pref="43" max="-2" attributes="0"/>
-                                              <Component id="jLabel11" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
-                                              <Component id="jLabel14" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
-                                              <Component id="jLabel13" min="-2" pref="43" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="provinsiComboBox" alignment="1" min="-2" pref="151" max="-2" attributes="0"/>
-                                              <Component id="kabupatenField" max="32767" attributes="0"/>
-                                              <Component id="kecamatanField" max="32767" attributes="0"/>
-                                              <Component id="desaField" max="32767" attributes="0"/>
-                                              <Component id="emailField" max="32767" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jSeparator2" min="-2" pref="7" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                                          <Component id="aktifLamaLabel" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jSeparator1" min="-2" pref="32" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <Component id="aktifBaruLabel" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jSeparator3" min="-2" pref="32" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
+                                                  <Component id="bukanKonstruksiLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jSeparator2" min="-2" pref="7" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bukanKonstruksiLabel" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jSeparator6" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="tutupLabel" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jSeparator4" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="tidakDitemukanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jSeparator5" min="-2" pref="7" max="-2" attributes="0"/>
+                                                  <Component id="jSeparator6" min="-2" pref="40" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="statusUsahaLabel" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="tutupLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jSeparator4" min="-2" pref="40" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="tidakDitemukanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jSeparator5" min="-2" pref="7" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="konstruksiKhususLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="statusUsahaLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="konstruksiKhususLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="bidangPekerjaanLabel" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                                  <Component id="konstruksiGedungLabel" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                                  <Component id="konstruksiSipilLabel" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="badanHukumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jenisBoronganLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="bidangPekerjaanLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="konstruksiGedungLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                                          <Component id="konstruksiSipilLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="badanHukumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jenisBoronganLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="kualifikasiPerusahaanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jmlPekerjaTetapLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="kualifikasiPerusahaanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jmlPekerjaTetapLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" attributes="0">
-                                                                      <Component id="tempatUsahaLabel" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                                                      <Component id="kantorLabel" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                                                                      <Component id="rumahTinggalLabel" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Component id="jmlPekerjaTetapLabel2" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="jmlPekerjaTetapLabel1" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="jmlPekerjaTetapLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="Catatan" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                  </Group>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="namaLabel" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="rukanLabel" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="namaContactPersonField" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                  <Component id="namaPencacahField" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                  <Component id="namaPengawasField" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                                                              </Group>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="tempatUsahaLabel" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                                              <Component id="kantorLabel" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="rumahTinggalLabel" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                                              <Component id="catatanField" min="-2" pref="455" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="jmlPekerjaTetapLabel2" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jmlPekerjaTetapLabel1" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jmlPekerjaTetapLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="Catatan" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
                                                           </Group>
                                                       </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <Component id="jabatanPencacahField" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                      <EmptySpace max="32767" attributes="0"/>
-                                                                      <Component id="tanggalPencacahanField1" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" attributes="0">
-                                                                      <Component id="jabatanContactPersonField" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" attributes="0">
-                                                                      <Component id="jabatanPengawasField" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                      <EmptySpace max="32767" attributes="0"/>
-                                                                      <Component id="tanggalPengawasanField" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                          </Group>
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                                          <Component id="jabatanLabel" min="-2" max="-2" attributes="0"/>
-                                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                                              <Component id="jmlPekerjaLakiLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                                              <Component id="jmlPekerjaLakiSpinner" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                                                          </Group>
-                                                                      </Group>
-                                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Group type="102" attributes="0">
-                                                                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                                  <Component id="jmlPekerjaPerempuanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                                                  <Component id="jmlPekerjaPerempuanSpinner" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                                                              </Group>
-                                                                              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                                  <Component id="jmlPekerjaTotalSpinner" min="-2" pref="65" max="-2" attributes="0"/>
-                                                                                  <Component id="jmlPekerjaTotalLabel" min="-2" max="-2" attributes="0"/>
-                                                                              </Group>
-                                                                          </Group>
-                                                                          <Group type="102" alignment="0" attributes="0">
-                                                                              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                                                                              <Component id="tanggalPencacahLabel1" min="-2" max="-2" attributes="0"/>
-                                                                          </Group>
-                                                                          <Group type="102" alignment="0" attributes="0">
-                                                                              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                                                                              <Component id="tanggalPencacahanField" min="-2" pref="160" max="-2" attributes="0"/>
-                                                                          </Group>
-                                                                      </Group>
-                                                                  </Group>
-                                                                  <Component id="tempatLainnyaLabel" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="namaLabel" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="rukanLabel" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="namaContactPersonField" min="-2" pref="160" max="-2" attributes="0"/>
+                                                          <Component id="namaPencacahField" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                                          <Component id="namaPengawasField" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="jenisBoronganField" min="-2" pref="873" max="-2" attributes="0"/>
+                                                      <Component id="catatanField" min="-2" pref="455" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="jabatanPencacahField" min="-2" pref="160" max="-2" attributes="0"/>
+                                                              <EmptySpace max="32767" attributes="0"/>
+                                                              <Component id="tanggalPencacahanField1" min="-2" pref="160" max="-2" attributes="0"/>
+                                                          </Group>
                                                           <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <Component id="gred1Label" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                                                      <Component id="gred2Label" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <Component id="ptPerseroLabel" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                                                      <Component id="ptLabel" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <Component id="jabatanContactPersonField" min="-2" pref="160" max="-2" attributes="0"/>
+                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="jabatanPengawasField" min="-2" pref="160" max="-2" attributes="0"/>
+                                                              <EmptySpace max="32767" attributes="0"/>
+                                                              <Component id="tanggalPengawasanField" min="-2" pref="160" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                                  <Component id="gred3Label" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="cvLabel" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jabatanLabel" min="-2" max="-2" attributes="0"/>
+                                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                                      <Component id="jmlPekerjaLakiLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="jmlPekerjaLakiSpinner" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                                  </Group>
                                                               </Group>
                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                   <Group type="102" attributes="0">
-                                                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                                                      <Component id="gred4Label" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                                                      <Component id="gred5Label" min="-2" max="-2" attributes="0"/>
+                                                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                                          <Component id="jmlPekerjaPerempuanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="jmlPekerjaPerempuanSpinner" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                                          <Component id="jmlPekerjaTotalSpinner" min="-2" pref="65" max="-2" attributes="0"/>
+                                                                          <Component id="jmlPekerjaTotalLabel" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                      </Group>
                                                                   </Group>
                                                                   <Group type="102" alignment="0" attributes="0">
-                                                                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                                                                      <Component id="firmaLabel" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                                                      <Component id="gred6Label" min="-2" max="-2" attributes="0"/>
+                                                                      <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                                                                      <Component id="tanggalPencacahLabel1" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
                                                                   <Group type="102" alignment="0" attributes="0">
-                                                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                                                      <Component id="koperasiLabel" min="-2" max="-2" attributes="0"/>
+                                                                      <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                                                                      <Component id="tanggalPencacahanField" min="-2" pref="160" max="-2" attributes="0"/>
                                                                   </Group>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" attributes="0">
-                                                                      <Component id="gred7Label" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                                                      <Component id="gredLabel8" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                                                      <Component id="gred9Label" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Component id="badanLainnyaLabel" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
+                                                          <Component id="tempatLainnyaLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="jenisBoronganField" min="-2" pref="873" max="-2" attributes="0"/>
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="gred1Label" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <Component id="gred2Label" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="ptPerseroLabel" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                                              <Component id="ptLabel" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="gred3Label" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="cvLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                                              <Component id="gred4Label" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                                              <Component id="gred5Label" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                                              <Component id="firmaLabel" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                              <Component id="gred6Label" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                                              <Component id="koperasiLabel" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="gred7Label" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                              <Component id="gredLabel8" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                              <Component id="gred9Label" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Component id="badanLainnyaLabel" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="kodeKabupatenField" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="kodeKecamatanField" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="kodeProvinsiField" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="kodeDesaField" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="statusPerusahaanComboBox" max="32767" attributes="0"/>
-                                      <Component id="kualifikasiPerusahaanComboBox" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="bidangPekerjaanComboBox" alignment="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="badanHukumComboBox" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="tempatUsahaComboBox" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="kodeKabupatenField" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="kodeKecamatanField" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="kodeProvinsiField" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="kodeDesaField" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="statusPerusahaanComboBox" max="32767" attributes="0"/>
+                              <Component id="kualifikasiPerusahaanComboBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="bidangPekerjaanComboBox" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="badanHukumComboBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="tempatUsahaComboBox" alignment="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -571,50 +568,52 @@
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jenisBoronganLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jenisBoronganField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="bidangPekerjaanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="konstruksiGedungLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="konstruksiSipilLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="konstruksiKhususLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bidangPekerjaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tempatUsahaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="kantorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rumahTinggalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rukanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tempatLainnyaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tempatUsahaComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jenisBoronganField" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="jmlPekerjaTetapLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="bidangPekerjaanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="konstruksiGedungLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="konstruksiSipilLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="konstruksiKhususLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="bidangPekerjaanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlPekerjaLakiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlPekerjaPerempuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlPekerjaTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tempatUsahaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="kantorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rumahTinggalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rukanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tempatLainnyaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tempatUsahaComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlPekerjaLakiSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlPekerjaPerempuanSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlPekerjaTotalSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="jmlPekerjaTetapLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jmlPekerjaLakiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jmlPekerjaPerempuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jmlPekerjaTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jmlPekerjaLakiSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jmlPekerjaPerempuanSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jmlPekerjaTotalSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="namaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jabatanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -649,7 +648,7 @@
                           <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="BackButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1607,6 +1606,10 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jmlPekerjaLakiSpinnerInputMethodTextChanged"/>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jmlPekerjaLakiSpinnerPropertyChange"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jmlPekerjaLakiLabel">
           <Properties>
@@ -1652,6 +1655,7 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jmlPekerjaTetapLabel1">
@@ -1948,6 +1952,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="catatanField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel20">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="8" style="2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="*akan berubah saat data disimpan"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
