@@ -390,7 +390,11 @@ public class PerusahaanPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jTextField1)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(20, 20, 20)
+=======
+                .addGap(32, 32, 32)
+>>>>>>> d3250bb9d8860223eaa062f862444b8ba246f9d7
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
@@ -398,11 +402,19 @@ public class PerusahaanPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(PanelRahasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                         .addGap(188, 188, 188)
                         .addComponent(Garuda)
                         .addGap(135, 135, 135))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(177, 177, 177)
+=======
+                        .addGap(185, 185, 185)
+                        .addComponent(Garuda)
+                        .addGap(135, 135, 135))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+>>>>>>> d3250bb9d8860223eaa062f862444b8ba246f9d7
                         .addComponent(Indonesia)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(UDP)
